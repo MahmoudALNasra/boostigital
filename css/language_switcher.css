@@ -1,0 +1,29 @@
+
+.language-switcher {
+    padding-left: 20px;
+    background-color: black; /* Black background for the entire switcher */
+    display: inline-block; /* Ensure the background wraps around the flag */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    padding-right: 5px; /* Add padding for better spacing */
+}
+
+#language-button {
+    background-color: black; /* Black background for the button */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    display: inline-block; /* Ensure the button wraps around the flag */
+    overflow: hidden; /* Hide any overflow from the flag image */
+}
+
+.flag {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    display: block; /* Ensure the flag is displayed as a block element */
+    background-color: black; /* Ensure the flag itself has a black background */
+    border: 1px solid black; /* Optional: Add a black border to the flag */
+    object-fit: cover; /* Ensure the flag image covers the entire container */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}

@@ -1,0 +1,97 @@
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.main-footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack form and info on small screens */
+        align-items: center; /* Center align everything */
+    }
+
+    .contact-container form {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .contact-container .contact-info {
+        text-align: center; /* Center align text */
+        margin-top: 30px; /* Add space between form and contact info */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .social-media {
+        justify-content: center; /* Center align icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container form {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+  
+  
+
+    .contact-info p {
+        font-size: 18px; /* Smaller text for small screens */
+    }
+
+    .contact-info a {
+        font-size: 18px; /* Smaller link size for small screens */
+    }
+
+    .social-media a {
+        font-size: 24px; /* Smaller icons for small screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .contact-container form {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px; /* Smaller padding for inputs */
+    }
+
+    .checkbox label {
+        font-size: 12px; /* Smaller checkbox label */
+    }
+
+    button[type="submit"] {
+        padding: 12px; /* Smaller button padding */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Smaller text for very small screens */
+    }
+
+    .contact-info a {
+        font-size: 16px; /* Smaller link size for very small screens */
+    }
+
+    .social-media a {
+        font-size: 20px; /* Smaller icons for very small screens */
+    }
+}

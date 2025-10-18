@@ -1,0 +1,139 @@
+/* Contact Section */
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height for centering */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    gap: 40px; /* Space between form and contact info */
+    max-width: 1200px; /* Wider container */
+    width: 100%;
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.contact-container form {
+    width: 600px; /* Fixed width for the form */
+    background-color: #222; /* Dark gray background */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* White shadow */
+}
+
+.contact-container .contact-info {
+    color: #fff; /* White text */
+    text-align: left; /* Align text to the left */
+    margin-left: 40px; /* Space between form and contact info */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff; /* White text */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 12px; /* Increased padding */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Adjust height as needed */
+}
+
+/* Checkbox Styles */
+.checkbox {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    margin-top: 15px; /* Increased margin */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.checkbox input {
+    margin-right: 10px; /* Space between checkbox and label */
+    flex-shrink: 0; /* Prevent checkbox from shrinking */
+    width: auto; /* Ensure checkbox doesn't stretch */
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #ccc; /* Light gray text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px; /* Increased padding */
+    background-color: #32bfc7; /* Teal button color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2aa8af; /* Darker teal on hover */
+}
+
+/* Contact Info Styles */
+.contact-info p {
+    font-size: 24px; /* 1.5x larger text size (16px * 1.5 = 24px) */
+    color: #ccc; /* Light gray text */
+    margin: 0 0 20px 0; /* Add margin between paragraphs */
+}
+
+.contact-info a {
+    color: #32bfc7; /* Teal link color */
+    text-decoration: none;
+    font-size: 24px; /* 1.5x larger link size */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Space above icons */
+}
+
+.social-media a {
+    display: inline-block;
+    color: #fff; /* White icons */
+    font-size: 36px; /* Larger icon size (24px * 1.5 = 36px) */
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #32bfc7; /* Teal on hover */
+}
+
+

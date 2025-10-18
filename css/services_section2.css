@@ -1,0 +1,189 @@
+/* Reset default margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Services Section */
+.services-section {
+  padding: 0 10px 60px 10px; /* Equal padding on left and right */
+  text-align: center;
+  background-color: #000; /* Black background for the entire section */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; /* Center the section */
+  color: #fff; /* White text color for the entire section */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+  overflow: hidden; /* Prevent overflow issues */
+}
+.section-title {
+  margin-bottom: 40px; /* Adds space between title and grid */
+}
+
+/* Section Title */
+.section-title p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px; /* Adds space ABOVE the title (from previous section) */
+  margin-bottom: 0; /* Remove extra bottom margin (moved to .section-title) */
+}
+
+/* Grid Styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 20px; /* Reduced gap for a more compact layout */
+  max-width: 1200px; /* Constrain the grid to a maximum width */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 10px; /* Equal padding on left and right */
+  width: 100%; /* Ensure the grid takes full width */
+}
+
+/* Service Item */
+.service-item {
+  background: #222; /* Lighter black for the blocks */
+  border-radius: 10px;
+  padding: 20px; /* Adjusted padding */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #fff; /* White text color */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+  width: 100%; /* Ensure all blocks take full width of their grid cell */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* White shadow for hover effect */
+}
+
+/* Service Item Image */
+.service-item img {
+  width: 100%; /* Fill the width of the parent block */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto 15px; /* Adjusted margin */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.service-title {
+  font-size: 1.25rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #fff; /* White text color */
+  margin-bottom: 15px; /* Adjusted margin */
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+  line-height: 1.2; /* Adjusted line height */
+}
+
+.service-description {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #ddd; /* Light gray for better readability */
+  line-height: 1.5; /* Adjusted line height */
+  margin-bottom: 0;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for tablets */
+    gap: 15px; /* Slightly reduce gap for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for phones */
+    gap: 10px; /* Further reduce gap for phones */
+  }
+
+  .section-title p {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 30px; /* Adjusted margin for smaller screens */
+    margin-top: -15px; /* Adjusted negative margin for smaller screens */
+  }
+
+  .service-title {
+    font-size: 1.1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .service-description {
+    font-size: 0.85rem; /* Adjusted font size for smaller screens */
+  }
+}
+
+/* Extra Small Screens (e.g., very small phones) */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 columns for very small phones */
+    gap: 10px; /* Keep small gap for very small phones */
+    padding: 0 10px; /* Equal padding on left and right */
+  }
+
+  .section-title p {
+    font-size: 1.75rem; /* Smaller font size for very small screens */
+    margin-bottom: 20px; /* Adjusted margin for very small screens */
+    margin-top: -10px; /* Adjusted negative margin for very small screens */
+  }
+
+  .service-title {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .service-description {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+}
+
+/* Adjustments for screens down to 290px */
+@media (max-width: 390px) {
+  .services-section {
+    padding: 0 5px 60px 5px; /* Ensure equal padding */
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0;
+    margin: 0 auto; /* Ensure grid is centered */
+    width: 100%; /* Make sure it spans full width */
+    max-width: 95%; /* Prevent overflow issues */
+  }
+
+  .service-item {
+    width: 100%;
+    margin: 0 auto; /* Ensure blocks are centered */
+  }
+}
+
+@media (max-width: 320px) {
+  .services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px 60px 5px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 0;
+    margin: 0 auto; /* Ensure the grid is centered */
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .service-item {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

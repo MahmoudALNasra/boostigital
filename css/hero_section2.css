@@ -1,0 +1,96 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: hidden;
+    margin-bottom: -30px; /* Removes blue space at bottom */
+    background: transparent;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /**background-color: linear-gradient(135deg, #18A999, #0093D4);*/
+    z-index: 0;
+    animation: zoomBg 10s infinite alternate ease-in-out;
+}
+
+.hero-content {
+    position: relative;
+    text-align: left;
+    max-width: 900px;
+    width: 100%;
+    z-index: 2;
+    padding-bottom: 0; /* Ensures no extra space at bottom */
+}
+
+/* Tightened heading spacing */
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px; /* Negative margin pulls heading up */
+    line-height: 0.8; /* Tighter line height */
+    display: block;
+}
+
+.hero-title {
+    font-size: 65px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1; /* Tight line height */
+    margin-top: -200px; /* Removed default margin */
+    padding-top: 0; /* Removed padding */
+    white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 22px;
+        margin-bottom: -8px;
+    }
+    .hero-title {
+        font-size: 40px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: -5px;
+        line-height: 0.9;
+    }
+    .hero-title {
+        font-size: 32px;
+    }
+}
+
+/* Extreme Small Mobile (320px) */
+@media (max-width: 320px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 280px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
