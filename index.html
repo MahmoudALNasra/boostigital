@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Boostigital </title>
+  <!--<link rel="stylesheet" href="css/style.css">-->
+  
+  <link rel="stylesheet" href="css/portfolio21-may6.css">
+  <link rel="stylesheet" href="css/hero_section6.css">
+  <!--<link rel="stylesheet" href="css/hero_section3.css">-->
+  <!--<link rel="stylesheet" href="css/new_hero_section.css">-->
+  <link rel="stylesheet" href="css/new_hero_first_section.css">
+  <link rel="stylesheet" href="css/image_flip.css">
+  <link rel="stylesheet" href="css/Mantra_Section.css">
+  <link rel="stylesheet" href="css/services_section7.css">
+  <link rel="stylesheet" href="css/team_section.css">
+  <link rel="stylesheet" href="css/contact_section.css">
+  <link rel="stylesheet" href="css/language_switcher.css">
+  <link rel="stylesheet" href="css/new_footer.css">
+  <link rel="stylesheet" href="css/whatsapp.css">
+  <link rel="stylesheet" href="css/Form.css">
+  <!--<link rel="stylesheet" href="css/services_section2.css">-->
+  <!-- <link rel="stylesheet" href="css/services_section3.css">-->
+  <!-- Standard Favicon -->
+    <link rel="icon" href="images/boostigital_button icon.ico" type="image/x-icon">
+    <!-- For Modern Browsers -->
+    <link rel="icon" href="images/boostigital_button icon.png" type="image/png">
+    <!-- For Apple Devices -->
+    <link rel="apple-touch-icon" href="images/miniatura_boostigital.png">
+    <!-- For Android Chrome -->
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
+ <style>
+        /* Force LTR for header */
+        .main-header {
+            direction: ltr !important;
+        }
+        
+        /* Form visibility fix */
+        #needsForm {
+            display: block !important;
+        }
+        
+        /* Navigation styles */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        
+        .main-nav li {
+            margin-left: 25px;
+        }
+        
+        .main-nav li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        /* Mobile menu styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .main-nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                padding: 20px;
+                transform: translateX(-100%);
+            }
+            
+            .main-nav.active {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostdigital</title>
+    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- WhatsApp Buttons -->
+<div class="whatsapp-buttons">
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-button chat">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+        <span>Tell Us Your Needs</span>
+    </a>
+
+    <!-- WhatsApp Call Button 
+    <a href="https://wa.me/+48792379386" target="_blank" class="whatsapp-button call">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Call">
+        <span>Call</span>
+    </a> -->
+</div>
+
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/boostigital_logo.png" alt="Boostigital Logo">
+                </a>
+            </div>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">Portfolio</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                    
+                    <li class="language-switcher">
+                        <button class="language-button" id="language-button">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="15">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- New Hero Section -->
+    <section class="new-hero-section">
+        <div class="new-hero">
+            <!-- Left Image -->
+            <div class="new-hero-image left">
+                <img src="images/boostigital_button icon.png" alt="Left Image">
+            </div>
+
+            <!-- Centered Heading -->
+            <h1 class="new-hero-title" data-lang="en">Boost Your Digital<br>Presence</h1>
+            <h1 class="new-hero-title" data-lang="ar" style="display: none;">عزز وجودك الرقمي</h1>
+
+            <!-- Right Image -->
+            <div class="new-hero-image right">
+                <img src="images/boostigital_button icon.png" alt="Right Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Flip Section -->
+    <section class="image-flip-section">
+        <div class="container">
+            <div class="image-flip-container">
+                <div class="image-flip-item">
+                    <figure>
+                        <img class="front-image" src="images/boost girl.png" alt="Boost Girl">
+                        <img class="back-image" src="images/Boost Girl Back.png" alt="Boost Girl Back">
+                    </figure>
+                </div>
+                <div class="image-flip-item">
+                    <figure>
+                        <img class="front-image" src="images/boost connect.png" alt="Boost Connect">
+                        <img class="back-image" src="images/Boost Connect Back.png" alt="Boost Connect Back">
+                    </figure>
+                </div>
+                <div class="image-flip-item">
+                    <figure>
+                        <img class="front-image" src="images/boost fly.png" alt="Boost Fly">
+                        <img class="back-image" src="images/Boost Fly Back.png" alt="Boost Fly Back">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mantra Section -->
+    <section class="mantra-section">
+        <div class="mantra-container">
+            <div class="mantra-left">
+                <div class="mantra-item">
+                    <img src="images/Experience icon.png" alt="Expertise">
+                    <div class="mantra-content">
+                        <h3 data-lang="en">Expertise</h3>
+                        <h3 data-lang="ar" style="display: none;">الخبرة</h3>
+                        <p data-lang="en">Our vast experience is our core.<br><strong>If we tell you we can do it, then we most definitely can!</strong></p>
+                        <p data-lang="ar" style="display: none;">خبرتنا الواسعة هي جوهرنا<br><strong>إذا أخبرناك أننا نستطيع فعلها، فنحن بالتأكيد نستطيع</strong></p>
+                    </div>
+                </div>
+                <div class="mantra-item">
+                    <img src="images/relevancy icon.png" alt="Relevancy">
+                    <div class="mantra-content">
+                        <h3 data-lang="en">Relevancy</h3>
+                        <h3 data-lang="ar" style="display: none;">الملاءمة</h3>
+                        <p data-lang="en">We research, dig deep and dig some more<br><strong>for a culturally-connected product.</strong></p>
+                        <p data-lang="ar" style="display: none;">نبحث ونحفر بعمق أكثر<br><strong>لإنتاج منتج متصل ثقافياً.</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="mantra-center">
+                <img src="images/guy on the mat.png" alt="Guy on the Mat">
+            </div>
+            <div class="mantra-right">
+                <div class="mantra-item">
+                    <img src="images/innovation icon.png" alt="Innovation">
+                    <div class="mantra-content">
+                        <h3 data-lang="en">Innovation</h3>
+                        <h3 data-lang="ar" style="display: none;">الابتكار</h3>
+                        <p data-lang="en">“Think outside the box”?<br><strong>We throw the box away and create our own shapes.</strong></p>
+                        <p data-lang="ar" style="display: none;">"فكر خارج الصندوق"؟<br><strong>نحن نتخلص من الصندوق ونخلق أشكالنا الخاصة</strong></p>
+                    </div>
+                </div>
+                <div class="mantra-item">
+                    <img src="images/transparency icon.png" alt="Transparency">
+                    <div class="mantra-content">
+                        <h3 data-lang="en">Transparency</h3>
+                        <h3 data-lang="ar" style="display: none;">الشفافية</h3>
+                        <p data-lang="en">No opinion is taken for granted!<br><strong>Transparency in communication is a key to our success and yours.</strong></p>
+                        <p data-lang="ar" style="display: none;">لا يتم أخذ أي رأي كأمر مسلم به<br><strong>الشفافية في التواصل هي مفتاح نجاحنا ونجاحك</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h2 class="hero-subtitle" data-lang="en">Let’s boost</h2>
+    <h2 class="hero-subtitle" data-lang="ar" style="display: none;">لنعزز</h2>
+    <h1 class="hero-title" data-lang="en">Your business to the next level</h1>
+    <h1 class="hero-title" data-lang="ar" style="display: none;">عملك إلى المستوى التالي</h1>
+    <a href="#contact_us_form" class="cta-button" data-lang="en">Contact us</a>
+    <a href="#contact_us_form" class="cta-button" data-lang="ar" style="display: none;">اتصل بنا</a>
+  </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-title">
+                <p data-lang="en">Our Services</p>
+                <p data-lang="ar" style="display: none;">خدماتنا</p>
+            </div>
+        <div class="container">
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <img src="images/website creation.png" alt="Website Creation">
+                    <h3 class="service-title" data-lang="en">Website Creation</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">إنشاء المواقع</h3>
+                    <p class="service-description" data-lang="en">Creating your website with the most efficient backend and user-friendly front end.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">إنشاء موقعك بأفضل واجهة خلفية وواجهة أمامية سهلة الاستخدام</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/branding.png" alt="Branding">
+                    <h3 class="service-title" data-lang="en">Branding</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">الهوية التجارية</h3>
+                    <p class="service-description" data-lang="en">Your brand is your persona. Let us make yours stand out in the crowd.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">هويتك التجارية هي شخصيتك. دعنا نجعلها تبرز بين الحشود</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/graphic and art direction.png" alt="Graphics and Art Direction">
+                    <h3 class="service-title" data-lang="en">Graphics and Art Direction</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">الرسومات والإخراج الفني</h3>
+                    <p class="service-description" data-lang="en">Maintain a great image with captivating visuals on every platform.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">حافظ على صورة رائعة مع مرئيات جذابة على كل منصة</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/social media management.png" alt="Social Media Management">
+                    <h3 class="service-title" data-lang="en">Social Media Management</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">إدارة وسائل التواصل الاجتماعي</h3>
+                    <p class="service-description" data-lang="en">All your digital marketing analysis and management power are excited for our conversion-led results.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">كل قوة تحليلاتك وإدارتك التسويقية متحمسة لنتائجنا القائمة على التحويل</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/content creation.png" alt="Content Creation">
+                    <h3 class="service-title" data-lang="en">Content Creation</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">إنشاء المحتوى</h3>
+                    <p class="service-description" data-lang="en">We create buzzworthy, relevant & building on brand values content.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">ننشئ محتوى يستحق الضجة وذو صلة ويعتمد على قيم العلامة التجارية</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/UX.png" alt="UI/UX Vision">
+                    <h3 class="service-title" data-lang="en">UI/UX Vision</h3>
+                    <h3 class="service-title" data-lang="ar" style="display: none;">رؤية واجهة المستخدم/التجربة</h3>
+                    <p class="service-description" data-lang="en">Ensuring a smooth experience and easy relationship to your audience will you or brand.</p>
+                    <p class="service-description" data-lang="ar" style="display: none;">ضمان تجربة سلسة وعلاقة سهلة مع جمهورك أو علامتك التجارية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="our-team-section">
+        <div class="our-team-container">
+            <h2 data-lang="en">Our Team</h2>
+            <h2 data-lang="ar" style="display: none;">فريقنا</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/UX UI Designer.png" alt="UX/UI Designer">
+                    <h3 data-lang="en">UX/UI DESIGNER</h3>
+                    <h3 data-lang="ar" style="display: none;">التركيز الشديد على كل التفاصيل</h3>
+                    <p data-lang="en">Hyperfocusing on every detail</p>
+                    <p data-lang="ar" style="display: none;">مصمم واجهة المستخدم/التجربة</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/Marketing Specialist.png" alt="Marketing Specialist">
+                    <h3 data-lang="en">MARKETING SPECIALIST</h3>
+                    <h3 data-lang="ar" style="display: none;">مليء بالنتائج الرائعة</h3>
+                    <p data-lang="en">Full of great results</p>
+                    <p data-lang="ar" style="display: none;">أخصائي تسويق</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/web-dev_icon_boost.png" alt="Web Developer">
+                    <h3 data-lang="en">WEB DEVELOPERS</h3>
+                    <h3 data-lang="ar" style="display: none;">نينجا التكنولوجيا التحليلية</h3>
+                    <p data-lang="en">Analytical ninja of technology</p>
+                    <p data-lang="ar" style="display: none;">مطورو الويب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact_us_form">
+        <div class="contact-container" >
+                <form id="contactForm">  <!-- Remove action and method -->
+
+
+                <div class="form-group" >
+                    <label for="full-name" data-lang="en">Name (required)</label>
+                    <label for="full-name" data-lang="ar" style="display: none;">الاسم (مطلوب)</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-name" data-lang="en">Company name</label>
+                    <label for="company-name" data-lang="ar" style="display: none;">اسم الشركة</label>
+                    <input type="text" id="company-name" name="company-name">
+                </div>
+                <div class="form-group">
+                    <label for="contact-number" data-lang="en">Contact number</label>
+                    <label for="contact-number" data-lang="ar" style="display: none;">رقم الاتصال</label>
+                    <input type="tel" id="contact-number" name="contact-number">
+                </div>
+                <div class="form-group">
+                    <label for="contact-email" data-lang="en">Contact email address (required)</label>
+                    <label for="contact-email" data-lang="ar" style="display: none;">البريد الإلكتروني (مطلوب)</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                    <label for="privacy-policy" data-lang="en">I agree to the privacy policy</label>
+                    <label for="privacy-policy" data-lang="ar" style="display: none;">أوافق على سياسة الخصوصية</label>
+                </div>
+                <button type="submit" data-lang="en">Submit</button>
+                <button type="submit" data-lang="ar" style="display: none;">إرسال</button>
+            </form>
+            <div id="formResponse" style="display: none; margin: 20px 0; padding: 10px; border-radius: 5px;"></div>
+            <div class="contact-info">
+                <p><strong data-lang="en">Prefer Another Way to Connect?</strong></p>
+                <p><strong data-lang="ar" style="display: none;">تفضل طريقة أخرى للتواصل؟</strong></p>
+                <p><a href="mailto:contact@boostigital.com">contact@boostigital.com</a></p>
+                <p><strong data-lang="en">Marketing cooperation:</strong></p>
+                <p><strong data-lang="ar" style="display: none;">التعاون التسويقي:</strong></p>
+                <p><a href="mailto:marketing@boostigital.com">marketing@boostigital.com</a></p>
+              
+              <!-- Social Media Icons -->
+                <div class="social-media">
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i> <!-- Facebook Icon -->
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p data-lang="en">&copy; 2025 Boostigital. All rights reserved.</p>
+            <p data-lang="ar" style="display: none;">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+    <!-- JavaScript for Language Switcher -->
+    <script>
+    document.getElementById('language-button').addEventListener('click', function() {
+        const englishElements = document.querySelectorAll('[data-lang="en"]');
+        const arabicElements = document.querySelectorAll('[data-lang="ar"]');
+        const flagImg = this.querySelector('img');
+
+        if (flagImg.src.includes('gb.svg')) {
+            // Switch to Arabic
+            flagImg.src = 'https://flagcdn.com/sa.svg';
+            flagImg.alt = 'Arabic';
+            englishElements.forEach(el => el.style.display = 'none');
+            arabicElements.forEach(el => el.style.display = 'block');
+        } else {
+            // Switch to English (British flag)
+            flagImg.src = 'https://flagcdn.com/gb.svg'; // Updated to British flag
+            flagImg.alt = 'English';
+            englishElements.forEach(el => el.style.display = 'block');
+            arabicElements.forEach(el => el.style.display = 'none');
+        }
+    });
+</script>
+<script>
+  // Store current language state
+let currentLanguage = 'en';
+
+// Toggle mobile menu
+function toggleMenu() {
+    const nav = document.getElementById("mainNav");
+    nav.classList.toggle("active");
+}
+
+// Language switcher
+document.getElementById('language-button').addEventListener('click', function() {
+    const englishElements = document.querySelectorAll('[data-lang="en"]');
+    const arabicElements = document.querySelectorAll('[data-lang="ar"]');
+    const flagImg = this.querySelector('img');
+
+    if (flagImg.src.includes('gb.svg')) {
+        // Switch to Arabic
+        flagImg.src = 'https://flagcdn.com/sa.svg';
+        flagImg.alt = 'Arabic';
+        englishElements.forEach(el => el.style.display = 'none');
+        arabicElements.forEach(el => el.style.display = 'block');
+        currentLanguage = 'ar';
+    } else {
+        // Switch to English (British flag)
+        flagImg.src = 'https://flagcdn.com/gb.svg';
+        flagImg.alt = 'English';
+        englishElements.forEach(el => el.style.display = 'block');
+        arabicElements.forEach(el => el.style.display = 'none');
+        currentLanguage = 'en';
+    }
+    
+    // Store language preference in localStorage
+    localStorage.setItem('boostigitalLanguage', currentLanguage);
+});
+
+// Check for saved language preference
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('boostigitalLanguage');
+    if (savedLanguage === 'ar') {
+        document.getElementById('language-button').click();
+    }
+    
+    // Update all navigation links to maintain language
+    updateNavLinks();
+    
+    // Initialize navigation and smooth scroll
+    initNavigation();
+});
+
+// Update navigation links to maintain language
+function updateNavLinks() {
+    const navLinks = document.querySelectorAll('[data-lang]');
+    navLinks.forEach(link => {
+        if (link.dataset.lang === currentLanguage) {
+            link.style.display = 'block';
+        } else {
+            link.style.display = 'none';
+        }
+    });
+}
+
+// Initialize navigation and smooth scroll
+function initNavigation() {
+    // Handle navigation links
+    document.querySelectorAll('.main-nav a').forEach(link => {
+        if (link.getAttribute('href').startsWith('http') || 
+            link.getAttribute('href').includes('.html') ||
+            link.getAttribute('href').includes('.php')) {
+            // Regular navigation link - ensure default behavior
+            link.addEventListener('click', function(e) {
+                // Allow normal navigation
+                return true;
+            });
+        }
+    });
+
+    // Handle smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            // Only prevent default if it's an on-page anchor
+            if (target && href !== '#' && !this.classList.contains('no-smooth')) {
+                e.preventDefault();
+                smoothScroll(href, 1000);
+                
+                // Update URL without page reload
+                if (history.pushState) {
+                    history.pushState(null, null, href);
+                } else {
+                    location.hash = href;
+                }
+            }
+        });
+    });
+}
+
+// Smooth scrolling function
+function smoothScroll(targetId, duration) {
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+}
+// Ensure consistent header behavior
+document.addEventListener('DOMContentLoaded', function() {
+    // Set consistent body styles
+    document.body.style.width = '100%';
+    document.body.style.overflowX = 'hidden';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    
+    // Make sure all sections have consistent width
+    document.querySelectorAll('section').forEach(section => {
+        section.style.width = '100%';
+        section.style.maxWidth = '100%';
+        section.style.overflow = 'hidden';
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Set consistent body styles
+    document.body.style.width = '100%';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflowX = 'hidden';
+    
+    // Initialize all containers
+    const containers = document.querySelectorAll('.container, .main-container');
+    containers.forEach(container => {
+        container.style.maxWidth = '1200px';
+        container.style.width = '100%';
+        container.style.margin = '0 auto';
+        container.style.padding = '0 20px';
+        container.style.boxSizing = 'border-box';
+    });
+    
+    // Initialize all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.width = '100%';
+        section.style.maxWidth = '100%';
+        section.style.overflow = 'hidden';
+    });
+});
+// Set active class on current page link
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
+</body>
+</html>
+<!-- partial -->
+  
+

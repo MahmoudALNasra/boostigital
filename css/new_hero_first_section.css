@@ -1,0 +1,101 @@
+/*New Hero Section (Renamed to avoid conflicts) */
+/* New Hero Section */
+/* New Hero Section */
+.new-hero-section {
+    background-color: #000; /* Black background */
+    padding: 100px 0; /* Add padding for spacing */
+}
+
+.new-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between images and text */
+    max-width: 1200px; /* Limit width for better alignment */
+    margin: 0 auto; /* Center the hero section */
+}
+
+.new-hero-image img {
+    width: 100%; /* Match the size of .front-image */
+    height: auto;
+    max-width: 350px; /* Adjust based on .front-image size */
+    transition: transform 0.5s ease; /* Smooth rotation effect */
+}
+
+.new-hero-image.left:hover img {
+    transform: rotate(90deg); /* Rotate left image 90 degrees on hover */
+}
+
+.new-hero-image.right:hover img {
+    transform: rotate(-90deg); /* Rotate right image -90 degrees on hover */
+}
+
+.new-hero-title {
+    font-size: clamp(24px, 6vw, 60px); /* Minimum 24px, proportional 6vw, maximum 86px */
+    font-weight: 900; /* Bold text */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 0 20px; /* Add horizontal padding for spacing */
+    margin: 0; /* Remove default margin */
+}
+.new-hero-title:hover {
+    color: #32bfc7 !important; /* Replace with your exact brand blue color */
+}
+/* Responsive Design for New Hero Section */
+@media (max-width: 768px) {
+    .new-hero {
+        gap: 10px; /* Reduced gap for mobile */
+        flex-direction: row; /* Ensure 3 columns on mobile */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: space-around; /* Distribute items evenly */
+    }
+
+    .new-hero-image,
+    .new-hero-title {
+        flex: 1 1 30%; /* Ensure each item takes up roughly 1/3 of the width */
+        text-align: center; /* Center-align text and images */
+    }
+
+    .new-hero-title {
+        font-size: clamp(24px, 6vw, 86px); /* Ensure proportional scaling */
+        padding: 0 10px; /* Adjusted padding for mobile */
+    }
+
+    .new-hero-image img {
+        max-width: 150px; /* Smaller images for mobile */
+    }
+}
+
+@media (max-width: 454px) {
+    .new-hero {
+        gap: 5px; /* Further reduced gap for smaller screens */
+    }
+
+    .new-hero-title {
+        font-size: clamp(24px, 6vw, 86px); /* Ensure proportional scaling */
+    }
+
+    .new-hero-image img {
+        max-width: 120px; /* Smaller images for smaller screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .new-hero {
+        gap: 5px; /* Further reduced gap for smaller screens */
+    }
+
+    .new-hero-title {
+        font-size: clamp(18px, 6vw, 86px); /* Ensure proportional scaling */
+    }
+
+    .new-hero-image img {
+        max-width: 100px; /* Smaller images for smaller screens */
+    }
+}
+@media (hover: hover) {
+    .new-hero-title:hover {
+        color: #32bfc7;
+    }
+}

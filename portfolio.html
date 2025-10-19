@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostdigital</title>
+    <link rel="stylesheet" href="css/contact_us_page.css">
+    <link rel="stylesheet" href="css/contact_us_page_form_submit_css.css">
+     <link rel="stylesheet" href="css/hero_section6.css">
+    <link rel="stylesheet" href="css/header5forportfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <link rel="stylesheet" href="portfolio21-may.css">
+    <link rel="stylesheet" href="css/portfolio21-may6.css">
+    <link rel="stylesheet" href="css/language_switcher.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
+    <link rel="icon" href="images/boostigital_button icon.ico" type="image/x-icon">
+    <link rel="icon" href="images/boostigital_button icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/miniatura_boostigital.png">
+    <style>
+        /* Force LTR for header and first section */
+        .main-header, .brand-showcase {
+            direction: ltr !important;
+        }
+        /* Fix for pharmacy section buttons */
+        .clickable-area {
+            cursor: pointer;
+        }
+        /* Make sure mission section buttons work */
+        .screen-toggle[data-lang="ar"] {
+            display: none;
+        }
+        .screen-toggle[data-lang="en"] {
+            display: block;
+        }
+        body[dir="rtl"] .screen-toggle[data-lang="ar"] {
+            display: block;
+        }
+        body[dir="rtl"] .screen-toggle[data-lang="en"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <!-- Logo (always left) -->
+            <div class="logo">
+                <a href="index.html">
+                <img src="images/boostigital_logo.png" alt="Logo">
+                 </a>
+            </div>
+            
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu (always right) -->
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-link" data-lang="en">Home</a>
+                        <a href="index.html" class="nav-link" data-lang="ar" style="display: none;">الرئيسية</a>
+                    </li>
+                    <li><a href="index.html#services" class="nav-link" data-lang="en">SERVICES</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-lang="en">CONTACT US</a></li>
+                    
+                    <!-- Arabic menu items (hidden by default) -->
+                    <li><a href="index.html#services" class="nav-link" data-lang="ar" style="display: none;">خدماتنا</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-lang="ar" style="display: none;">اتصل بنا</a></li>
+                    
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button id="language-button">
+                            <img src="https://flagcdn.com/gb.svg" alt="English" class="flag">
+                        </button>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- WhatsApp Buttons -->
+    <div class="whatsapp-buttons">
+        <!-- WhatsApp Chat Button -->
+        <a href="https://wa.me/?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-button chat">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            <span data-lang="en">Tell Us Your Needs</span>
+            <span data-lang="ar" style="display: none;">تواصل معنا</span>
+        </a>
+    </div>
+    
+    <div class="main-container">
+        <!-- First Section -->
+        <section class="brand-showcase">
+            <div class="logo-wrapper">
+                <img src="images/boostigital_logo.png" 
+                     alt="bostigital logo" 
+                     class="logo-image">
+                <div class="logo-subtext" data-lang="en">portfolio</div>
+                <div class="logo-subtext" data-lang="ar" style="display: none;">أعمالنا</div>
+            </div>
+        </section>
+        
+        <!-- Second Section - Fixed Arabic word order -->
+        <section class="social-section">
+            <div class="social-content">
+                <div class="title-wrapper">
+                    <span class="social-title-left" data-lang="en">Social</span>
+                    <span class="social-title-left" data-lang="ar" style="display: none;">التواصل</span>
+                    <span class="social-title-right" data-lang="en">media</span>
+                    <span class="social-title-right" data-lang="ar" style="display: none;">الاجتماعي</span>
+                </div>
+                <div class="subtitle-wrapper">
+                    <span class="social-subtitle-left" data-lang="en">boost</span>
+                    <span class="social-subtitle-left" data-lang="ar" style="display: none;">تعزيز</span>
+                    <span class="social-subtitle-right" data-lang="en">concept</span>
+                    <span class="social-subtitle-right" data-lang="ar" style="display: none;">العلامة</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Third Section - Fixed Arabic word order -->
+        <section class="social-description">
+            <div class="description-header">
+              <h2 class="description-title">
+                <div class="title-line-wrapper">
+                  <span class="title-line title-line-1" data-lang="en">Social</span>
+                  <span class="title-line title-line-1" data-lang="ar" style="display: none;">التواصل</span>
+                  <span class="title-line title-line-2" data-lang="en">media</span>
+                  <span class="title-line title-line-2" data-lang="ar" style="display: none;">الاجتماعي</span>
+                </div>
+                <div class="title-line-wrapper">
+                  <span class="title-line title-line-2" data-lang="en">boost</span>
+                  <span class="title-line title-line-2" data-lang="ar" style="display: none;">تعزيز</span>
+                  <span class="title-line title-line-1" data-lang="en">concept</span>
+                  <span class="title-line title-line-1" data-lang="ar" style="display: none;">العلامة</span>
+                </div>
+              </h2>
+            </div>
+            
+            <div class="content-wrapper">
+              <div class="text-container">
+                <div class="text-wrapper">
+                  <p class="description-text" data-lang="en">Your social media is your brand's business card – it either shines and attracts or gets lost in the crowd. We make sure it sparkles! We build branding that not only looks great but also engages and sells.</p>
+                  <p class="description-text" data-lang="en">Trust us with your profiles, and your brand will become as recognizable as your favorite meme online!</p>
+                  
+                  <p class="description-text" data-lang="ar" style="display: none;">وسائل التواصل الاجتماعي هي واجهة علامتك التجارية - إما أن تبرز وتجذب أو تضيع بين المنافسين. نحن نضمن تميزك! نصنع هوية لا تبدو رائعة فحسب، بل تتفاعل مع الجمهور وتحقق المبيعات.</p>
+                  <p class="description-text" data-lang="ar" style="display: none;">ثق بنا في إدارة منصاتك، وسنحول علامتك التجارية إلى أيقونة معروفة في عالم الإنترنت!</p>
+                </div>
+              </div>
+              
+              <div class="images-container">
+                <img src="https://i.imgur.com/2FGMI89.png" alt="Social media example" class="desc-image">
+                <img src="https://i.imgur.com/mmOy1zC.png" alt="Social media example" class="desc-image">
+              </div>
+            </div>
+            
+            <div class="footer-container">
+              <img src="https://i.imgur.com/uvPHvql_d.png?maxwidth=520&shape=thumb&fidelity=high" 
+                   alt="small bostigital logo" 
+                   class="small-logo">
+            </div>
+        </section>
+
+        <!-- Fourth Section - Fixed Arabic word order -->
+        <section class="concept-section">
+            <div class="description-header">
+              <h2 class="description-title">
+                <div class="title-line-wrapper">
+                  <span class="title-line title-line-1" data-lang="en">Social</span>
+                  <span class="title-line title-line-1" data-lang="ar" style="display: none;">التواصل</span>
+                  <span class="title-line title-line-2" data-lang="en">media</span>
+                  <span class="title-line title-line-2" data-lang="ar" style="display: none;">الاجتماعي</span>
+                </div>
+                <div class="title-line-wrapper">
+                  <span class="title-line title-line-2" data-lang="en">boost</span>
+                  <span class="title-line title-line-2" data-lang="ar" style="display: none;">تعزيز</span>
+                  <span class="title-line title-line-1" data-lang="en">concept</span>
+                  <span class="title-line title-line-1" data-lang="ar" style="display: none;">العلامة</span>
+                </div>
+              </h2>
+            </div>
+            
+            <div class="content-wrapper">
+              <div class="text-container">
+                <div class="text-wrapper">
+                  <p class="description-text" data-lang="en">We create more than just pretty visuals – we build entire concepts that attract and stick in people's minds. We craft catchy slogans, develop cohesive strategies, and perfect every detail.</p>
+                  <p class="description-text" data-lang="en">And with Meta Ads, your brand reaches exactly where it should – straight to the hearts and minds of your customers!</p>
+                  
+                  <p class="description-text" data-lang="ar" style="display: none;">نحن لا نقدم مجرد تصاميم جميلة، بل نبتكر مفاهيم كاملة تعلق في الأذهان. نصنع شعارات جذابة، نطور استراتيجيات متكاملة، ونحترف كل التفاصيل.</p>
+                  <p class="description-text" data-lang="ar" style="display: none;">وباستخدام إعلانات ميتا، نصل بعلامتك التجارية إلى الجمهور المستهدف مباشرة - إلى قلوب وعقول عملائك!</p>
+                </div>
+              </div>
+              
+              <div class="images-container">
+                <img src="https://i.imgur.com/G0cZ3Bs.png" alt="Concept development example" class="desc-image">
+                <img src="https://i.imgur.com/OPIKYrz.png" alt="Concept development example" class="desc-image">
+              </div>
+            </div>
+            
+            <div class="footer-container">
+              <img src="https://i.imgur.com/uvPHvql_d.png?maxwidth=520&shape=thumb&fidelity=high" 
+                   alt="small bostigital logo" 
+                   class="small-logo">
+            </div>
+        </section>
+        
+        <!-- Brand Promise Section -->
+        <section class="brand-promise">
+            <div class="promise-container">
+                <div class="promise-box">
+                    <p class="promise-text" data-lang="en">
+                        <span class="text-white">We ensure consistent communication, always responding to customer needs – </span>
+                        <span class="text-blue">together, we create recognizable brands!</span>
+                    </p>
+                    <p class="promise-text" data-lang="ar" style="display: none;">
+                        <span class="text-white">نضمن تواصلاً مستمراً، نستجيب دائمًا لاحتياجات العملاء – </span>
+                        <span class="text-blue">معًا نصنع علامات تجارية مميزة!</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Grid Section -->
+        <section class="image-grid-section">
+            <div class="grid-container">
+                <div class="grid-row top-row">
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/hYcYtYG.png" alt="Airport App 1" class="grid-image top-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/owvmMLo.png" alt="Airport App 2" class="grid-image top-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/TuMVbow.png" alt="Airport App 3" class="grid-image top-image">
+                    </div>
+                </div>
+                
+                <div class="grid-row bottom-row">
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/qKQeF29.png" alt="Airport App 4" class="grid-image bottom-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/8ToN4zX.png" alt="Airport App 5" class="grid-image bottom-image">
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://i.imgur.com/jVHDDfI.png" alt="Airport App 6" class="grid-image bottom-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="full-image-section">
+            <img src="https://i.imgur.com/xu7GScR.jpeg" alt="Descriptive text about the image">
+        </section>
+     
+        <!-- Unconventional Section -->
+        <section class="unconventional-section">
+            <div class="unconventional-container">
+                <div class="unconventional-content">
+                    <div class="unconventional-text">
+                        <h1 class="unconventional-headline">
+                            <span class="text-blue" data-lang="en">Unconventional thinking is our signature</span>
+                            <span class="text-blue" data-lang="ar" style="display: none;">الابتكار هو توقيعنا</span>
+                            <span class="text-black" data-lang="en"> – we'd love to teach you how to boost your business to the next level!</span>
+                            <span class="text-black" data-lang="ar" style="display: none;"> - نود أن نعلمك كيف تطور عملك إلى مستوى جديد!</span>
+                        </h1>
+                    </div>
+                    <div class="unconventional-phones">
+                        <img src="https://i.imgur.com/NJcvNwD.png" alt="Phone screen 1" class="phone-screen phone-1">
+                        <img src="https://i.imgur.com/9HdMBzS.png" alt="Phone screen 2" class="phone-screen phone-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+        <!-- Business Adoption Section -->
+        <section class="business-adoption-section">
+            <div class="business-adoption-container">
+                <div class="business-adoption-left">
+                    <div class="business-adoption-content">
+                        <h2 class="section-title" data-lang="en">BUSINESS ADOPTION:</h2>
+                        <h2 class="section-title" data-lang="ar" style="display: none;">الأعمال والرقمية:</h2>
+                        <p class="stat-text" data-lang="en">
+                            <span class="stat-number">77%</span> OF COMPANIES USE SOCIAL MEDIA PLATFORMS TO CONNECT WITH THE RIGHT AUDIENCES, PROVING THEIR WIDESPREAD ROLE IN BUSINESS STRATEGIES.
+                        </p>
+                        <p class="stat-text" data-lang="ar" style="display: none;">
+                            <span class="stat-number">77%</span> من الشركات تستخدم وسائل التواصل الاجتماعي للوصول إلى الجمهور المناسب، مما يؤكد دورها الأساسي في استراتيجيات الأعمال.
+                        </p>
+                    </div>
+                </div>
+                <div class="business-adoption-right">
+                    <h3 class="did-you-know" data-lang="en">did you know that...</h3>
+                    <h3 class="did-you-know" data-lang="ar" style="display: none;">هل تعلم...</h3>
+                    <p class="right-stat-number">73%</p>
+                    <p class="right-stat-text" data-lang="en">of marketers considered social media highly effective in driving website traffic and generating leads.</p>
+                    <p class="right-stat-text" data-lang="ar" style="display: none;">من المسوقين يرون وسائل التواصل الاجتماعي فعالة جداً في جذب الزوار وتوليد العملاء المحتملين.</p>
+                </div>
+            </div>
+        </section>
+   
+        <section class="boost-section" id="boostSection">
+            <div class="boost-container">
+                <h1 class="boost-headline">
+                    <span class="line-1" data-lang="en">Boost your</span>
+                    <span class="line-1" data-lang="ar" style="display: none;">طور</span>
+                    <span class="line-2" data-lang="en">website, <span class="blue-text" id="boostWord">boost</span></span>
+                    <span class="line-2" data-lang="ar" style="display: none;">موقعك، <span class="blue-text" id="boostWord">ارتقِ</span></span>
+                    <span class="line-3"><span id="businessWord" data-lang="en">your business!</span></span>
+                    <span class="line-3"><span id="businessWord" data-lang="ar" style="display: none;">بعملك!</span></span>
+                </h1>
+            </div>
+        </section>
+      
+        <!-- Mission Section with fixed Arabic text and working buttons -->
+        <section class="mission-section">
+            <div class="mission-container">
+                <div class="mission-content">
+                    <h1 class="mission-headline" data-lang="en">
+                        <span class="text-line">We don't just code</span>
+                        <span class="text-line"><span class="text-dash">–</span><span class="text-blue"> we create online</span></span>
+                        <span class="text-line"><span class="text-blue">experiences that </span></span>
+                        <span class="text-line">engage and</span>
+                        <span class="text-line">convert.</span>
+                    </h1>
+                    <h1 class="mission-headline" data-lang="ar" style="display: none;">
+                        <span class="text-line">لسنا مجرد مبرمجين</span>
+                        <span class="text-line"><span class="text-dash">–</span><span class="text-blue"> نصنع تجارب</span></span>
+                        <span class="text-line"><span class="text-blue">رقمية </span></span>
+                        <span class="text-line">تجذب وتؤثر</span>
+                        <span class="text-line">وتحقق النتائج</span>
+                    </h1>
+                    <p class="mission-description" data-lang="en">
+                        Our websites don't just look great; they work – capturing attention, increasing engagement, and delivering real results. Have a vision? We'll bring it to life, combining creative design with functionality that drives your business forward. Get in touch with us and let's create something amazing!
+                    </p>
+                    <p class="mission-description" data-lang="ar" style="display: none;">
+                        مواقعنا ليست جميلة المظهر فقط، بل فعالة - تجذب الانتباه، تزيد التفاعل، وتحقق نتائج ملموسة. لديك رؤية؟ سنحولها إلى واقع، بدمج التصميم الإبداعي مع الوظائف التي تدفع عملك للأمام. تواصل معنا لنصنع شيئاً مميزاً!
+                    </p>
+                </div>
+                <div class="mission-visual">
+                    <div class="laptop-wrapper">
+                        <img src="https://i.imgur.com/oEi07Gu.png" alt="Website on laptop" class="laptop-image">
+                        <div class="laptop-screen">
+                            <div class="screen-content">
+                                <div class="screen-header">
+                                    <span data-lang="en">Books</span>
+                                    <span data-lang="ar" style="display: none;">الكتب</span>
+                                    <span data-lang="en">Assets</span>
+                                    <span data-lang="ar" style="display: none;">الأصول</span>
+                                    <span data-lang="en">Comments</span>
+                                    <span data-lang="ar" style="display: none;">التعليقات</span>
+                                    <span data-lang="en">Page</span>
+                                    <span data-lang="ar" style="display: none;">الصفحة</span>
+                                </div>
+                                <div class="screen-body">
+                                    <div class="screen-column">
+                                        <h3 data-lang="en">Size</h3>
+                                        <h3 data-lang="ar" style="display: none;">الحجم</h3>
+                                        <pre>width: 198%
+min-height: 
+38s
+display: flex
+align-items: 
+center</pre>
+                                    </div>
+                                    <div class="screen-column">
+                                        <h3>JS</h3>
+                                        <p>3485</p>
+                                        <p>3441</p>
+                                        <p>3453</p>
+                                        <h3 data-lang="en">Settings</h3>
+                                        <h3 data-lang="ar" style="display: none;">الإعدادات</h3>
+                                    </div>
+                                    <div class="screen-column">
+                                        <h3>Jazz</h3>
+                                        <p>1222</p>
+                                        <p>1294</p>
+                                        <p>1233</p>
+                                    </div>
+                                </div>
+                                <div class="screen-footer">
+                                    <span data-lang="en">Last saved APRIL 10, 2025 – 6:00:00 AM</span>
+                                    <span data-lang="ar" style="display: none;">آخر حفظ 10 أبريل 2025 – 6:00:00 ص</span>
+                                    <span data-lang="en">Delete</span>
+                                    <span data-lang="ar" style="display: none;">حذف</span>
+                                    <span data-lang="en">Add to Collection</span>
+                                    <span data-lang="ar" style="display: none;">إضافة للمجموعة</span>
+                                    <span data-lang="en">Foto</span>
+                                    <span data-lang="ar" style="display: none;">صورة</span>
+                                    <span data-lang="en">Embed</span>
+                                    <span data-lang="ar" style="display: none;">تضمين</span>
+                                    <span data-lang="en">Export</span>
+                                    <span data-lang="ar" style="display: none;">تصدير</span>
+                                    <span data-lang="en">Share</span>
+                                    <span data-lang="ar" style="display: none;">مشاركة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="screen-toggle" data-lang="en" onclick="toggleScreen()">Boost Screen</button>
+                    <button class="screen-toggle" data-lang="ar" style="display: none;" onclick="toggleScreen()">عرض الموقع</button>
+                </div>
+            </div>
+        </section>
+      
+        <!-- Pharmacy Section with working buttons and fixed instruction position -->
+        <section class="pharmacy-section">
+            <div class="pharmacy-container">
+                <div class="pharmacy-visual">
+                    <div class="laptop-animation-wrapper">
+                        <img src="https://i.imgur.com/B8CdKfK.png" alt="Pharmacy website" class="laptop-image">
+                        
+                        <!-- Clickable Main Buttons -->
+                        <div class="clickable-area contact-btn" onclick="showOverlay('contact')">
+                            <span data-lang="en">Contact Us</span>
+                            <span data-lang="ar" style="display: none;">اتصل بنا</span>
+                        </div>
+                        <div class="clickable-area call-btn" onclick="showOverlay('call')">
+                            <span data-lang="en">Call Us</span>
+                            <span data-lang="ar" style="display: none;">اتصال</span>
+                        </div>
+                        
+                        <!-- Footer Buttons -->
+                        <div class="repositioned-footer">
+                            <div class="footer-button" onclick="showOverlay('footer1')"></div>
+                            <div class="footer-button" onclick="showOverlay('footer2')"></div>
+                            <div class="footer-button" onclick="showOverlay('footer3')"></div>
+                            <div class="footer-button" onclick="showOverlay('footer4')"></div>
+                            <div class="footer-button" onclick="showOverlay('footer5')"></div>
+                            <div class="footer-button" onclick="showOverlay('footer6')"></div>
+                        </div>
+                        
+                        <!-- Boostigital Overlay -->
+                        <div class="boostigital-overlay" id="boostigitalOverlay">
+                            <img src="https://i.imgur.com/PaLHVj9.png" alt="Boostigital" class="boostigital-image">
+                            <button class="close-overlay" onclick="hideOverlay()">&times;</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="animation-instruction" data-lang="en">Click on 'Contact Us' or 'Call Us' to view details</p>
+                <p class="animation-instruction" data-lang="ar" style="display: none;">انقر على "اتصل بنا" أو "اتصال" لعرض التفاصيل</p>
+            </div>
+        </section>
+   
+        <section class="ux-section">
+            <div class="ux-container">
+                <h1 class="ux-headline">
+                    <span class="ux-text-white" data-lang="en">Investing in UX and proper web preparation isn't just about aesthetics – </span>
+                    <span class="ux-text-white" data-lang="ar" style="display: none;">الاستثمار في تجربة المستخدم والتصميم الجيد لا يقتصر على المظهر – </span>
+                    <span class="ux-text-blue" data-lang="en">it's the key to attracting customers, building trust, and driving business growth!</span>
+                    <span class="ux-text-blue" data-lang="ar" style="display: none;">بل هو المفتاح لجذب العملاء، بناء الثقة، وتحقيق النمو!</span>
+                </h1>
+            </div>
+        </section>
+      
+        <section class="conversion-boost-section">
+            <div class="conversion-boost-container">
+                <div class="conversion-boost-left">
+                    <div class="conversion-boost-content">
+                        <h2 class="conversion-boost-title" data-lang="en">INCREASE IN CONVERSIONS:</h2>
+                        <h2 class="conversion-boost-title" data-lang="ar" style="display: none;">زيادة التحويلات:</h2>
+                        <p class="conversion-boost-text" data-lang="en">
+                            A well-designed website can boost conversion rates by up to <span class="conversion-highlight">400%</span>, directly translating into more transactions.
+                        </p>
+                        <p class="conversion-boost-text" data-lang="ar" style="display: none;">
+                            يمكن لموقع مصمم جيداً أن يزيد معدلات التحويل حتى <span class="conversion-highlight">400%</span>، مما يعني المزيد من المبيعات مباشرة.
+                        </p>
+                    </div>
+                </div>
+                <div class="conversion-boost-right">
+                    <h3 class="conversion-did-you-know" data-lang="en">did you know that...</h3>
+                    <h3 class="conversion-did-you-know" data-lang="ar" style="display: none;">هل تعلم...</h3>
+                    <p class="conversion-big-number">91%</p>
+                    <p class="conversion-right-text" data-lang="en">of users will return to a website only if they have a positive experience. One bad click could cost you customers for months!</p>
+                    <p class="conversion-right-text" data-lang="ar" style="display: none;">من المستخدمين سيعودون لموقعك فقط إذا كانت تجربتهم إيجابية. تجربة سيئة واحدة قد تكلفك عملاء لشهور!</p>
+                </div>
+            </div>
+        </section>
+      
+        <!-- Hero Boost Section - Fixed Arabic text -->
+        <section class="hero-boost-section">
+            <div class="hero-boost-container">
+                <img src="https://i.imgur.com/uvPHvql_d.png?maxwidth=520&shape=thumb&fidelity=high" alt="Bostigital Logo" class="hero-boost-logo">
+                <h1 class="hero-boost-tagline">
+                    <span class="capital-b" data-lang="en"></span>
+                    <span data-lang="en">Boost your business to the next<br>level with us!</span>
+                    <span data-lang="ar" style="display: none;">طور عملك إلى المستوى التالي<br>معنا!</span>
+                </h1>
+            </div>
+        </section>
+      
+        <div class="scroll-space"></div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p data-lang="en">&copy; 2025 Boostigital. All rights reserved.</p>
+            <p data-lang="ar" style="display: none;">&copy; 2025 Boostigital. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Store current language state
+        let currentLanguage = 'en';
+        
+        // Toggle mobile menu
+        function toggleMenu() {
+            const nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+        
+        // Language switcher
+        document.getElementById('language-button').addEventListener('click', function() {
+            const englishElements = document.querySelectorAll('[data-lang="en"]');
+            const arabicElements = document.querySelectorAll('[data-lang="ar"]');
+            const flagImg = this.querySelector('img');
+
+            if (flagImg.src.includes('gb.svg')) {
+                // Switch to Arabic
+                flagImg.src = 'https://flagcdn.com/sa.svg';
+                flagImg.alt = 'Arabic';
+                englishElements.forEach(el => {
+                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
+                        el.style.display = 'none';
+                    }
+                });
+                arabicElements.forEach(el => {
+                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
+                        el.style.display = 'block';
+                    }
+                });
+                currentLanguage = 'ar';
+                
+                // Set RTL for body but keep header LTR
+                document.body.dir = 'rtl';
+                document.body.lang = 'ar';
+            } else {
+                // Switch to English (British flag)
+                flagImg.src = 'https://flagcdn.com/gb.svg';
+                flagImg.alt = 'English';
+                englishElements.forEach(el => {
+                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
+                        el.style.display = 'block';
+                    }
+                });
+                arabicElements.forEach(el => {
+                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
+                        el.style.display = 'none';
+                    }
+                });
+                currentLanguage = 'en';
+                
+                // Reset to LTR
+                document.body.dir = 'ltr';
+                document.body.lang = 'en';
+            }
+            
+            // Store language preference in localStorage
+            localStorage.setItem('boostigitalLanguage', currentLanguage);
+        });
+        
+        // Check for saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLanguage = localStorage.getItem('boostigitalLanguage');
+            if (savedLanguage === 'ar') {
+                document.getElementById('language-button').click();
+            }
+            
+            // Update all navigation links to maintain language
+            updateNavLinks();
+        });
+        
+        // Update navigation links to maintain language
+        function updateNavLinks() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.dataset.lang === currentLanguage) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        }
+        
+        // Pharmacy section overlay functions
+        function showOverlay(type) {
+            const overlay = document.getElementById('boostigitalOverlay');
+            // You can customize the overlay content based on the button type
+            overlay.style.display = 'flex';
+        }
+        
+        function hideOverlay() {
+            const overlay = document.getElementById('boostigitalOverlay');
+            overlay.style.display = 'none';
+        }
+        
+        // Mission section screen toggle
+        function toggleScreen() {
+            const screen = document.querySelector('.laptop-screen');
+            screen.classList.toggle('active');
+        }
+        
+        // Smooth scrolling
+        function smoothScroll(targetId, duration) {
+            const target = document.querySelector(targetId);
+            const targetPosition = target.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                smoothScroll(targetId, 1000);
+            });
+        });
+    </script>
+    
+    <script src="/js/portfoliojs.js"></script>
+</body>
+</html>

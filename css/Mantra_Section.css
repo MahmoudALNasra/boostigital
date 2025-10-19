@@ -1,0 +1,281 @@
+/* Mantra Section */
+/* Mantra Section */
+/* Mantra Section */
+/* Mantra Section */
+.mantra-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000;
+    width: 100%;
+}
+
+.mantra-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Left and Right Columns */
+.mantra-left, .mantra-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Center Image */
+.mantra-center {
+    flex: 3; /* Increase flex value to make the image even larger */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mantra-center img {
+    max-width: 100%; /* Ensure the image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+/* "Our Mantra" Text Overlay */
+.mantra-center::after {
+    content: "Our Mantra";
+    position: absolute;
+    color: #fff;
+    font-size: 4.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 0.9;
+    transition: color 0.3s ease-in-out;
+}
+
+.mantra-center:hover::after {
+    color: #32bfc7;
+}
+
+/* Mantra Items - Icons Above Text */
+.mantra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    padding: 0;
+}
+
+/* Adjusted Icons */
+.mantra-item img {
+    width: 80px; /* Smaller icons for desktop */
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Adjusted Headings */
+.mantra-content h3 {
+    font-size: 1.2rem; /* Smaller headings for desktop */
+    color: #32bfc7;
+    margin-bottom: 10px;
+}
+
+/* Adjusted Text */
+.mantra-content p {
+    font-size: 0.7rem; /* Smaller text for desktop */
+    color: #ddd;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Change Blue Sentences to White and Hover to Blue */
+.mantra-content p strong {
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.mantra-content p strong:hover {
+    color: #32bfc7;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for tablets */
+        gap: 20px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 30px;
+    }
+
+    .mantra-item img {
+        width: 70px; /* Smaller icons for tablets */
+        height: 70px;
+        margin-bottom: 15px;
+    }
+
+    .mantra-content h3 {
+        font-size: 1rem; /* Smaller headings for tablets */
+        margin-bottom: 8px;
+    }
+
+    .mantra-content p {
+        font-size: 0.6rem; /* Smaller text for tablets */
+    }
+
+    .mantra-center img {
+        max-width: 100%; /* Increase image size for tablets */
+    }
+
+    .mantra-center::after {
+        font-size: 3.5rem; /* Smaller text overlay for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for smaller tablets */
+        gap: 15px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 20px;
+    }
+
+    .mantra-item img {
+        width: 60px; /* Smaller icons for smaller tablets */
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.9rem; /* Smaller headings for smaller tablets */
+        margin-bottom: 6px;
+    }
+
+    .mantra-content p {
+        font-size: 0.5rem; /* Smaller text for smaller tablets */
+    }
+
+    .mantra-center img {
+        max-width: 90%; /* Increase image size for smaller tablets */
+    }
+
+    .mantra-center::after {
+        font-size: 3rem; /* Smaller text overlay for smaller tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for mobile */
+        gap: 10px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 15px;
+    }
+
+    .mantra-item img {
+        width: 50px; /* Smaller icons for mobile */
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.8rem; /* Smaller headings for mobile */
+        margin-bottom: 5px;
+    }
+
+    .mantra-content p {
+        font-size: 0.4rem; /* Smaller text for mobile */
+    }
+
+    .mantra-center img {
+        max-width: 80%; /* Increase image size for mobile */
+    }
+
+    .mantra-center::after {
+        font-size: 2.5rem; /* Smaller text overlay for mobile */
+    }
+}
+
+@media (max-width: 320px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for very small screens */
+        gap: 8px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 10px;
+    }
+
+    .mantra-item img {
+        width: 40px; /* Smaller icons for very small screens */
+        height: 40px;
+        margin-bottom: 8px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.7rem; /* Smaller headings for very small screens */
+        margin-bottom: 4px;
+    }
+
+    .mantra-content p {
+        font-size: 0.3rem; /* Smaller text for very small screens */
+    }
+
+    .mantra-center img {
+        max-width: 70%; /* Increase image size for very small screens */
+    }
+
+    .mantra-center::after {
+        font-size: 2rem; /* Smaller text overlay for very small screens */
+    }
+}
+
+@media (max-width: 290px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for the smallest screens */
+        gap: 5px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 8px;
+    }
+
+    .mantra-item img {
+        width: 30px; /* Smaller icons for the smallest screens */
+        height: 30px;
+        margin-bottom: 6px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.6rem; /* Smaller headings for the smallest screens */
+        margin-bottom: 3px;
+    }
+
+    .mantra-content p {
+        font-size: 0.2rem; /* Smaller text for the smallest screens */
+    }
+
+    .mantra-center img {
+        max-width: 60%; /* Increase image size for the smallest screens */
+    }
+
+    .mantra-center::after {
+        font-size: 1.5rem; /* Smaller text overlay for the smallest screens */
+    }
+}

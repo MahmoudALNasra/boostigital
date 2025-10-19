@@ -1,0 +1,817 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+    color: #FFF;
+}
+
+
+/* Fullscreen hero section */
+.fullscreen-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* adjust as needed */
+    overflow: hidden;
+}
+
+.hero-gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/dGuuBh1.png') center/cover no-repeat;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+    font-size: 5rem;
+    font-weight: 900;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    /* Add animation if you want the text to move slightly */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+/* Website Creation Section */
+.website-creation {
+    padding: 60px 40px; /* Reduced from 100px */
+    background-color: #000;
+}
+
+.creation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.creation-image {
+    width: 623px;
+    height: 623px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    background: url('https://i.imgur.com/dGuuBh1.png') lightgray 50%/cover no-repeat;
+}
+
+.creation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.creation-content {
+    max-width: 574px;
+}
+
+.creation-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.creation-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.creation-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.creation-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.creation-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.creation-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Branding Section */
+.branding-section {
+    padding: 60px 0; /* Reduced from 100px */
+    background-color: #000;
+}
+
+.branding-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.branding-content {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.branding-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.branding-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    max-width: 520px;
+    transition: color 0.3s ease;
+}
+
+.branding-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.branding-features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 484px;
+}
+
+.branding-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.branding-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.branding-image {
+    width: 595px;
+    height: 595px;
+    flex-shrink: 0;
+    background: 
+        linear-gradient(#000, #000) padding-box,
+        url('https://i.imgur.com/oHMjnGF.png') center/contain no-repeat;
+}
+
+.branding-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Graphic & Art Direction Section */
+.graphic-art-section {
+    padding: 60px 0; /* Reduced from 100px */
+    background-color: #000;
+    color: #FFF;
+}
+
+.graphic-art-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.graphic-art-image {
+    width: 601px;
+    height: 601px;
+    flex-shrink: 0;
+    background: url('https://i.imgur.com/9039e3b2.png') lightgray 50%/contain no-repeat;
+}
+
+.graphic-art-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.graphic-art-content {
+    flex: 1;
+}
+
+.graphic-art-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.graphic-art-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    max-width: 528px;
+    transition: color 0.3s ease;
+}
+
+.graphic-art-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.graphic-art-features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 574px;
+}
+
+.graphic-art-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.graphic-art-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Social Media Management Section */
+.social-media-section {
+    padding: 60px 0; /* Reduced from 100px */
+    background-color: #000;
+    color: #FFF;
+}
+
+.social-media-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.social-media-image {
+    width: 623px;
+    height: 623px;
+    flex-shrink: 0;
+    background: 
+        linear-gradient(#000, #000) padding-box,
+        url('https://i.imgur.com/IDZQ7fo.jpeg') center/contain no-repeat;
+    overflow: hidden;
+}
+
+.social-media-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+}
+
+.social-media-content {
+    flex: 1;
+}
+
+.social-media-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 30px;
+    max-width: 671px;
+    transition: color 0.3s ease;
+}
+
+.social-media-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    max-width: 465px;
+    transition: color 0.3s ease;
+}
+
+.social-media-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.social-media-features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 570px;
+}
+
+.social-media-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.social-media-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Content Creation Section */
+.content-creation-section {
+    padding: 60px 0; /* Reduced from 100px */
+    background-color: #000;
+    color: #FFF;
+}
+
+.content-creation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.content-creation-image {
+    width: 623px;
+    height: 623px;
+    flex-shrink: 0;
+    background: url('https://i.imgur.com/0b1c4ffa.png') lightgray 50%/cover no-repeat;
+    overflow: hidden;
+}
+
+.content-creation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-creation-content {
+    flex: 1;
+}
+
+.content-creation-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 30px;
+    max-width: 613px;
+    transition: color 0.3s ease;
+}
+
+.content-creation-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    max-width: 501px;
+    transition: color 0.3s ease;
+}
+
+.content-creation-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.content-creation-features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 458px;
+}
+
+.content-creation-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.content-creation-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* UI/UX Vision Section - Updated */
+.ux-vision-section {
+    padding: 60px 0; /* Reduced from 100px */
+    background-color: #000;
+    color: #FFF;
+}
+
+.ux-vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.ux-vision-image {
+    width: 687px;
+    height: 687px;
+    flex-shrink: 0;
+    background: 
+        linear-gradient(#000, #000) padding-box,
+        url('https://i.imgur.com/V45X0CL.png') center/contain no-repeat;
+    overflow: hidden;
+}
+
+.ux-vision-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: lighten;
+}
+
+.ux-vision-content {
+    flex: 1;
+}
+
+.ux-vision-title {
+    color: #FFF;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-bottom: 30px;
+    max-width: 671px;
+    transition: color 0.3s ease;
+}
+
+.ux-vision-description {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 40px;
+    max-width: 546px;
+    transition: color 0.3s ease;
+}
+
+.ux-vision-features h3 {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* Removed transition for includes/تشمل خدماتنا */
+}
+
+.ux-vision-features ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 570px;
+}
+
+.ux-vision-features li {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    padding-left: 30px;
+}
+
+.ux-vision-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* Hover Effects for All Headers (except includes/تشمل خدماتنا) */
+.creation-title:hover,
+.creation-description:hover,
+.branding-title:hover,
+.branding-description:hover,
+.graphic-art-title:hover,
+.graphic-art-description:hover,
+.social-media-title:hover,
+.social-media-description:hover,
+.content-creation-title:hover,
+.content-creation-description:hover,
+.ux-vision-title:hover,
+.ux-vision-description:hover {
+    color: #007bff !important;
+}
+
+/* RTL Support */
+html[dir="rtl"] .bs-header-content {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] {
+    direction: rtl;
+    font-family: 'Montserrat', 'Tahoma', sans-serif;
+}
+
+/* Bullet Points Adjustment for RTL */
+html[dir="rtl"] .content-creation-features li,
+html[dir="rtl"] .social-media-features li,
+html[dir="rtl"] .graphic-art-features li,
+html[dir="rtl"] .branding-features li,
+html[dir="rtl"] .creation-features li,
+html[dir="rtl"] .ux-vision-features li {
+    padding-right: 35px;
+    padding-left: 0;
+    text-align: right;
+}
+
+html[dir="rtl"] .content-creation-features li::before,
+html[dir="rtl"] .social-media-features li::before,
+html[dir="rtl"] .graphic-art-features li::before,
+html[dir="rtl"] .branding-features li::before,
+html[dir="rtl"] .creation-features li::before,
+html[dir="rtl"] .ux-vision-features li::before {
+    right: 0;
+    left: auto;
+    padding-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .creation-container,
+    .branding-container,
+    .graphic-art-container,
+    .social-media-container,
+    .content-creation-container,
+    .ux-vision-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 40px;
+    }
+    
+    .branding-container,
+    .social-media-container,
+    .ux-vision-container {
+        flex-direction: column-reverse;
+    }
+    
+    .creation-image,
+    .branding-image,
+    .graphic-art-image,
+    .social-media-image,
+    .content-creation-image,
+    .ux-vision-image {
+        width: 100%;
+        max-width: 623px;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+    
+    .creation-content,
+    .branding-content,
+    .graphic-art-content,
+    .social-media-content,
+    .content-creation-content,
+    .ux-vision-content {
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .branding-content,
+    .ux-vision-content {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .website-creation,
+    .branding-section,
+    .graphic-art-section,
+    .social-media-section,
+    .content-creation-section,
+    .ux-vision-section {
+        padding: 40px 0; /* Reduced from 60px */
+    }
+    
+    .creation-title,
+    .branding-title,
+    .graphic-art-title,
+    .social-media-title,
+    .content-creation-title,
+    .ux-vision-title {
+        font-size: 40px;
+    }
+    
+    .creation-description,
+    .creation-features h3,
+    .creation-features li,
+    .branding-description,
+    .branding-features h3,
+    .branding-features li,
+    .graphic-art-description,
+    .graphic-art-features h3,
+    .graphic-art-features li,
+    .social-media-description,
+    .social-media-features h3,
+    .social-media-features li,
+    .content-creation-description,
+    .content-creation-features h3,
+    .content-creation-features li,
+    .ux-vision-description,
+    .ux-vision-features h3,
+    .ux-vision-features li {
+        font-size: 20px;
+    }
+    
+    .creation-features li,
+    .branding-features li,
+    .graphic-art-features li,
+    .social-media-features li,
+    .content-creation-features li,
+    .ux-vision-features li {
+        line-height: 32px;
+    }
+    
+    .menu-item {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .creation-container,
+    .branding-container,
+    .graphic-art-container,
+    .social-media-container,
+    .content-creation-container,
+    .ux-vision-container {
+        padding: 0 20px;
+    }
+    
+    .creation-title,
+    .branding-title,
+    .graphic-art-title,
+    .social-media-title,
+    .content-creation-title,
+    .ux-vision-title {
+        font-size: 32px;
+    }
+    
+    .creation-description,
+    .creation-features h3,
+    .creation-features li,
+    .branding-description,
+    .branding-features h3,
+    .branding-features li,
+    .graphic-art-description,
+    .graphic-art-features h3,
+    .graphic-art-features li,
+    .social-media-description,
+    .social-media-features h3,
+    .social-media-features li,
+    .content-creation-description,
+    .content-creation-features h3,
+    .content-creation-features li,
+    .ux-vision-description,
+    .ux-vision-features h3,
+    .ux-vision-features li {
+        font-size: 18px;
+    }
+    
+    .creation-features li,
+    .branding-features li,
+    .graphic-art-features li,
+    .social-media-features li,
+    .content-creation-features li,
+    .ux-vision-features li {
+        line-height: 28px;
+        padding-left: 25px;
+    }
+    
+    html[dir="rtl"] .creation-features li,
+    html[dir="rtl"] .branding-features li,
+    html[dir="rtl"] .graphic-art-features li,
+    html[dir="rtl"] .social-media-features li,
+    html[dir="rtl"] .content-creation-features li,
+    html[dir="rtl"] .ux-vision-features li {
+        padding-left: 0;
+        padding-right: 25px;
+    }
+    
+    .creation-features li::before,
+    .branding-features li::before,
+    .graphic-art-features li::before,
+    .social-media-features li::before,
+    .content-creation-features li::before,
+    .ux-vision-features li::before {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .bs-logo {
+        height: 50px;
+    }
+    
+    .bs-menu {
+        gap: 10px;
+    }
+    
+    .menu-item {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}

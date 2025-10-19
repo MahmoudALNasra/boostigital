@@ -1,0 +1,93 @@
+/* Header Styles */
+.bs-header {
+    position: relative;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bs-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bs-logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Menu and Flag Container */
+.bs-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Menu Items with Oval Background */
+.menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 123, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.bs-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Language Toggle */
+.bs-language-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.bs-language-toggle .flag-icon {
+    width: 25px;
+    height: 17px;
+    transition: transform 0.3s ease;
+    border-radius: 3px;
+}
+
+.bs-language-toggle:hover .flag-icon {
+    transform: scale(1.1);
+}
+
+/* Transparent header styles */
+.transparent-header {
+    background: transparent !important;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.transparent-header .bs-logo,
+.transparent-header .menu-item {
+    color: white; /* or whatever color contrasts with your GIF */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* for better readability */
+}

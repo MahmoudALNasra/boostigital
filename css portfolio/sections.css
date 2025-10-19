@@ -1,0 +1,103 @@
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio-fullscreen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio-zoom {
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: transform, opacity;
+}
+
+.portfolio-fullscreen.active .portfolio-zoom {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.portfolio-logo {
+    width: min(90vw, 800px);
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.portfolio-text {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    color: #333;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    font-style: italic;
+    text-transform: none;
+}
+
+/* ===== BOOST SECTION ===== */
+.boost-concept {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.boost-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.boost-heading {
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.boost-concept.active .boost-heading {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-text {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    
+    .boost-heading {
+        font-size: clamp(2.5rem, 7vw, 4rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-logo {
+        width: 95vw;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-text {
+        font-size: clamp(1.3rem, 4vw, 2rem);
+    }
+    
+    .boost-heading {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+}

@@ -1,0 +1,156 @@
+/* Reset default margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Services Section */
+/* SERVICES SECTION */
+.services-section {
+  padding: 0 10px 60px 10px;
+  text-align: center;
+  background-color: #000;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+/* SECTION TITLE */
+.section-title p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* SERVICES GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* SERVICE BLOCK */
+.service-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* SERVICE IMAGES */
+.service-image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* SERVICE TITLE */
+.service-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* SERVICE DESCRIPTION */
+.service-description {
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+/* CTA BUTTON */
+.whatsapp-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.whatsapp-btn a {
+  background-color: #25d366;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.whatsapp-btn a:hover {
+  background-color: #1ebc5d;
+}
+
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Still maintain 3 columns */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Enforce 3-column layout */
+    gap: 8px;
+  }
+}
+
+/* RESPONSIVE FIXES FOR SMALL SCREENS */
+@media (max-width: 390px) {
+  .section-title p {
+    font-size: 1.8rem;  /* Reduce title size */
+    margin-top: 80px; /* Push it down */
+    margin-bottom: 10px;
+  }
+
+  .service-title {
+    font-size: 0.55rem; /* Reduce heading size inside blocks */
+  }
+
+  .service-description {
+    font-size: 0.75rem; /* Adjust description text */
+  }
+}
+
+@media (max-width: 320px) {
+  .section-title p {
+    font-size: 1.6rem;
+    margin-top: 30px; /* Further push it down */
+    margin-bottom: 25px;
+  }
+
+  .service-title {
+    font-size: 0.65rem; /* Even smaller for very small screens */
+  }
+
+  .service-description {
+    font-size: 0.7rem; /* Adjust description text */
+  }
+
+  .whatsapp-btn a {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
