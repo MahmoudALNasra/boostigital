@@ -22,7 +22,7 @@ body {
 .brand-showcase {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 70px); /* Subtract header height */
     min-height: 500px;
     display: flex;
     justify-content: center;
@@ -30,6 +30,14 @@ body {
     background: #000;
     opacity: 0;
     transform: scale(0.8);
+    margin-top: 0 !important;
+}
+
+/* Mobile adjustment for brand showcase */
+@media (max-width: 768px) {
+    .brand-showcase {
+        height: calc(100vh - 60px); /* Subtract mobile header height */
+    }
 }
 
 .logo-wrapper {
@@ -932,7 +940,9 @@ body {
   padding: 0;
 }
 
-.container {
+/* Portfolio container styles - NOT for header */
+section .container:not(.main-header .container),
+.portfolio-container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -977,7 +987,8 @@ body {
 
 /* Small Screen Fixes: Media Queries */
 @media (max-width: 430px) {
-  .container {
+  section .container:not(.main-header .container),
+  .portfolio-container {
     flex-direction: column;
     padding: 10px;
   }
@@ -1009,7 +1020,8 @@ body {
     font-size: 13px;
   }
 
-  .container {
+  section .container:not(.main-header .container),
+  .portfolio-container {
     padding: 5px;
   }
 
@@ -1027,7 +1039,8 @@ body {
     font-size: 12px;
   }
 
-  .container {
+  section .container:not(.main-header .container),
+  .portfolio-container {
     padding: 5px;
   }
 
@@ -1045,7 +1058,8 @@ body {
     font-size: 10px;
   }
 
-  .container {
+  section .container:not(.main-header .container),
+  .portfolio-container {
     padding: 2px;
   }
 
@@ -1060,7 +1074,8 @@ body {
     padding: 10px;
     min-width: 100%;
   }
-  .container {
+  section .container:not(.main-header .container),
+  .portfolio-container {
     gap: 5px;
   }
 }
@@ -1844,5 +1859,85 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Force LTR for brand showcase section */
+.brand-showcase {
+    direction: ltr !important;
+}
+
+/* Fix for pharmacy section buttons */
+.clickable-area {
+    cursor: pointer;
+}
+
+/* Make sure mission section buttons work */
+.screen-toggle[data-lang="ar"] {
+    display: none;
+}
+.screen-toggle[data-lang="en"] {
+    display: block;
+}
+body[dir="rtl"] .screen-toggle[data-lang="ar"] {
+    display: block;
+}
+body[dir="rtl"] .screen-toggle[data-lang="en"] {
+    display: none;
+}
+/* Enhanced Portfolio Mobile View */
+@media (max-width: 768px) {
+    .brand-showcase {
+        padding: 30px 15px;
+        /* height is already set above: calc(100vh - 60px) */
+        min-height: 400px;
+    }
+    
+    .logo-wrapper {
+        width: 95%;
+    }
+    
+    .logo-image {
+        max-width: 250px;
+    }
+    
+    .logo-subtext {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+    
+    /* Section fixes */
+    .section-intro, .section-description {
+        padding: 20px 15px;
+    }
+    
+    .unconventional-headline {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .stat-text {
+        font-size: 1.2rem;
+    }
+    
+    .right-stat-number {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        max-width: 200px;
+    }
+    
+    .logo-subtext {
+        font-size: 0.9rem;
+    }
+    
+    .right-stat-number {
+        font-size: 3rem;
     }
 }

@@ -8,24 +8,18 @@
 
 
 
-/* Footer Styles */
+/* Footer */
 .main-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     text-align: center;
-    width: 100%;
-}
-
-.main-footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
 .main-footer p {
     margin: 0;
+    font-size: 14px;
 }
 
 /* Responsive Design */
@@ -55,8 +49,10 @@
         padding: 20px; /* Reduce padding for smaller screens */
     }
 
-  
-  
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* Full width inputs */
+    }
 
     .contact-info p {
         font-size: 18px; /* Smaller text for small screens */

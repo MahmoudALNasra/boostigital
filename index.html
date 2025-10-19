@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Boostigital </title>
-  <!--<link rel="stylesheet" href="css/style.css">-->
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Boostigital</title>
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/portfolio21-may6.css">
   <link rel="stylesheet" href="css/hero_section6.css">
-  <!--<link rel="stylesheet" href="css/hero_section3.css">-->
-  <!--<link rel="stylesheet" href="css/new_hero_section.css">-->
   <link rel="stylesheet" href="css/new_hero_first_section.css">
   <link rel="stylesheet" href="css/image_flip.css">
   <link rel="stylesheet" href="css/Mantra_Section.css">
@@ -19,8 +17,7 @@
   <link rel="stylesheet" href="css/new_footer.css">
   <link rel="stylesheet" href="css/whatsapp.css">
   <link rel="stylesheet" href="css/Form.css">
-  <!--<link rel="stylesheet" href="css/services_section2.css">-->
-  <!-- <link rel="stylesheet" href="css/services_section3.css">-->
+  <link rel="stylesheet" href="css/mobile-enhancements.css">
   <!-- Standard Favicon -->
     <link rel="icon" href="images/boostigital_button icon.ico" type="image/x-icon">
     <!-- For Modern Browsers -->
@@ -86,11 +83,6 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostdigital</title>
-    <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- WhatsApp Buttons -->
@@ -98,14 +90,9 @@
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-button chat">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
-        <span>Tell Us Your Needs</span>
+        <span data-lang="en" style="display: none;">Tell Us Your Needs</span>
+        <span data-lang="ar">أخبرنا باحتياجاتك</span>
     </a>
-
-    <!-- WhatsApp Call Button 
-    <a href="https://wa.me/+48792379386" target="_blank" class="whatsapp-button call">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Call">
-        <span>Call</span>
-    </a> -->
 </div>
 
 
@@ -126,14 +113,14 @@
             
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">Portfolio</a></li>
-                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">الأعمال</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
                     
                     <li class="language-switcher">
                         <button class="language-button" id="language-button">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="15">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic" width="20" height="15">
                         </button>
                     </li>
                 </ul>
@@ -150,8 +137,8 @@
             </div>
 
             <!-- Centered Heading -->
-            <h1 class="new-hero-title" data-lang="en">Boost Your Digital<br>Presence</h1>
-            <h1 class="new-hero-title" data-lang="ar" style="display: none;">عزز وجودك الرقمي</h1>
+            <h1 class="new-hero-title" data-lang="en" style="display: none;">Boost Your Digital<br>Presence</h1>
+            <h1 class="new-hero-title" data-lang="ar">عزز وجودك الرقمي</h1>
 
             <!-- Right Image -->
             <div class="new-hero-image right">
@@ -167,19 +154,28 @@
                 <div class="image-flip-item">
                     <figure>
                         <img class="front-image" src="images/boost girl.png" alt="Boost Girl">
-                        <img class="back-image" src="images/Boost Girl Back.png" alt="Boost Girl Back">
+                        <div class="back-content">
+                            <p class="flip-description" data-lang="en" style="display: none;">In today's digital landscape, your website serves as the virtual storefront for your business. Our team of skilled developers and designers crafts captivating, user-friendly websites that not only reflect your brand identity but also enhance user experience.</p>
+                            <p class="flip-description" data-lang="ar">في المشهد الرقمي اليوم، يعمل موقعك الإلكتروني كواجهة افتراضية لعملك. يصمم فريقنا من المطورين والمصممين المهرة مواقع ويب جذابة وسهلة الاستخدام تعكس هوية علامتك التجارية وتعزز تجربة المستخدم.</p>
+                        </div>
                     </figure>
                 </div>
                 <div class="image-flip-item">
                     <figure>
                         <img class="front-image" src="images/boost connect.png" alt="Boost Connect">
-                        <img class="back-image" src="images/Boost Connect Back.png" alt="Boost Connect Back">
+                        <div class="back-content">
+                            <p class="flip-description" data-lang="en" style="display: none;">Whether you're starting from scratch or seeking to revamp your existing site, we provide customized solutions to suit your objectives. From responsive design to seamless integration of cutting-edge technical features, we ensure your online presence stands out amidst the competition.</p>
+                            <p class="flip-description" data-lang="ar">سواء كنت تبدأ من الصفر أو تسعى لتجديد موقعك الحالي، نقدم حلولاً مخصصة تناسب أهدافك. من التصميم المتجاوب إلى التكامل السلس لأحدث الميزات التقنية، نضمن تميز حضورك الرقمي وسط المنافسة.</p>
+                        </div>
                     </figure>
                 </div>
                 <div class="image-flip-item">
                     <figure>
                         <img class="front-image" src="images/boost fly.png" alt="Boost Fly">
-                        <img class="back-image" src="images/Boost Fly Back.png" alt="Boost Fly Back">
+                        <div class="back-content">
+                            <p class="flip-description" data-lang="en" style="display: none;">Partner with us to elevate your digital presence and drive meaningful engagement with your audience. Let's embark on this journey together and unlock the full potential of your online presence.</p>
+                            <p class="flip-description" data-lang="ar">شاركنا لرفع مستوى حضورك الرقمي وتحقيق تفاعل هادف مع جمهورك. دعنا نبدأ هذه الرحلة معاً ونطلق العنان للإمكانات الكاملة لحضورك الرقمي.</p>
+                        </div>
                     </figure>
                 </div>
             </div>
@@ -193,42 +189,46 @@
                 <div class="mantra-item">
                     <img src="images/Experience icon.png" alt="Expertise">
                     <div class="mantra-content">
-                        <h3 data-lang="en">Expertise</h3>
-                        <h3 data-lang="ar" style="display: none;">الخبرة</h3>
-                        <p data-lang="en">Our vast experience is our core.<br><strong>If we tell you we can do it, then we most definitely can!</strong></p>
-                        <p data-lang="ar" style="display: none;">خبرتنا الواسعة هي جوهرنا<br><strong>إذا أخبرناك أننا نستطيع فعلها، فنحن بالتأكيد نستطيع</strong></p>
+                        <h3 data-lang="en" style="display: none;">Expertise</h3>
+                        <h3 data-lang="ar">الخبرة</h3>
+                        <p data-lang="en" style="display: none;">Our vast experience is our core.<br><strong>If we tell you we can do it, then we most definitely can!</strong></p>
+                        <p data-lang="ar">خبرتنا الواسعة هي جوهرنا<br><strong>إذا أخبرناك أننا نستطيع فعلها، فنحن بالتأكيد نستطيع</strong></p>
                     </div>
                 </div>
                 <div class="mantra-item">
                     <img src="images/relevancy icon.png" alt="Relevancy">
                     <div class="mantra-content">
-                        <h3 data-lang="en">Relevancy</h3>
-                        <h3 data-lang="ar" style="display: none;">الملاءمة</h3>
-                        <p data-lang="en">We research, dig deep and dig some more<br><strong>for a culturally-connected product.</strong></p>
-                        <p data-lang="ar" style="display: none;">نبحث ونحفر بعمق أكثر<br><strong>لإنتاج منتج متصل ثقافياً.</strong></p>
+                        <h3 data-lang="en" style="display: none;">Relevancy</h3>
+                        <h3 data-lang="ar">الملاءمة</h3>
+                        <p data-lang="en" style="display: none;">We research, dig deep and dig some more<br><strong>for a culturally-connected product.</strong></p>
+                        <p data-lang="ar">نبحث ونحفر بعمق أكثر<br><strong>لإنتاج منتج متصل ثقافياً.</strong></p>
                     </div>
                 </div>
             </div>
             <div class="mantra-center">
                 <img src="images/guy on the mat.png" alt="Guy on the Mat">
+                <div class="mantra-center-text">
+                    <span data-lang="en" style="display: none;">OUR MANTRA</span>
+                    <span data-lang="ar">شعارنا</span>
+                </div>
             </div>
             <div class="mantra-right">
                 <div class="mantra-item">
                     <img src="images/innovation icon.png" alt="Innovation">
                     <div class="mantra-content">
-                        <h3 data-lang="en">Innovation</h3>
-                        <h3 data-lang="ar" style="display: none;">الابتكار</h3>
-                        <p data-lang="en">“Think outside the box”?<br><strong>We throw the box away and create our own shapes.</strong></p>
-                        <p data-lang="ar" style="display: none;">"فكر خارج الصندوق"؟<br><strong>نحن نتخلص من الصندوق ونخلق أشكالنا الخاصة</strong></p>
+                        <h3 data-lang="en" style="display: none;">Innovation</h3>
+                        <h3 data-lang="ar">الابتكار</h3>
+                        <p data-lang="en" style="display: none;">"Think outside the box"?<br><strong>We throw the box away and create our own shapes.</strong></p>
+                        <p data-lang="ar">"فكر خارج الصندوق"؟<br><strong>نحن نتخلص من الصندوق ونخلق أشكالنا الخاصة</strong></p>
                     </div>
                 </div>
                 <div class="mantra-item">
                     <img src="images/transparency icon.png" alt="Transparency">
                     <div class="mantra-content">
-                        <h3 data-lang="en">Transparency</h3>
-                        <h3 data-lang="ar" style="display: none;">الشفافية</h3>
-                        <p data-lang="en">No opinion is taken for granted!<br><strong>Transparency in communication is a key to our success and yours.</strong></p>
-                        <p data-lang="ar" style="display: none;">لا يتم أخذ أي رأي كأمر مسلم به<br><strong>الشفافية في التواصل هي مفتاح نجاحنا ونجاحك</strong></p>
+                        <h3 data-lang="en" style="display: none;">Transparency</h3>
+                        <h3 data-lang="ar">الشفافية</h3>
+                        <p data-lang="en" style="display: none;">No opinion is taken for granted!<br><strong>Transparency in communication is a key to our success and yours.</strong></p>
+                        <p data-lang="ar">لا يتم أخذ أي رأي كأمر مسلم به<br><strong>الشفافية في التواصل هي مفتاح نجاحنا ونجاحك</strong></p>
                     </div>
                 </div>
             </div>
@@ -237,68 +237,70 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <h2 class="hero-subtitle" data-lang="en">Let’s boost</h2>
-    <h2 class="hero-subtitle" data-lang="ar" style="display: none;">لنعزز</h2>
-    <h1 class="hero-title" data-lang="en">Your business to the next level</h1>
-    <h1 class="hero-title" data-lang="ar" style="display: none;">عملك إلى المستوى التالي</h1>
-    <a href="#contact_us_form" class="cta-button" data-lang="en">Contact us</a>
-    <a href="#contact_us_form" class="cta-button" data-lang="ar" style="display: none;">اتصل بنا</a>
-  </div>
-</section>
+        <div class="hero-content">
+            <h2 class="hero-subtitle" data-lang="en" style="display: none;">Let's boost</h2>
+            <h2 class="hero-subtitle" data-lang="ar">لنعزز</h2>
+            <h1 class="hero-title" data-lang="en" style="display: none;">Your business to the next level</h1>
+            <h1 class="hero-title" data-lang="ar">عملك إلى المستوى التالي</h1>
+            <a href="#contact_us_form" class="cta-button" data-lang="en" style="display: none;">Contact us</a>
+            <a href="#contact_us_form" class="cta-button" data-lang="ar">اتصل بنا</a>
+        </div>
+        <div class="hero-bg">
+            <img src="images/boostigital_lets boost your business background.png" alt="Power Symbol Background">
+        </div>
+    </section>
 
 
     <!-- Services Section -->
     <section class="services-section" id="services">
         <div class="section-title">
-                <p data-lang="en">Our Services</p>
-                <p data-lang="ar" style="display: none;">خدماتنا</p>
+                <p data-lang="en" style="display: none;">Our Services</p>
+                <p data-lang="ar">خدماتنا</p>
             </div>
         <div class="container">
             
             <div class="services-grid">
                 <div class="service-item">
                     <img src="images/website creation.png" alt="Website Creation">
-                    <h3 class="service-title" data-lang="en">Website Creation</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">إنشاء المواقع</h3>
-                    <p class="service-description" data-lang="en">Creating your website with the most efficient backend and user-friendly front end.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">إنشاء موقعك بأفضل واجهة خلفية وواجهة أمامية سهلة الاستخدام</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">Website Creation</h3>
+                    <h3 class="service-title" data-lang="ar">إنشاء المواقع</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">Creating your website with the most efficient backend and user-friendly front end.</p>
+                    <p class="service-description" data-lang="ar">إنشاء موقعك بأفضل واجهة خلفية وواجهة أمامية سهلة الاستخدام</p>
                 </div>
                 <div class="service-item">
                     <img src="images/branding.png" alt="Branding">
-                    <h3 class="service-title" data-lang="en">Branding</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">الهوية التجارية</h3>
-                    <p class="service-description" data-lang="en">Your brand is your persona. Let us make yours stand out in the crowd.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">هويتك التجارية هي شخصيتك. دعنا نجعلها تبرز بين الحشود</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">Branding</h3>
+                    <h3 class="service-title" data-lang="ar">الهوية التجارية</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">Your brand is your persona. Let us make yours stand out in the crowd.</p>
+                    <p class="service-description" data-lang="ar">هويتك التجارية هي شخصيتك. دعنا نجعلها تبرز بين الحشود</p>
                 </div>
                 <div class="service-item">
                     <img src="images/graphic and art direction.png" alt="Graphics and Art Direction">
-                    <h3 class="service-title" data-lang="en">Graphics and Art Direction</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">الرسومات والإخراج الفني</h3>
-                    <p class="service-description" data-lang="en">Maintain a great image with captivating visuals on every platform.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">حافظ على صورة رائعة مع مرئيات جذابة على كل منصة</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">Graphics and Art Direction</h3>
+                    <h3 class="service-title" data-lang="ar">الرسومات والإخراج الفني</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">Maintain a great image with captivating visuals on every platform.</p>
+                    <p class="service-description" data-lang="ar">حافظ على صورة رائعة مع مرئيات جذابة على كل منصة</p>
                 </div>
                 <div class="service-item">
                     <img src="images/social media management.png" alt="Social Media Management">
-                    <h3 class="service-title" data-lang="en">Social Media Management</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">إدارة وسائل التواصل الاجتماعي</h3>
-                    <p class="service-description" data-lang="en">All your digital marketing analysis and management power are excited for our conversion-led results.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">كل قوة تحليلاتك وإدارتك التسويقية متحمسة لنتائجنا القائمة على التحويل</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">Social Media Management</h3>
+                    <h3 class="service-title" data-lang="ar">إدارة وسائل التواصل الاجتماعي</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">All your digital marketing analysis and management power are excited for our conversion-led results.</p>
+                    <p class="service-description" data-lang="ar">كل قوة تحليلاتك وإدارتك التسويقية متحمسة لنتائجنا القائمة على التحويل</p>
                 </div>
                 <div class="service-item">
                     <img src="images/content creation.png" alt="Content Creation">
-                    <h3 class="service-title" data-lang="en">Content Creation</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">إنشاء المحتوى</h3>
-                    <p class="service-description" data-lang="en">We create buzzworthy, relevant & building on brand values content.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">ننشئ محتوى يستحق الضجة وذو صلة ويعتمد على قيم العلامة التجارية</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">Content Creation</h3>
+                    <h3 class="service-title" data-lang="ar">إنشاء المحتوى</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">We create buzzworthy, relevant & building on brand values content.</p>
+                    <p class="service-description" data-lang="ar">ننشئ محتوى يستحق الضجة وذو صلة ويعتمد على قيم العلامة التجارية</p>
                 </div>
                 <div class="service-item">
                     <img src="images/UX.png" alt="UI/UX Vision">
-                    <h3 class="service-title" data-lang="en">UI/UX Vision</h3>
-                    <h3 class="service-title" data-lang="ar" style="display: none;">رؤية واجهة المستخدم/التجربة</h3>
-                    <p class="service-description" data-lang="en">Ensuring a smooth experience and easy relationship to your audience will you or brand.</p>
-                    <p class="service-description" data-lang="ar" style="display: none;">ضمان تجربة سلسة وعلاقة سهلة مع جمهورك أو علامتك التجارية</p>
+                    <h3 class="service-title" data-lang="en" style="display: none;">UI/UX Vision</h3>
+                    <h3 class="service-title" data-lang="ar">رؤية واجهة المستخدم/التجربة</h3>
+                    <p class="service-description" data-lang="en" style="display: none;">Ensuring a smooth experience and easy relationship to your audience will you or brand.</p>
+                    <p class="service-description" data-lang="ar">ضمان تجربة سلسة وعلاقة سهلة مع جمهورك أو علامتك التجارية</p>
                 </div>
             </div>
         </div>
@@ -307,29 +309,29 @@
     <!-- Our Team Section -->
     <section class="our-team-section">
         <div class="our-team-container">
-            <h2 data-lang="en">Our Team</h2>
-            <h2 data-lang="ar" style="display: none;">فريقنا</h2>
+            <h2 data-lang="en" style="display: none;">Our Team</h2>
+            <h2 data-lang="ar">فريقنا</h2>
             <div class="team-grid">
                 <div class="team-member">
                     <img src="images/UX UI Designer.png" alt="UX/UI Designer">
-                    <h3 data-lang="en">UX/UI DESIGNER</h3>
-                    <h3 data-lang="ar" style="display: none;">التركيز الشديد على كل التفاصيل</h3>
-                    <p data-lang="en">Hyperfocusing on every detail</p>
-                    <p data-lang="ar" style="display: none;">مصمم واجهة المستخدم/التجربة</p>
+                    <h3 data-lang="en" style="display: none;">UX/UI DESIGNER</h3>
+                    <h3 data-lang="ar">التركيز الشديد على كل التفاصيل</h3>
+                    <p data-lang="en" style="display: none;">Hyperfocusing on every detail</p>
+                    <p data-lang="ar">مصمم واجهة المستخدم/التجربة</p>
                 </div>
                 <div class="team-member">
                     <img src="images/Marketing Specialist.png" alt="Marketing Specialist">
-                    <h3 data-lang="en">MARKETING SPECIALIST</h3>
-                    <h3 data-lang="ar" style="display: none;">مليء بالنتائج الرائعة</h3>
-                    <p data-lang="en">Full of great results</p>
-                    <p data-lang="ar" style="display: none;">أخصائي تسويق</p>
+                    <h3 data-lang="en" style="display: none;">MARKETING SPECIALIST</h3>
+                    <h3 data-lang="ar">مليء بالنتائج الرائعة</h3>
+                    <p data-lang="en" style="display: none;">Full of great results</p>
+                    <p data-lang="ar">أخصائي تسويق</p>
                 </div>
                 <div class="team-member">
                     <img src="images/web-dev_icon_boost.png" alt="Web Developer">
-                    <h3 data-lang="en">WEB DEVELOPERS</h3>
-                    <h3 data-lang="ar" style="display: none;">نينجا التكنولوجيا التحليلية</h3>
-                    <p data-lang="en">Analytical ninja of technology</p>
-                    <p data-lang="ar" style="display: none;">مطورو الويب</p>
+                    <h3 data-lang="en" style="display: none;">WEB DEVELOPERS</h3>
+                    <h3 data-lang="ar">نينجا التكنولوجيا التحليلية</h3>
+                    <p data-lang="en" style="display: none;">Analytical ninja of technology</p>
+                    <p data-lang="ar">مطورو الويب</p>
                 </div>
             </div>
         </div>
@@ -342,40 +344,40 @@
 
 
                 <div class="form-group" >
-                    <label for="full-name" data-lang="en">Name (required)</label>
-                    <label for="full-name" data-lang="ar" style="display: none;">الاسم (مطلوب)</label>
+                    <label for="full-name" data-lang="en" style="display: none;">Name (required)</label>
+                    <label for="full-name" data-lang="ar">الاسم (مطلوب)</label>
                     <input type="text" id="full-name" name="full-name" required>
                 </div>
                 <div class="form-group">
-                    <label for="company-name" data-lang="en">Company name</label>
-                    <label for="company-name" data-lang="ar" style="display: none;">اسم الشركة</label>
+                    <label for="company-name" data-lang="en" style="display: none;">Company name</label>
+                    <label for="company-name" data-lang="ar">اسم الشركة</label>
                     <input type="text" id="company-name" name="company-name">
                 </div>
                 <div class="form-group">
-                    <label for="contact-number" data-lang="en">Contact number</label>
-                    <label for="contact-number" data-lang="ar" style="display: none;">رقم الاتصال</label>
+                    <label for="contact-number" data-lang="en" style="display: none;">Contact number</label>
+                    <label for="contact-number" data-lang="ar">رقم الاتصال</label>
                     <input type="tel" id="contact-number" name="contact-number">
                 </div>
                 <div class="form-group">
-                    <label for="contact-email" data-lang="en">Contact email address (required)</label>
-                    <label for="contact-email" data-lang="ar" style="display: none;">البريد الإلكتروني (مطلوب)</label>
+                    <label for="contact-email" data-lang="en" style="display: none;">Contact email address (required)</label>
+                    <label for="contact-email" data-lang="ar">البريد الإلكتروني (مطلوب)</label>
                     <input type="email" id="contact-email" name="contact-email" required>
                 </div>
                 <div class="form-group checkbox">
                     <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
-                    <label for="privacy-policy" data-lang="en">I agree to the privacy policy</label>
-                    <label for="privacy-policy" data-lang="ar" style="display: none;">أوافق على سياسة الخصوصية</label>
+                    <label for="privacy-policy" data-lang="en" style="display: none;">I agree to the privacy policy</label>
+                    <label for="privacy-policy" data-lang="ar">أوافق على سياسة الخصوصية</label>
                 </div>
-                <button type="submit" data-lang="en">Submit</button>
-                <button type="submit" data-lang="ar" style="display: none;">إرسال</button>
+                <button type="submit" data-lang="en" style="display: none;">Submit</button>
+                <button type="submit" data-lang="ar">إرسال</button>
             </form>
             <div id="formResponse" style="display: none; margin: 20px 0; padding: 10px; border-radius: 5px;"></div>
             <div class="contact-info">
-                <p><strong data-lang="en">Prefer Another Way to Connect?</strong></p>
-                <p><strong data-lang="ar" style="display: none;">تفضل طريقة أخرى للتواصل؟</strong></p>
+                <p><strong data-lang="en" style="display: none;">Prefer Another Way to Connect?</strong></p>
+                <p><strong data-lang="ar">تفضل طريقة أخرى للتواصل؟</strong></p>
                 <p><a href="mailto:contact@boostigital.com">contact@boostigital.com</a></p>
-                <p><strong data-lang="en">Marketing cooperation:</strong></p>
-                <p><strong data-lang="ar" style="display: none;">التعاون التسويقي:</strong></p>
+                <p><strong data-lang="en" style="display: none;">Marketing cooperation:</strong></p>
+                <p><strong data-lang="ar">التعاون التسويقي:</strong></p>
                 <p><a href="mailto:marketing@boostigital.com">marketing@boostigital.com</a></p>
               
               <!-- Social Media Icons -->
@@ -397,140 +399,15 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <p data-lang="en">&copy; 2025 Boostigital. All rights reserved.</p>
-            <p data-lang="ar" style="display: none;">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
+            <p data-lang="en" style="display: none;">&copy; Boostigital 2025. All rights reserved.</p>
+            <p data-lang="ar">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Hamburger Menu -->
+    <!-- Unified Language Switcher and Navigation -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/header.js"></script>
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById("mainNav");
-            nav.classList.toggle("active");
-        }
-    </script>
-
-    <!-- JavaScript for Language Switcher -->
-    <script>
-    document.getElementById('language-button').addEventListener('click', function() {
-        const englishElements = document.querySelectorAll('[data-lang="en"]');
-        const arabicElements = document.querySelectorAll('[data-lang="ar"]');
-        const flagImg = this.querySelector('img');
-
-        if (flagImg.src.includes('gb.svg')) {
-            // Switch to Arabic
-            flagImg.src = 'https://flagcdn.com/sa.svg';
-            flagImg.alt = 'Arabic';
-            englishElements.forEach(el => el.style.display = 'none');
-            arabicElements.forEach(el => el.style.display = 'block');
-        } else {
-            // Switch to English (British flag)
-            flagImg.src = 'https://flagcdn.com/gb.svg'; // Updated to British flag
-            flagImg.alt = 'English';
-            englishElements.forEach(el => el.style.display = 'block');
-            arabicElements.forEach(el => el.style.display = 'none');
-        }
-    });
-</script>
-<script>
-  // Store current language state
-let currentLanguage = 'en';
-
-// Toggle mobile menu
-function toggleMenu() {
-    const nav = document.getElementById("mainNav");
-    nav.classList.toggle("active");
-}
-
-// Language switcher
-document.getElementById('language-button').addEventListener('click', function() {
-    const englishElements = document.querySelectorAll('[data-lang="en"]');
-    const arabicElements = document.querySelectorAll('[data-lang="ar"]');
-    const flagImg = this.querySelector('img');
-
-    if (flagImg.src.includes('gb.svg')) {
-        // Switch to Arabic
-        flagImg.src = 'https://flagcdn.com/sa.svg';
-        flagImg.alt = 'Arabic';
-        englishElements.forEach(el => el.style.display = 'none');
-        arabicElements.forEach(el => el.style.display = 'block');
-        currentLanguage = 'ar';
-    } else {
-        // Switch to English (British flag)
-        flagImg.src = 'https://flagcdn.com/gb.svg';
-        flagImg.alt = 'English';
-        englishElements.forEach(el => el.style.display = 'block');
-        arabicElements.forEach(el => el.style.display = 'none');
-        currentLanguage = 'en';
-    }
-    
-    // Store language preference in localStorage
-    localStorage.setItem('boostigitalLanguage', currentLanguage);
-});
-
-// Check for saved language preference
-document.addEventListener('DOMContentLoaded', function() {
-    const savedLanguage = localStorage.getItem('boostigitalLanguage');
-    if (savedLanguage === 'ar') {
-        document.getElementById('language-button').click();
-    }
-    
-    // Update all navigation links to maintain language
-    updateNavLinks();
-    
-    // Initialize navigation and smooth scroll
-    initNavigation();
-});
-
-// Update navigation links to maintain language
-function updateNavLinks() {
-    const navLinks = document.querySelectorAll('[data-lang]');
-    navLinks.forEach(link => {
-        if (link.dataset.lang === currentLanguage) {
-            link.style.display = 'block';
-        } else {
-            link.style.display = 'none';
-        }
-    });
-}
-
-// Initialize navigation and smooth scroll
-function initNavigation() {
-    // Handle navigation links
-    document.querySelectorAll('.main-nav a').forEach(link => {
-        if (link.getAttribute('href').startsWith('http') || 
-            link.getAttribute('href').includes('.html') ||
-            link.getAttribute('href').includes('.php')) {
-            // Regular navigation link - ensure default behavior
-            link.addEventListener('click', function(e) {
-                // Allow normal navigation
-                return true;
-            });
-        }
-    });
-
-    // Handle smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            const target = document.querySelector(href);
-            
-            // Only prevent default if it's an on-page anchor
-            if (target && href !== '#' && !this.classList.contains('no-smooth')) {
-                e.preventDefault();
-                smoothScroll(href, 1000);
-                
-                // Update URL without page reload
-                if (history.pushState) {
-                    history.pushState(null, null, href);
-                } else {
-                    location.hash = href;
-                }
-            }
-        });
-    });
-}
-
 // Smooth scrolling function
 function smoothScroll(targetId, duration) {
     const target = document.querySelector(targetId);
@@ -558,21 +435,8 @@ function smoothScroll(targetId, duration) {
 
     requestAnimationFrame(animation);
 }
-// Ensure consistent header behavior
-document.addEventListener('DOMContentLoaded', function() {
-    // Set consistent body styles
-    document.body.style.width = '100%';
-    document.body.style.overflowX = 'hidden';
-    document.body.style.margin = '0';
-    document.body.style.padding = '0';
-    
-    // Make sure all sections have consistent width
-    document.querySelectorAll('section').forEach(section => {
-        section.style.width = '100%';
-        section.style.maxWidth = '100%';
-        section.style.overflow = 'hidden';
-    });
-});
+
+// Initialize page functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Set consistent body styles
     document.body.style.width = '100%';
@@ -597,21 +461,35 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.maxWidth = '100%';
         section.style.overflow = 'hidden';
     });
-});
-// Set active class on current page link
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Set active class on current page link
     const currentPage = window.location.pathname.split('/').pop();
     const navLinks = document.querySelectorAll('.main-nav a');
-    
     navLinks.forEach(link => {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
         }
     });
+    
+    // Handle smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            if (target && href !== '#' && !this.classList.contains('no-smooth')) {
+                e.preventDefault();
+                smoothScroll(href, 1000);
+                
+                if (history.pushState) {
+                    history.pushState(null, null, href);
+                } else {
+                    location.hash = href;
+                }
+            }
+        });
+    });
 });
 </script>
 </body>
 </html>
-<!-- partial -->
-  
-

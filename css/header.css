@@ -1,0 +1,400 @@
+/* ===================================
+   BOOSTIGITAL - UNIFIED HEADER STYLES
+   Consolidated from header5.css and header5forportfolio.css
+   =================================== */
+
+/* General Styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #000 !important;
+    padding: 15px 0 !important;
+    width: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    font-family: Arial, sans-serif !important;
+    transition: transform 0.3s ease-in-out !important;
+    transform: translateY(0) !important;
+}
+
+/* Header hidden state - applies to all screen sizes */
+.main-header.header-hidden {
+    transform: translateY(-100%) !important;
+}
+
+/* Add padding to body to compensate for fixed header */
+body {
+    padding-top: 70px !important;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px !important;
+    }
+}
+
+.main-header * {
+    font-family: Arial, sans-serif !important;
+}
+
+/* Header Container - More specific to prevent overrides */
+.main-header .container {
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 0 !important;
+    gap: 0 !important;
+}
+
+/* Logo Styles */
+.logo {
+    margin-right: auto !important;
+}
+
+.logo img {
+    height: 40px !important;
+    width: auto !important;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Styles */
+.main-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Arial, sans-serif !important;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif !important;
+}
+
+.main-nav ul li {
+    margin-left: 15px;
+    font-family: Arial, sans-serif !important;
+}
+
+.main-nav ul li:first-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 90px;
+    white-space: nowrap;
+    font-family: Arial, sans-serif !important;
+}
+
+.main-nav ul li a:hover {
+    color: #32bfc7;
+    border-color: #32bfc7;
+    background-color: rgba(50, 191, 199, 0.1);
+}
+
+.main-nav ul li a.active {
+    color: #32bfc7;
+    border-color: #32bfc7;
+    font-weight: 600;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: inline-block;
+    margin-left: 15px;
+    font-family: Arial, sans-serif !important;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: Arial, sans-serif !important;
+}
+
+.language-switcher img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.language-switcher img:hover {
+    transform: scale(1.1);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none !important;
+    cursor: pointer !important;
+    margin-left: auto !important;
+    font-family: Arial, sans-serif !important;
+    padding: 10px !important;
+    z-index: 1001 !important;
+}
+
+.hamburger span {
+    display: block !important;
+    width: 25px !important;
+    height: 3px !important;
+    background-color: #fff !important;
+    margin: 5px 0 !important;
+    transition: all 0.3s ease !important;
+    font-family: Arial, sans-serif !important;
+}
+
+/* Hamburger active state (X animation) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    /* Ensure header container is protected from other styles */
+    .main-header .container {
+        width: 90% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 10px 15px !important;
+        gap: 0 !important;
+        flex-direction: row !important;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        white-space: normal;
+    }
+
+    .hamburger {
+        display: block !important;
+        margin-left: auto !important;
+    }
+
+    .main-nav {
+        display: none !important;
+        position: absolute !important;
+        top: 70px !important;
+        right: 20px !important;
+        background-color: rgba(0, 0, 0, 0.95) !important;
+        padding: 15px !important;
+        border-radius: 8px !important;
+        width: 200px !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(5px) !important;
+    }
+
+    .main-nav.active {
+        display: block !important;
+    }
+    
+    /* Menu backdrop overlay - mobile only */
+    .menu-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        backdrop-filter: blur(2px);
+    }
+    
+    .menu-backdrop.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .main-nav ul {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .main-nav ul li {
+        margin: 8px 0 !important;
+        width: 100% !important;
+    }
+
+    .main-nav ul li:first-child {
+        margin-top: 0 !important;
+    }
+
+    .main-nav ul li a {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 4px !important;
+    }
+
+    .main-nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .language-switcher {
+        margin: 15px 0 0 !important;
+        display: block !important;
+        text-align: center !important;
+    }
+
+    .language-switcher img {
+        width: 20px !important;
+    }
+}
+
+/* Additional mobile breakpoints - Ensure header container stays consistent */
+@media (max-width: 480px) {
+    .main-header .container {
+        width: 95% !important;
+        padding: 10px 10px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-header .container {
+        width: 100% !important;
+        padding: 10px 8px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-header .container {
+        width: 100% !important;
+        padding: 10px 5px !important;
+    }
+}
+
+/* Desktop - hide backdrop and ensure menu is always visible */
+@media (min-width: 769px) {
+    .menu-backdrop {
+        display: none !important;
+    }
+    
+    .main-nav {
+        display: flex !important;
+        position: static !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        width: auto !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Ensure navigation links work properly */
+.main-nav a.nav-link {
+    pointer-events: auto !important;
+}
+
+/* Ensure elements don't exceed container width */
+div, section {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure full width sections */
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Standard Container for all sections */
+.container, 
+.main-container, 
+.grid-container, 
+.services-grid, 
+.team-grid,
+.image-flip-container,
+.mantra-container,
+.hero-container,
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* RTL Support - Keep Header LTR */
+html[dir="rtl"] .main-header,
+html[dir="rtl"] .main-header .container,
+html[dir="rtl"] .main-nav,
+html[dir="rtl"] .main-nav ul {
+    direction: ltr !important;
+}
+
+/* Ensure body can be RTL but header stays LTR */
+body[dir="rtl"] .main-header,
+body[dir="rtl"] .main-header .container,
+body[dir="rtl"] .main-nav,
+body[dir="rtl"] .main-nav ul {
+    direction: ltr !important;
+}
+

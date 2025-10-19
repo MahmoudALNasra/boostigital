@@ -1,0 +1,130 @@
+/* Services Section */
+/* Services Section */
+/* General Styles */
+.services-section {
+  padding: 0 20px 60px 20px; /* Remove top padding */
+  text-align: center;
+  background-color: #000; /* Black background for the entire section */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff; /* White text color for the entire section */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Section Title */
+.section-title p {
+  font-size: 2.5rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #fff; /* White text color */
+  margin-bottom: 40px; /* Adjusted margin for more spacing */
+  text-transform: uppercase;
+  text-align: center; /* Ensure text is centered */
+  margin-top: -20px; /* Move the title upward */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Grid Styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 20px; /* Reduced gap for a more compact layout */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Service Item */
+.service-item {
+  background: #222; /* Lighter black for the blocks */
+  border-radius: 10px;
+  padding: 20px; /* Adjusted padding */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #fff; /* White text color */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* White shadow for hover effect */
+}
+
+/* Service Item Image */
+.service-item img {
+  width: 100%; /* Fill the width of the parent block */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto 15px; /* Adjusted margin */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.service-title {
+  font-size: 1.25rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #fff; /* White text color */
+  margin-bottom: 15px; /* Adjusted margin */
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+  line-height: 1.2; /* Adjusted line height */
+}
+
+.service-description {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #ddd; /* Light gray for better readability */
+  line-height: 1.5; /* Adjusted line height */
+  margin-bottom: 0;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for tablets */
+    gap: 15px; /* Slightly reduce gap for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for phones */
+    gap: 10px; /* Further reduce gap for phones */
+  }
+
+  .section-title p {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 30px; /* Adjusted margin for smaller screens */
+    margin-top: -15px; /* Adjusted negative margin for smaller screens */
+  }
+
+  .service-title {
+    font-size: 1.1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .service-description {
+    font-size: 0.85rem; /* Adjusted font size for smaller screens */
+  }
+}
+
+/* Extra Small Screens (e.g., very small phones) */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for very small phones */
+    gap: 10px; /* Keep small gap for very small phones */
+  }
+
+  .section-title p {
+    font-size: 1.75rem; /* Smaller font size for very small screens */
+    margin-bottom: 20px; /* Adjusted margin for very small screens */
+    margin-top: -10px; /* Adjusted negative margin for very small screens */
+  }
+
+  .service-title {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .service-description {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+}

@@ -1,44 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bostigital</title>
-    <link rel="stylesheet" href="css/services_CSS/header_services.css">
+    <title>Boostigital - Services</title>
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/services_CSS/services.css">
+    <link rel="stylesheet" href="css/whatsapp.css">
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- WhatsApp Buttons -->
+    <div class="whatsapp-buttons">
+        <!-- WhatsApp Chat Button -->
+        <a href="https://wa.me/?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-button chat">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+            <span data-lang="en" style="display: none;">Tell Us Your Needs</span>
+            <span data-lang="ar">أخبرنا باحتياجاتك</span>
+        </a>
+    </div>
+
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/boostigital_logo.png" alt="Boostigital Logo">
+                </a>
+            </div>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">الأعمال</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
+                    
+                    <li class="language-switcher">
+                        <button class="language-button" id="language-button">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic" width="20" height="15">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section with animated background -->
     <div class="fullscreen-hero">
         <!-- Animated GIF background -->
         <div class="hero-gif-background"></div>
-        
-        <!-- Header with transparent background -->
-        <header class="bs-header transparent-header">
-            <div class="bs-header-content">
-               <div class="logo">
-                    <a href="index.html">
-                <img src="https://i.imgur.com/zBJf6uF.png" alt="Bostigital Logo" class="bs-logo">
-                </a>
-            </div>
-                
-               
-                <div class="bs-nav-wrapper">
-                    <nav class="bs-nav">
-                        <ul class="bs-menu">
-                            <li><a href="index.html" data-key="services" class="menu-item">Home</a></li>
-                            <li><a href="portfolio.html" data-key="portfolio" class="menu-item">PORTFOLIO</a></li>
-                            <li><a href="contact_us_page.html" data-key="contact" class="menu-item">CONTACT US</a></li>
-                        </ul>
-                    </nav>
-                    <button class="bs-language-toggle" id="languageToggle">
-                        <span class="flag-icon flag-icon-gb"></span>
-                    </button>
-                </div>
-            </div>
-        </header>
 
         <!-- Hero content centered -->
         <div class="hero-content">
@@ -190,10 +209,14 @@
 
 
 
+    <!-- Unified Language Switcher -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/header.js"></script>
+    
+    <!-- Services Page Translations -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-    // Language Toggle Functionality
-    const languageToggle = document.getElementById('languageToggle');
+    // Services Page Translation Functionality
     const elementsToTranslate = document.querySelectorAll('[data-key]');
 
     const translations = {
@@ -372,18 +395,9 @@
     // Initialize Hero Animation
     initHeroAnimation();
 
-    // Language Toggle Handler
-    languageToggle.addEventListener('click', () => {
-        currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
-        
-        // Update document direction
-        document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
-        
-        // Update flag icon
-        const flagSpan = languageToggle.querySelector('.flag-icon');
-        flagSpan.className = currentLanguage === 'en' 
-            ? 'flag-icon flag-icon-gb' 
-            : 'flag-icon flag-icon-sa';
+    // Listen to language changes and update services translations
+    document.addEventListener('languageChanged', function(e) {
+        const currentLanguage = e.detail.language;
         
         // Update all translatable elements
         elementsToTranslate.forEach(element => {
@@ -397,17 +411,6 @@
         const heroText = document.querySelector('.hero-text');
         if (heroText) {
             heroText.textContent = translations[currentLanguage]['heroTitle'];
-            // Re-trigger animation
-            setTimeout(() => {
-                heroText.style.transition = 'none';
-                heroText.style.opacity = '0';
-                heroText.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    heroText.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-                    heroText.style.opacity = '1';
-                    heroText.style.transform = 'translateY(0)';
-                }, 50);
-            }, 10);
         }
         
         // Clean only bullet points in Arabic
@@ -416,9 +419,9 @@
         }
     });
 
-    // Initialize Arabic cleaning if page loads in Arabic
-    if (document.documentElement.dir === 'rtl') {
-        currentLanguage = 'ar';
+    // Initial translation based on saved language
+    const savedLanguage = localStorage.getItem('boostigitalLanguage') || 'ar';
+    if (savedLanguage === 'ar') {
         setTimeout(() => {
             elementsToTranslate.forEach(element => {
                 const key = element.getAttribute('data-key');
@@ -427,40 +430,13 @@
                 }
             });
             
-            // Update hero text
             const heroText = document.querySelector('.hero-text');
             if (heroText) {
                 heroText.textContent = translations.ar['heroTitle'];
             }
             
             cleanArabicBullets();
-        }, 50);
-    }
-
-    // Smooth scroll for navigation links
-    document.querySelectorAll('.menu-item').forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Only prevent default if it's a hash link on the same page
-        if (this.getAttribute('href').startsWith('#')) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        }
-        // Otherwise, let the link work normally
-    });
-});
-
-    // Make sure header is transparent initially
-    const header = document.querySelector('.bs-header');
-    if (header) {
-        header.classList.add('transparent-header');
+        }, 100);
     }
 });
         
@@ -469,5 +445,13 @@
         
         
     </script>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p data-lang="en" style="display: none;">&copy; Boostigital 2025. All rights reserved.</p>
+            <p data-lang="ar">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
 </body>
 </html>

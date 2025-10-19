@@ -1,0 +1,1162 @@
+/* General Styles */
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff; /* White text for black background */
+    background-color: #000; /* Black background for the entire website */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #000; /* Solid black background */
+    padding: 15px 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* White shadow */
+    position: static; /* Remove fixed position */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and menu */
+}
+
+.logo img {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.main-nav {
+    margin-left: auto; /* Push the menu to the right */
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure menu items are horizontal */
+    align-items: center; /* Align menu items vertically */
+}
+
+.main-nav ul li {
+    margin-left: 8px; /* Further reduce spacing between buttons */
+}
+
+.main-nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 12px; /* Smaller font size */
+    font-weight: 500;
+    padding: 6px 10px; /* Smaller padding for both buttons */
+    border: 2px solid #fff; /* White border */
+    border-radius: 50px; /* Rounded buttons */
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 90px; /* Smaller minimum width */
+}
+
+.main-nav ul li a:hover {
+    color: #32bfc7; /* Teal color on hover */
+    border-color: #32bfc7; /* Change border color on hover */
+    background-color: rgba(50, 191, 199, 0.1); /* Light teal background on hover */
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+    display: none; /* Hide hamburger menu */
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .main-header {
+        display: flex;
+        justify-content: flex-end; /* Keep menu on the right side */
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .main-nav ul {
+        display: none; /* Hide menu items on mobile */
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 10px; /* Align dropdown to the right */
+        width: auto; /* Keep width compact */
+        background-color: #000; /* Black background for mobile menu */
+        padding: 10px 20px;
+        text-align: right; /* Align text to the right */
+        border-radius: 8px;
+    }
+
+    .main-nav ul.active {
+        display: flex; /* Show menu items when active */
+    }
+
+    .main-nav ul li {
+        margin: 8px 0; /* Adjust spacing for mobile */
+    }
+
+    .main-nav ul li a {
+        font-size: 10px; /* Even smaller font size for mobile */
+        padding: 5px 8px; /* Adjusted padding for small screens */
+        min-width: 80px; /* Ensure buttons fit on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+    }
+}
+
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Increased height to prevent overlap */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #18A999, #0093D4);
+    padding-left: 10%;
+    padding-top: 0;
+    overflow: hidden;
+    animation: zoomBg 10s infinite alternate ease-in-out;
+    margin-bottom: 40px; /* Added margin to create space below */
+}
+
+@keyframes zoomBg {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hero-content {
+    position: relative;
+    text-align: left;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 65px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 22px;
+    border: 4px solid white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #008080;
+}
+
+.hero-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://boostigital.com/wp-content/uploads/2024/12/cropped-background-green-1.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Responsive Design for Old Hero Section */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh; /* Adjusted height for mobile */
+        padding-left: 5%; /* Adjusted padding for mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 24px; /* Adjusted font size for mobile */
+    }
+
+    .hero-title {
+        font-size: 40px; /* Adjusted font size for mobile */
+        white-space: normal; /* Allow text to wrap */
+    }
+
+    .cta-button {
+        font-size: 18px; /* Adjust button font size for mobile */
+        padding: 10px 20px; /* Adjust button padding for mobile */
+    }
+}
+
+/*New Hero Section (Renamed to avoid conflicts) */
+/* New Hero Section */
+/* New Hero Section */
+.new-hero-section {
+    background-color: #000; /* Black background */
+    padding: 100px 0; /* Add padding for spacing */
+}
+
+.new-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between images and text */
+    max-width: 1200px; /* Limit width for better alignment */
+    margin: 0 auto; /* Center the hero section */
+}
+
+.new-hero-image img {
+    width: 100%; /* Match the size of .front-image */
+    height: auto;
+    max-width: 350px; /* Adjust based on .front-image size */
+    transition: transform 0.5s ease; /* Smooth rotation effect */
+}
+
+.new-hero-image.left:hover img {
+    transform: rotate(90deg); /* Rotate left image 90 degrees on hover */
+}
+
+.new-hero-image.right:hover img {
+    transform: rotate(-90deg); /* Rotate right image -90 degrees on hover */
+}
+
+.new-hero-title {
+    font-size: clamp(24px, 6vw, 60px); /* Minimum 24px, proportional 6vw, maximum 86px */
+    font-weight: 900; /* Bold text */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 0 20px; /* Add horizontal padding for spacing */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Design for New Hero Section */
+@media (max-width: 768px) {
+    .new-hero {
+        gap: 10px; /* Reduced gap for mobile */
+        flex-direction: row; /* Ensure 3 columns on mobile */
+        flex-wrap: wrap; /* Allow wrapping if needed */
+        justify-content: space-around; /* Distribute items evenly */
+    }
+
+    .new-hero-image,
+    .new-hero-title {
+        flex: 1 1 30%; /* Ensure each item takes up roughly 1/3 of the width */
+        text-align: center; /* Center-align text and images */
+    }
+
+    .new-hero-title {
+        font-size: clamp(24px, 6vw, 86px); /* Ensure proportional scaling */
+        padding: 0 10px; /* Adjusted padding for mobile */
+    }
+
+    .new-hero-image img {
+        max-width: 150px; /* Smaller images for mobile */
+    }
+}
+
+@media (max-width: 454px) {
+    .new-hero {
+        gap: 5px; /* Further reduced gap for smaller screens */
+    }
+
+    .new-hero-title {
+        font-size: clamp(24px, 6vw, 86px); /* Ensure proportional scaling */
+    }
+
+    .new-hero-image img {
+        max-width: 120px; /* Smaller images for smaller screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .new-hero {
+        gap: 5px; /* Further reduced gap for smaller screens */
+    }
+
+    .new-hero-title {
+        font-size: clamp(18px, 6vw, 86px); /* Ensure proportional scaling */
+    }
+
+    .new-hero-image img {
+        max-width: 100px; /* Smaller images for smaller screens */
+    }
+}
+/* Image Flip Section */
+.image-flip-section {
+    padding: 50px 0;
+}
+
+.image-flip-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* Ensure images stay in a row */
+    overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+.image-flip-item {
+    position: relative;
+    min-width: 30%; /* Adjust as needed */
+    perspective: 1000px;
+}
+
+.image-flip-item figure {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.image-flip-item:hover figure {
+    transform: rotateY(180deg);
+}
+
+.image-flip-item img {
+    width: 100%;
+    height: auto;
+    backface-visibility: hidden;
+}
+
+.image-flip-item .back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+}
+
+/* Mantra Section */
+/* Mantra Section */
+/* Mantra Section */
+/* Mantra Section */
+.mantra-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000;
+    width: 100%;
+}
+
+.mantra-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Left and Right Columns */
+.mantra-left, .mantra-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Center Image */
+.mantra-center {
+    flex: 3; /* Increase flex value to make the image even larger */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mantra-center img {
+    max-width: 100%; /* Ensure the image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+/* "Our Mantra" Text Overlay */
+.mantra-center::after {
+    content: "Our Mantra";
+    position: absolute;
+    color: #fff;
+    font-size: 4.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 0.9;
+    transition: color 0.3s ease-in-out;
+}
+
+.mantra-center:hover::after {
+    color: #32bfc7;
+}
+
+/* Mantra Items - Icons Above Text */
+.mantra-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    padding: 0;
+}
+
+/* Adjusted Icons */
+.mantra-item img {
+    width: 80px; /* Smaller icons for desktop */
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Adjusted Headings */
+.mantra-content h3 {
+    font-size: 1.2rem; /* Smaller headings for desktop */
+    color: #32bfc7;
+    margin-bottom: 10px;
+}
+
+/* Adjusted Text */
+.mantra-content p {
+    font-size: 0.7rem; /* Smaller text for desktop */
+    color: #ddd;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Change Blue Sentences to White and Hover to Blue */
+.mantra-content p strong {
+    font-weight: 700;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.mantra-content p strong:hover {
+    color: #32bfc7;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for tablets */
+        gap: 20px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 30px;
+    }
+
+    .mantra-item img {
+        width: 70px; /* Smaller icons for tablets */
+        height: 70px;
+        margin-bottom: 15px;
+    }
+
+    .mantra-content h3 {
+        font-size: 1rem; /* Smaller headings for tablets */
+        margin-bottom: 8px;
+    }
+
+    .mantra-content p {
+        font-size: 0.6rem; /* Smaller text for tablets */
+    }
+
+    .mantra-center img {
+        max-width: 100%; /* Increase image size for tablets */
+    }
+
+    .mantra-center::after {
+        font-size: 3.5rem; /* Smaller text overlay for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for smaller tablets */
+        gap: 15px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 20px;
+    }
+
+    .mantra-item img {
+        width: 60px; /* Smaller icons for smaller tablets */
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.9rem; /* Smaller headings for smaller tablets */
+        margin-bottom: 6px;
+    }
+
+    .mantra-content p {
+        font-size: 0.5rem; /* Smaller text for smaller tablets */
+    }
+
+    .mantra-center img {
+        max-width: 90%; /* Increase image size for smaller tablets */
+    }
+
+    .mantra-center::after {
+        font-size: 3rem; /* Smaller text overlay for smaller tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for mobile */
+        gap: 10px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 15px;
+    }
+
+    .mantra-item img {
+        width: 50px; /* Smaller icons for mobile */
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.8rem; /* Smaller headings for mobile */
+        margin-bottom: 5px;
+    }
+
+    .mantra-content p {
+        font-size: 0.4rem; /* Smaller text for mobile */
+    }
+
+    .mantra-center img {
+        max-width: 80%; /* Increase image size for mobile */
+    }
+
+    .mantra-center::after {
+        font-size: 2.5rem; /* Smaller text overlay for mobile */
+    }
+}
+
+@media (max-width: 320px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for very small screens */
+        gap: 8px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 10px;
+    }
+
+    .mantra-item img {
+        width: 40px; /* Smaller icons for very small screens */
+        height: 40px;
+        margin-bottom: 8px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.7rem; /* Smaller headings for very small screens */
+        margin-bottom: 4px;
+    }
+
+    .mantra-content p {
+        font-size: 0.3rem; /* Smaller text for very small screens */
+    }
+
+    .mantra-center img {
+        max-width: 70%; /* Increase image size for very small screens */
+    }
+
+    .mantra-center::after {
+        font-size: 2rem; /* Smaller text overlay for very small screens */
+    }
+}
+
+@media (max-width: 290px) {
+    .mantra-container {
+        flex-direction: row; /* Keep side-by-side layout for the smallest screens */
+        gap: 5px;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 8px;
+    }
+
+    .mantra-item img {
+        width: 30px; /* Smaller icons for the smallest screens */
+        height: 30px;
+        margin-bottom: 6px;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.6rem; /* Smaller headings for the smallest screens */
+        margin-bottom: 3px;
+    }
+
+    .mantra-content p {
+        font-size: 0.2rem; /* Smaller text for the smallest screens */
+    }
+
+    .mantra-center img {
+        max-width: 60%; /* Increase image size for the smallest screens */
+    }
+
+    .mantra-center::after {
+        font-size: 1.5rem; /* Smaller text overlay for the smallest screens */
+    }
+}
+/* Services Section */
+/* Services Section */
+/* General Styles */
+.services-section {
+  padding: 0 20px 60px 20px; /* Remove top padding */
+  text-align: center;
+  background-color: #000; /* Black background for the entire section */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff; /* White text color for the entire section */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Section Title */
+.section-title p {
+  font-size: 2.5rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #fff; /* White text color */
+  margin-bottom: 40px; /* Adjusted margin for more spacing */
+  text-transform: uppercase;
+  text-align: center; /* Ensure text is centered */
+  margin-top: -20px; /* Move the title upward */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Grid Styles */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 20px; /* Reduced gap for a more compact layout */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Service Item */
+.service-item {
+  background: #222; /* Lighter black for the blocks */
+  border-radius: 10px;
+  padding: 20px; /* Adjusted padding */
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: #fff; /* White text color */
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2); /* White shadow for hover effect */
+}
+
+/* Service Item Image */
+.service-item img {
+  width: 100%; /* Fill the width of the parent block */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto 15px; /* Adjusted margin */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.service-title {
+  font-size: 1.25rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #fff; /* White text color */
+  margin-bottom: 15px; /* Adjusted margin */
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+  line-height: 1.2; /* Adjusted line height */
+}
+
+.service-description {
+  font-size: 0.9rem; /* Adjusted font size */
+  color: #ddd; /* Light gray for better readability */
+  line-height: 1.5; /* Adjusted line height */
+  margin-bottom: 0;
+  font-family: 'Arial', sans-serif; /* Adjust font family */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for tablets */
+    gap: 15px; /* Slightly reduce gap for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for phones */
+    gap: 10px; /* Further reduce gap for phones */
+  }
+
+  .section-title p {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 30px; /* Adjusted margin for smaller screens */
+    margin-top: -15px; /* Adjusted negative margin for smaller screens */
+  }
+
+  .service-title {
+    font-size: 1.1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .service-description {
+    font-size: 0.85rem; /* Adjusted font size for smaller screens */
+  }
+}
+
+/* Extra Small Screens (e.g., very small phones) */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for very small phones */
+    gap: 10px; /* Keep small gap for very small phones */
+  }
+
+  .section-title p {
+    font-size: 1.75rem; /* Smaller font size for very small screens */
+    margin-bottom: 20px; /* Adjusted margin for very small screens */
+    margin-top: -10px; /* Adjusted negative margin for very small screens */
+  }
+
+  .service-title {
+    font-size: 1rem; /* Smaller font size for very small screens */
+  }
+
+  .service-description {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+}
+/* Team Section */
+/* Team Section */
+/* Team Section */
+/* Team Section */
+/* Team Section */
+.our-team-section {
+    padding: 50px 0;
+    background-color: #000; /* Black background */
+}
+
+.our-team-container {
+    text-align: center;
+    max-width: 1200px; /* Match the width of the services section */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.our-team-container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff; /* White text */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Always 3 columns with equal width */
+    gap: 20px; /* Space between blocks */
+}
+
+.team-member {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; /* Dark gray background */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* White shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+    width: 100%; /* Responsive images */
+    max-width: 200px; /* Larger images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.team-member h3 {
+    font-size: 24px; /* Larger font size */
+    margin-bottom: 10px;
+    color: #fff; /* White text */
+}
+
+.team-member p {
+    font-size: 16px; /* Larger font size */
+    color: #ccc; /* Light gray text */
+}
+
+/* Responsive Design for Team Section */
+@media (max-width: 1024px) {
+    .team-grid {
+        gap: 15px; /* Slightly reduce gap for tablets */
+    }
+
+    .team-member img {
+        max-width: 180px; /* Slightly smaller images for tablets */
+    }
+
+    .team-member h3 {
+        font-size: 20px; /* Adjusted font size for tablets */
+    }
+
+    .team-member p {
+        font-size: 14px; /* Adjusted font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        gap: 10px; /* Further reduce gap for mobile */
+    }
+
+    .team-member img {
+        max-width: 150px; /* Smaller images for mobile */
+    }
+
+    .team-member h3 {
+        font-size: 18px; /* Adjusted font size for mobile */
+    }
+
+    .team-member p {
+        font-size: 12px; /* Adjusted font size for mobile */
+    }
+}
+
+/* Extra Small Screens (e.g., very small phones) */
+@media (max-width: 480px) {
+    .team-grid {
+        gap: 10px; /* Keep small gap for very small phones */
+    }
+
+    .team-member img {
+        max-width: 120px; /* Smaller images for very small phones */
+    }
+
+    .team-member h3 {
+        font-size: 16px; /* Adjusted font size for very small phones */
+    }
+
+    .team-member p {
+        font-size: 10px; /* Adjusted font size for very small phones */
+    }
+}
+/* Contact Section */
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height for centering */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    gap: 40px; /* Space between form and contact info */
+    max-width: 1200px; /* Wider container */
+    width: 100%;
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.contact-container form {
+    width: 600px; /* Fixed width for the form */
+    background-color: #222; /* Dark gray background */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* White shadow */
+}
+
+.contact-container .contact-info {
+    color: #fff; /* White text */
+    text-align: left; /* Align text to the left */
+    margin-left: 40px; /* Space between form and contact info */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff; /* White text */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 12px; /* Increased padding */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 150px; /* Adjust height as needed */
+}
+
+/* Checkbox Styles */
+.checkbox {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    margin-top: 15px; /* Increased margin */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.checkbox input {
+    margin-right: 10px; /* Space between checkbox and label */
+    flex-shrink: 0; /* Prevent checkbox from shrinking */
+    width: auto; /* Ensure checkbox doesn't stretch */
+}
+
+.checkbox label {
+    font-size: 14px;
+    color: #ccc; /* Light gray text */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px; /* Increased padding */
+    background-color: #32bfc7; /* Teal button color */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2aa8af; /* Darker teal on hover */
+}
+
+/* Contact Info Styles */
+.contact-info p {
+    font-size: 24px; /* 1.5x larger text size (16px * 1.5 = 24px) */
+    color: #ccc; /* Light gray text */
+    margin: 0 0 20px 0; /* Add margin between paragraphs */
+}
+
+.contact-info a {
+    color: #32bfc7; /* Teal link color */
+    text-decoration: none;
+    font-size: 24px; /* 1.5x larger link size */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Space above icons */
+}
+
+.social-media a {
+    display: inline-block;
+    color: #fff; /* White icons */
+    font-size: 36px; /* Larger icon size (24px * 1.5 = 36px) */
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #32bfc7; /* Teal on hover */
+}
+
+/* Footer */
+.main-footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack form and info on small screens */
+        align-items: center; /* Center align everything */
+    }
+
+    .contact-container form {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .contact-container .contact-info {
+        text-align: center; /* Center align text */
+        margin-top: 30px; /* Add space between form and contact info */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .social-media {
+        justify-content: center; /* Center align icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container form {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* Full width inputs */
+    }
+
+    .contact-info p {
+        font-size: 18px; /* Smaller text for small screens */
+    }
+
+    .contact-info a {
+        font-size: 18px; /* Smaller link size for small screens */
+    }
+
+    .social-media a {
+        font-size: 24px; /* Smaller icons for small screens */
+    }
+}
+
+@media (max-width: 320px) {
+    .contact-container form {
+        padding: 15px; /* Further reduce padding */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px; /* Smaller padding for inputs */
+    }
+
+    .checkbox label {
+        font-size: 12px; /* Smaller checkbox label */
+    }
+
+    button[type="submit"] {
+        padding: 12px; /* Smaller button padding */
+    }
+
+    .contact-info p {
+        font-size: 16px; /* Smaller text for very small screens */
+    }
+
+    .contact-info a {
+        font-size: 16px; /* Smaller link size for very small screens */
+    }
+
+    .social-media a {
+        font-size: 20px; /* Smaller icons for very small screens */
+    }
+}
+
+.language-switcher {
+    padding-left: 20px;
+    background-color: black; /* Black background for the entire switcher */
+    display: inline-block; /* Ensure the background wraps around the flag */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    padding-right: 5px; /* Add padding for better spacing */
+}
+
+#language-button {
+    background-color: black; /* Black background for the button */
+    border: none; /* Remove default button border */
+    padding: 0; /* Remove default padding */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    display: inline-block; /* Ensure the button wraps around the flag */
+    overflow: hidden; /* Hide any overflow from the flag image */
+}
+
+.flag {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    display: block; /* Ensure the flag is displayed as a block element */
+    background-color: black; /* Ensure the flag itself has a black background */
+    border: 1px solid black; /* Optional: Add a black border to the flag */
+    object-fit: cover; /* Ensure the flag image covers the entire container */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}
