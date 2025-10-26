@@ -1,0 +1,725 @@
+/* ===================================
+   MOBILE ENHANCEMENTS - BOOSTIGITAL
+   Comprehensive mobile optimization for all pages
+   =================================== */
+
+/* ========== GENERAL MOBILE FIXES ========== */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling on mobile */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ========== MOBILE BREAKPOINTS ========== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    /* Base font size adjustment */
+    html {
+        font-size: 14px;
+    }
+    
+    /* Section padding */
+    section {
+        padding: 40px 15px !important;
+    }
+    
+    /* Container adjustments - NOT for header */
+    section .container:not(.main-header .container),
+    .hero-container,
+    .services-container,
+    .contact-container {
+        padding: 0 15px !important;
+        width: 100% !important;
+    }
+    
+    /* Header improvements - DO NOT OVERRIDE header.css */
+    /* Header styles are managed by header.css */
+    
+    .logo img {
+        height: 35px !important;
+    }
+    
+    /* Navigation menu */
+    .main-nav {
+        top: 60px !important;
+        right: 15px !important;
+        width: 180px !important;
+    }
+    
+    /* Hero sections */
+    .hero-section {
+        min-height: 50vh !important;
+        padding: 30px 15px !important;
+        justify-content: center !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .cta-button {
+        font-size: 1rem !important;
+        padding: 12px 24px !important;
+    }
+    
+    /* English (LTR) mobile view adjustments */
+    html:not([dir="rtl"]) .hero-section {
+        text-align: left !important;
+        padding-left: 8% !important;
+    }
+    
+    html:not([dir="rtl"]) .hero-content {
+        text-align: left !important;
+    }
+    
+    /* Arabic (RTL) mobile view - centered */
+    html[dir="rtl"] .hero-section {
+        justify-content: center !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    
+    html[dir="rtl"] .hero-content {
+        text-align: center !important;
+    }
+    
+    /* New hero first section */
+    .new-hero {
+        padding: 30px 10px !important;
+        gap: 15px !important;
+    }
+    
+    .new-hero-title {
+        font-size: 1.5rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .new-hero-image img {
+        max-width: 60px !important;
+        height: auto !important;
+    }
+    
+    /* Buttons */
+    .cta-button, button {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Services grid */
+    .services-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .service-item {
+        padding: 15px !important;
+    }
+    
+    .service-item img {
+        max-width: 60px !important;
+        height: auto !important;
+    }
+    
+    .service-title {
+        font-size: 0.9rem !important;
+        margin: 10px 0 5px !important;
+    }
+    
+    .service-description {
+        font-size: 0.7rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Team section */
+    .team-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+    }
+    
+    .team-member img {
+        max-width: 80px !important;
+    }
+    
+    .team-member h3 {
+        font-size: 0.8rem !important;
+    }
+    
+    .team-member p {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Mantra section */
+    .mantra-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .mantra-item {
+        flex-direction: row !important;
+        text-align: left !important;
+        gap: 10px !important;
+    }
+    
+    .mantra-item img {
+        max-width: 40px !important;
+    }
+    
+    .mantra-content h3 {
+        font-size: 0.9rem !important;
+    }
+    
+    .mantra-content p {
+        font-size: 0.7rem !important;
+    }
+    
+    .mantra-center img {
+        max-width: 80% !important;
+    }
+    
+    .mantra-center-text {
+        font-size: 2rem !important;
+    }
+    
+    /* Image flip section */
+    .image-flip-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    .image-flip-item {
+        min-width: 80% !important;
+        max-width: 300px !important;
+        margin: 0 auto !important;
+    }
+    
+    .flip-description {
+        font-size: 0.75rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    /* Contact form */
+    .contact-section {
+        padding: 30px 15px !important;
+    }
+    
+    .contact-container {
+        flex-direction: column !important;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+    
+    /* Footer */
+    .main-footer {
+        padding: 15px 0 !important;
+    }
+    
+    .main-footer p {
+        font-size: 0.8rem !important;
+    }
+    
+    /* WhatsApp button */
+    .whatsapp-button {
+        padding: 10px 15px !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .whatsapp-button img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* Mobile phones (480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
+    section {
+        padding: 30px 10px !important;
+    }
+    
+    section .container:not(.main-header .container),
+    .hero-container,
+    .services-container,
+    .contact-container {
+        padding: 0 10px !important;
+    }
+    
+    /* Header */
+    .logo img {
+        height: 30px !important;
+    }
+    
+    .main-nav {
+        width: 160px !important;
+    }
+    
+    .main-nav ul li a {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+    }
+    
+    /* Hero sections */
+    .hero-section {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        height: 50vh !important;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .cta-button {
+        font-size: 0.9rem !important;
+        padding: 10px 20px !important;
+    }
+    
+    /* English view specific */
+    html:not([dir="rtl"]) .hero-section {
+        padding-left: 6% !important;
+    }
+    
+    .new-hero-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .new-hero-image img {
+        max-width: 50px !important;
+    }
+    
+    /* Services grid - single column on very small screens */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .service-item {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Team grid - single column */
+    .team-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .team-member {
+        max-width: 200px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Mantra items */
+    .mantra-content h3 {
+        font-size: 0.8rem !important;
+    }
+    
+    .mantra-content p {
+        font-size: 0.65rem !important;
+    }
+    
+    .mantra-center-text {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Image flip */
+    .image-flip-item {
+        min-width: 90% !important;
+        max-width: 250px !important;
+    }
+    
+    .flip-description {
+        font-size: 0.65rem !important;
+        padding: 10px !important;
+    }
+    
+    .back-content {
+        padding: 12% !important;
+    }
+    
+    /* Contact form */
+    .form-heading .your-needs {
+        font-size: 2rem !important;
+    }
+    
+    .form-heading .tell-us {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Extra small phones (375px) */
+@media (max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+    
+    section {
+        padding: 25px 8px !important;
+    }
+    
+    .hero-section {
+        height: 45vh !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+    
+    .hero-title {
+        font-size: 1.3rem !important;
+        line-height: 1.15 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem !important;
+    }
+    
+    .cta-button {
+        font-size: 0.85rem !important;
+        padding: 8px 18px !important;
+    }
+    
+    .new-hero-title {
+        font-size: 1rem !important;
+    }
+    
+    /* English view specific */
+    html:not([dir="rtl"]) .hero-section {
+        padding-left: 5% !important;
+    }
+    
+    .new-hero-image img {
+        max-width: 40px !important;
+    }
+    
+    .service-item img {
+        max-width: 50px !important;
+    }
+    
+    .mantra-item img {
+        max-width: 35px !important;
+    }
+    
+    .mantra-center-text {
+        font-size: 1.2rem !important;
+    }
+    
+    .image-flip-item {
+        max-width: 220px !important;
+    }
+}
+
+/* Very small screens (320px) */
+@media (max-width: 320px) {
+    html {
+        font-size: 11px;
+    }
+    
+    section {
+        padding: 20px 5px !important;
+    }
+    
+    section .container:not(.main-header .container),
+    .hero-container,
+    .services-container,
+    .contact-container {
+        padding: 0 5px !important;
+    }
+    
+    .logo img {
+        height: 25px !important;
+    }
+    
+    .main-nav {
+        width: 140px !important;
+    }
+    
+    .hero-section {
+        height: 40vh !important;
+        min-height: 300px !important;
+        padding-left: 4% !important;
+        padding-right: 4% !important;
+    }
+    
+    .hero-title {
+        font-size: 1.1rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.75rem !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .cta-button {
+        font-size: 0.75rem !important;
+        padding: 7px 15px !important;
+    }
+    
+    .new-hero-title {
+        font-size: 0.9rem !important;
+    }
+    
+    /* English view specific */
+    html:not([dir="rtl"]) .hero-section {
+        padding-left: 4% !important;
+    }
+    
+    html:not([dir="rtl"]) .hero-content {
+        padding: 0 10px !important;
+    }
+    
+    .new-hero-image img {
+        max-width: 35px !important;
+    }
+    
+    .service-item img {
+        max-width: 40px !important;
+    }
+    
+    .service-title {
+        font-size: 0.8rem !important;
+    }
+    
+    .service-description {
+        font-size: 0.6rem !important;
+    }
+    
+    .mantra-content h3 {
+        font-size: 0.7rem !important;
+    }
+    
+    .mantra-content p {
+        font-size: 0.55rem !important;
+    }
+    
+    .mantra-center-text {
+        font-size: 1rem !important;
+    }
+    
+    .flip-description {
+        font-size: 0.55rem !important;
+    }
+    
+    .image-flip-item {
+        max-width: 200px !important;
+    }
+}
+
+/* ========== TOUCH OPTIMIZATIONS ========== */
+
+/* Better touch targets */
+@media (max-width: 768px) {
+    button, a, input, select {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        padding: 12px 15px !important;
+    }
+    
+    /* Prevent text selection on buttons */
+    button {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    
+    /* Better form inputs on mobile */
+    input, select, textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        border-radius: 8px;
+    }
+}
+
+/* ========== ORIENTATION FIXES ========== */
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 70vh !important;
+    }
+    
+    .mantra-container {
+        flex-direction: row !important;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* ========== ACCESSIBILITY IMPROVEMENTS ========== */
+
+@media (max-width: 768px) {
+    /* Better focus states for mobile */
+    button:focus,
+    a:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 3px solid #32bfc7;
+        outline-offset: 2px;
+    }
+    
+    /* Better contrast for small text */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+
+/* Additional Mobile Polish */
+@media (max-width: 768px) {
+    /* Improve tap targets */
+    a, button, input, select, textarea {
+        -webkit-tap-highlight-color: rgba(50, 191, 199, 0.3);
+    }
+    
+    /* Better text readability */
+    p, li, span {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+    
+    /* Prevent iOS text size adjustment */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* Smooth momentum scrolling */
+    body, .main-nav {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Fix iOS input zoom */
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+    
+    /* Privacy Policy Checkbox - Mobile Friendly */
+    .checkbox {
+        display: flex !important;
+        align-items: flex-start !important;
+        margin: 15px 0 20px 0 !important;
+    }
+    
+    .checkbox input[type="checkbox"] {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+        margin-right: 12px !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+        cursor: pointer;
+    }
+    
+    .checkbox label {
+        white-space: normal !important; /* Allow text to wrap */
+        line-height: 1.5 !important;
+        font-size: 14px !important;
+        cursor: pointer;
+        flex: 1 !important;
+        word-break: break-word !important;
+    }
+    
+    .checkbox label a {
+        word-break: break-word !important;
+        display: inline !important;
+    }
+    
+    /* Contact form specific checkbox styling */
+    .contact-form-container .checkbox,
+    .form-group.checkbox {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    
+    .contact-form-container .checkbox input,
+    .form-group.checkbox input {
+        width: 20px !important;
+        height: 20px !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+        margin: 2px 0 0 0 !important;
+    }
+    
+    .contact-form-container .checkbox label,
+    .form-group.checkbox label {
+        flex: 1 !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        line-height: 1.5 !important;
+        font-size: 14px !important;
+    }
+}
+
+/* Smaller screens - even more compact */
+@media (max-width: 480px) {
+    .checkbox label {
+        font-size: 13px !important;
+    }
+    
+    .checkbox input[type="checkbox"] {
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px !important;
+        min-height: 18px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .checkbox label {
+        font-size: 12px !important;
+    }
+}

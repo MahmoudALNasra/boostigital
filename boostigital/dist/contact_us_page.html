@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostdigital</title>
+    <link rel="stylesheet" href="css/contact_us_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://boostigital.com/wp-content/uploads/2024/08/boostigital_logo-.png" alt="Logo">
+            </div>
+            
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" data-lang="en">SERVICES</a></li>
+                    <li><a href="#" data-lang="en">CONTACT US</a></li>
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button id="language-button">
+                            <img src="https://flagcdn.com/us.svg" alt="English" class="flag">
+                        </button>
+                    </div>
+                    <li><a href="#" data-lang="ar" style="display: none;">الخدمات</a></li>
+                    <li><a href="#" data-lang="ar" style="display: none;">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="contact-form-container">
+            <div class="form-heading">
+                <span class="tell-us">tell us more about</span>
+                <span class="your-needs">your needs</span>
+            </div>
+            <form>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name (required)" required>
+                </div>
+
+                <!-- Company Name -->
+                <div class="form-group">
+                    <input type="text" id="company-name" name="company-name" placeholder="Company Name (required)" required>
+                </div>
+
+                <!-- Contact Number -->
+                <div class="form-group">
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Contact Number (Optional)">
+                </div>
+
+                <!-- Contact Email -->
+                <div class="form-group">
+                    <input type="email" id="contact-email" name="contact-email" placeholder="Contact Email Address (required)" required>
+                </div>
+
+                <!-- Service Selection -->
+                <div class="form-group">
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Service You're Interested In:</option>
+                        <option value="branding">Branding</option>
+                        <option value="social-media">Social Media</option>
+                        <option value="performance-marketing">Performance Marketing</option>
+                        <option value="web-design">Web Design</option>
+                        <option value="full-package">Full Package</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Your Message -->
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="8" required></textarea>
+                </div>
+
+                <!-- Privacy Policy Checkbox -->
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                    <label for="privacy-policy">I agree to the <a href="/privacy-policy"> privacy policy</a></label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group submit-button">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p data-lang="en">&copy; 2023 Your Website. All rights reserved.</p>
+            <p data-lang="ar" style="display: none;">&copy; 2023 موقعك. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("mainNav");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+    <!-- JavaScript for Language Switcher -->
+    <script>
+        document.getElementById('language-button').addEventListener('click', function() {
+            const englishElements = document.querySelectorAll('[data-lang="en"]');
+            const arabicElements = document.querySelectorAll('[data-lang="ar"]');
+            const flagImg = this.querySelector('img');
+
+            if (flagImg.src.includes('gb.svg')) {
+                // Switch to Arabic
+                flagImg.src = 'https://flagcdn.com/sa.svg';
+                flagImg.alt = 'Arabic';
+                englishElements.forEach(el => el.style.display = 'none');
+                arabicElements.forEach(el => el.style.display = 'block');
+            } else {
+                // Switch to English (British flag)
+                flagImg.src = 'https://flagcdn.com/gb.svg'; // Updated to British flag
+                flagImg.alt = 'English';
+                englishElements.forEach(el => el.style.display = 'block');
+                arabicElements.forEach(el => el.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,71 +1,26 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8B6K1EM52"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q8B6K1EM52');
+</script>
     <meta charset="UTF-8">
-     
-    <link rel="stylesheet" href="css/header-stable.css">
-    <link rel="stylesheet" href="css/portfolio21-may6.css">
-   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostdigital</title>
+    <title>Boostigital - Contact Us</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/portfolio21-may6.css">
     <link rel="stylesheet" href="css/contact_us_page.css">
     <link rel="stylesheet" href="css/contact_us_page_form_submit_css.css">
-    <link rel="stylesheet" href="css/header5.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/whatsapp.css">
-    <style>
-        /* Force LTR for header */
-        .main-header {
-            direction: ltr !important;
-        }
-        
-        /* Form visibility fix */
-        #needsForm {
-            display: block !important;
-        }
-        
-        /* Navigation styles */
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            align-items: center;
-        }
-        
-        .main-nav li {
-            margin-left: 25px;
-        }
-        
-        .main-nav li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-        
-        /* Mobile menu styles */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            .main-nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: #000;
-                padding: 20px;
-                transform: translateX(-100%);
-            }
-            
-            .main-nav.active {
-                transform: translateX(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -85,14 +40,14 @@
             
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
-                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">Portfolio</a></li>
-                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">الأعمال</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
                     
                     <li class="language-switcher">
                         <button class="language-button" id="language-button">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English" width="20" height="15">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic" width="20" height="15">
                         </button>
                     </li>
                 </ul>
@@ -105,14 +60,9 @@
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/?text=Hello%20I%20have%20a%20question" target="_blank" class="whatsapp-button chat">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
-        <span>Tell Us Your Needs</span>
+        <span data-lang="en" style="display: none;">Tell Us Your Needs</span>
+        <span data-lang="ar">أخبرنا باحتياجاتك</span>
     </a>
-
-    <!-- WhatsApp Call Button 
-    <a href="https://wa.me/+48792379386" target="_blank" class="whatsapp-button call">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Call">
-        <span>Call</span>
-    </a> -->
 </div>
     <!-- Contact Form Section -->
     <section class="contact-form-section">
@@ -196,332 +146,73 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <p data-lang="en">&copy; Boostigital 2025. All rights reserved.</p>
-            <p data-lang="ar" style="display: none;">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
+            <p data-lang="en" style="display: none;">&copy; Boostigital 2025. All rights reserved.</p>
+            <p data-lang="ar">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Hamburger Menu -->
+    <!-- Unified Language Switcher -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/header.js"></script>
+    
+    <!-- Form Submission Handler -->
     <script>
-        function toggleMenu() {
-            const nav = document.getElementById("mainNav");
-            nav.classList.toggle("active");
-        }
-    </script>
-
-    <!-- JavaScript for Language Switcher -->
-   <script>
-// Smooth Language Switcher for Boostigital
 document.addEventListener('DOMContentLoaded', function() {
-    const langButton = document.getElementById('language-button');
+    const contactForm = document.getElementById('needsForm');
+    if (!contactForm) return;
     
-    if (langButton) {
-        langButton.addEventListener('click', function(e) {
-            e.preventDefault();
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const form = e.target;
+        const responseDiv = document.getElementById('formResponse');
+        const submitButtons = form.querySelectorAll('button[type="submit"]');
+        
+        // Disable buttons during submission
+        submitButtons.forEach(btn => btn.disabled = true);
+        
+        try {
+            // Get current language from localStorage
+            const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
             
-            // Get current scroll position
-            const scrollY = window.scrollY;
+            // Prepare form data
+            const formData = new FormData(form);
+            formData.append('language', currentLang);
             
-            // Get current state
-            const flagImg = this.querySelector('img');
-            const isEnglish = flagImg.src.includes('gb.svg');
-            
-            // Toggle languages
-            document.querySelectorAll('[data-lang="en"]').forEach(el => {
-                el.style.display = isEnglish ? 'none' : 'block';
+            const response = await fetch("send_needs_email.php", {
+                method: "POST",
+                body: formData
             });
-            document.querySelectorAll('[data-lang="ar"]').forEach(el => {
-                el.style.display = isEnglish ? 'block' : 'none';
-            });
             
-            // Update flag and document attributes
-            flagImg.src = isEnglish ? 'https://flagcdn.com/sa.svg' : 'https://flagcdn.com/gb.svg';
-            flagImg.alt = isEnglish ? 'Arabic' : 'English';
-            document.documentElement.lang = isEnglish ? 'ar' : 'en';
-            document.documentElement.dir = isEnglish ? 'rtl' : 'ltr';
+            const result = await response.text();
             
-            // Maintain scroll position
-            window.requestAnimationFrame(() => {
-                window.scrollTo(0, scrollY);
-            });
-        });
-    }
-});
-
-// Mobile menu toggle (keep this as is)
-function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    if (nav) nav.classList.toggle('active');
-}
-</script>
-    <script>
-        document.getElementById("needsForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
-    
-    const form = e.target;
-    const responseDiv = document.getElementById("formResponse");
-    const submitButtons = form.querySelectorAll('button[type="submit"]');
-    
-    // Disable buttons during submission
-    submitButtons.forEach(btn => btn.disabled = true);
-    
-    try {
-        // Get current language
-        const currentLang = document.querySelector('[data-lang="en"]').style.display === 'none' ? 'ar' : 'en';
-        
-        // Prepare form data
-        const formData = new FormData(form);
-        
-        // Add language to form data
-        formData.append('language', currentLang);
-        
-        const response = await fetch("send_needs_email.php", {  // Different PHP file
-            method: "POST",
-            body: formData
-        });
-        
-        const result = await response.text();
-        
-        // Show response
-        responseDiv.style.display = "block";
-        responseDiv.innerHTML = result.includes("Success") 
-            ? `<div class="success-message">${result}</div>` 
-            : `<div class="error-message">${result}</div>`;
-        
-        // Reset form if successful
-        if (result.includes("Success")) {
-            form.reset();
-            setTimeout(() => {
-                responseDiv.style.display = "none";
-            }, 5000);
-        }
-    } catch (error) {
-        responseDiv.style.display = "block";
-        responseDiv.innerHTML = `<div class="error-message">${
-            currentLang === 'en' 
-            ? 'Network error. Please try again.' 
-            : 'خطأ في الشبكة. يرجى المحاولة مرة أخرى.'
-        }</div>`;
-    } finally {
-        submitButtons.forEach(btn => btn.disabled = false);
-    }
-});
-        
-        
-    </script>
-    <script>
-// Current language state
-let currentLang = 'en';
-
-// Toggle mobile menu
-function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.classList.toggle('active');
-}
-
-// Language switcher functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const languageButton = document.getElementById('language-button');
-    
-    languageButton.addEventListener('click', function() {
-        // Toggle between languages
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-        
-        // Update the flag
-        const flagImg = languageButton.querySelector('.flag');
-        flagImg.src = currentLang === 'en' 
-            ? 'https://flagcdn.com/gb.svg' 
-            : 'https://flagcdn.com/sa.svg';
-        flagImg.alt = currentLang === 'en' ? 'English' : 'Arabic';
-        
-        // Toggle visibility of language versions
-        document.querySelectorAll('.en-lang').forEach(el => {
-            el.style.display = currentLang === 'en' ? 'block' : 'none';
-        });
-        document.querySelectorAll('.ar-lang').forEach(el => {
-            el.style.display = currentLang === 'ar' ? 'block' : 'none';
-        });
-        
-        // Change direction for Arabic
-        if (currentLang === 'ar') {
-            document.body.style.direction = 'rtl';
-            document.body.style.textAlign = 'right';
-        } else {
-            document.body.style.direction = 'ltr';
-            document.body.style.textAlign = 'left';
-        }
-    });
-});
-</script>
-   <!-- <script src="js/language-switcher.js"></script> -->
-   <script>
-// Current language state
-let currentLang = 'en';
-
-// Toggle mobile menu
-function toggleMenu() {
-    const nav = document.getElementById('mainNav');
-    nav.classList.toggle('active');
-}
-
-// Language switcher functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const languageButton = document.getElementById('language-button');
-    
-    languageButton.addEventListener('click', function() {
-        // Toggle between languages
-        currentLang = currentLang === 'en' ? 'ar' : 'en';
-        
-        // Update the flag
-        const flagImg = languageButton.querySelector('.flag');
-        flagImg.src = currentLang === 'en' 
-            ? 'https://flagcdn.com/gb.svg' 
-            : 'https://flagcdn.com/sa.svg';
-        flagImg.alt = currentLang === 'en' ? 'English' : 'Arabic';
-        
-        // Toggle visibility of language versions
-        document.querySelectorAll('.en-lang').forEach(el => {
-            el.style.display = currentLang === 'en' ? 'block' : 'none';
-        });
-        document.querySelectorAll('.ar-lang').forEach(el => {
-            el.style.display = currentLang === 'ar' ? 'block' : 'none';
-        });
-        
-        // Change direction for Arabic
-        if (currentLang === 'ar') {
-            document.body.style.direction = 'rtl';
-            document.body.style.textAlign = 'right';
-            document.querySelector('.main-header').style.direction = 'rtl';
-        } else {
-            document.body.style.direction = 'ltr';
-            document.body.style.textAlign = 'left';
-            document.querySelector('.main-header').style.direction = 'ltr';
-        }
-    });
-});
-</script>
-<script>
-let currentLang = 'en';
-
-function toggleMenu() {
-    document.getElementById('mainNav').classList.toggle('active');
-}
-
-document.getElementById('language-button').addEventListener('click', function() {
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
-    
-    // Update flag
-    const flagImg = this.querySelector('.flag');
-    flagImg.src = currentLang === 'en' 
-        ? 'https://flagcdn.com/w40/gb.png' 
-        : 'https://flagcdn.com/w40/sa.png';
-    flagImg.alt = currentLang === 'en' ? 'English' : 'Arabic';
-    
-    // Update all navigation texts
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.textContent = link.getAttribute(`data-${currentLang}`);
-    });
-    
-    // Update text direction
-    document.body.style.direction = currentLang === 'ar' ? 'rtl' : 'ltr';
-    
-    // Force header to maintain LTR layout
-    document.querySelector('.main-header').style.direction = 'ltr';
-});
-</script>
- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Current language state
-        let currentLang = 'en';
-        
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('mainNav').classList.toggle('active');
-        }
-        
-        // Language switcher
-        const languageButton = document.getElementById('language-button');
-        if (languageButton) {
-            languageButton.addEventListener('click', function() {
-                // Toggle language
-                currentLang = currentLang === 'en' ? 'ar' : 'en';
+            // Show response
+            if (responseDiv) {
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = result.includes("Success") || result.includes("تم الإرسال")
+                    ? `<div class="success-message">${result}</div>` 
+                    : `<div class="error-message">${result}</div>`;
                 
-                // Update flag
-                const flagImg = this.querySelector('img');
-                flagImg.src = currentLang === 'en' 
-                    ? 'https://flagcdn.com/w40/gb.png' 
-                    : 'https://flagcdn.com/w40/sa.png';
-                
-                // Update navigation text
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.textContent = link.getAttribute(`data-${currentLang}`);
-                });
-                
-                // Update form fields and content
-                document.querySelectorAll('[data-lang="en"]').forEach(el => {
-                    if (el.tagName !== 'A') el.style.display = currentLang === 'en' ? 'block' : 'none';
-                });
-                document.querySelectorAll('[data-lang="ar"]').forEach(el => {
-                    if (el.tagName !== 'A') el.style.display = currentLang === 'ar' ? 'block' : 'none';
-                });
-                
-                // Update direction
-                document.body.style.direction = currentLang === 'ar' ? 'rtl' : 'ltr';
-                document.documentElement.lang = currentLang;
-            });
-        }
-        
-        // Form submission handler
-        const contactForm = document.getElementById('needsForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                const form = e.target;
-                const responseDiv = document.getElementById('formResponse');
-                const submitButtons = form.querySelectorAll('button[type="submit"]');
-                
-                // Disable buttons during submission
-                submitButtons.forEach(btn => btn.disabled = true);
-                
-                try {
-                    const formData = new FormData(form);
-                    formData.append('language', currentLang);
-                    
-                    const response = await fetch("send_needs_email.php", {
-                        method: "POST",
-                        body: formData
-                    });
-                    
-                    const result = await response.text();
-                    
-                    // Show response
-                    if (responseDiv) {
-                        responseDiv.style.display = "block";
-                        responseDiv.innerHTML = result.includes("Success") 
-                            ? `<div class="success-message">${result}</div>` 
-                            : `<div class="error-message">${result}</div>`;
-                        
-                        if (result.includes("Success")) {
-                            form.reset();
-                            setTimeout(() => {
-                                responseDiv.style.display = "none";
-                            }, 5000);
-                        }
-                    }
-                } catch (error) {
-                    if (responseDiv) {
-                        responseDiv.style.display = "block";
-                        responseDiv.innerHTML = currentLang === 'en' 
-                            ? '<div class="error-message">Network error. Please try again.</div>'
-                            : '<div class="error-message">خطأ في الشبكة. يرجى المحاولة مرة أخرى.</div>';
-                    }
-                } finally {
-                    submitButtons.forEach(btn => btn.disabled = false);
+                if (result.includes("Success") || result.includes("تم الإرسال")) {
+                    form.reset();
+                    setTimeout(() => {
+                        responseDiv.style.display = "none";
+                    }, 5000);
                 }
-            });
+            }
+        } catch (error) {
+            if (responseDiv) {
+                const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = currentLang === 'en' 
+                    ? '<div class="error-message">Network error. Please try again.</div>'
+                    : '<div class="error-message">خطأ في الشبكة. يرجى المحاولة مرة أخرى.</div>';
+            }
+        } finally {
+            submitButtons.forEach(btn => btn.disabled = false);
         }
     });
+});
     </script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Increased height to prevent overlap */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #18A999, #0093D4);
+    padding-left: 10%;
+    padding-top: 0;
+    overflow: hidden;
+    animation: zoomBg 10s infinite alternate ease-in-out;
+    margin-bottom: 40px; /* Added margin to create space below */
+}
+
+@keyframes zoomBg {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hero-content {
+    position: relative;
+    text-align: left;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 65px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 22px;
+    border: 4px solid white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #008080;
+}
+
+.hero-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('https://boostigital.com/wp-content/uploads/2024/12/cropped-background-green-1.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Responsive Design for Old Hero Section */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh; /* Adjusted height for mobile */
+        padding-left: 5%; /* Adjusted padding for mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 24px; /* Adjusted font size for mobile */
+    }
+
+    .hero-title {
+        font-size: 40px; /* Adjusted font size for mobile */
+        white-space: normal; /* Allow text to wrap */
+    }
+
+    .cta-button {
+        font-size: 18px; /* Adjust button font size for mobile */
+        padding: 10px 20px; /* Adjust button padding for mobile */
+    }
+}

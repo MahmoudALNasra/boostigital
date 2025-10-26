@@ -30,10 +30,17 @@ $message .= "Email: " . htmlspecialchars($_POST['contact-email']) . "\n";
 $message .= "Company: " . (isset($_POST['company-name']) ? htmlspecialchars($_POST['company-name']) : 'N/A') . "\n";
 $message .= "Phone: " . (isset($_POST['contact-number']) ? htmlspecialchars($_POST['contact-number']) : 'N/A') . "\n";
 
+// Sanitize and validate email
+$userEmail = filter_var($_POST['contact-email'], FILTER_SANITIZE_EMAIL);
+if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
+    die("Error: Invalid email address.");
+}
+
 $headers = [
-    'From' => $_POST['contact-email'],
-    'Reply-To' => $_POST['contact-email'],
-    'X-Mailer' => 'PHP/' . phpversion()
+    'From' => 'noreply@boostigital.com',
+    'Reply-To' => $userEmail,
+    'X-Mailer' => 'PHP/' . phpversion(),
+    'Content-Type' => 'text/plain; charset=utf-8'
 ];
 
 // Try sending

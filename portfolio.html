@@ -1,85 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8B6K1EM52"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q8B6K1EM52');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boostdigital</title>
+    <title>Boostigital - Portfolio</title>
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/contact_us_page.css">
     <link rel="stylesheet" href="css/contact_us_page_form_submit_css.css">
-     <link rel="stylesheet" href="css/hero_section6.css">
-    <link rel="stylesheet" href="css/header5forportfolio.css">
+    <link rel="stylesheet" href="css/hero_section6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/whatsapp.css">
-    <link rel="stylesheet" href="portfolio21-may.css">
+    <link rel="stylesheet" href="css/portfolio21-may.css">
     <link rel="stylesheet" href="css/portfolio21-may6.css">
     <link rel="stylesheet" href="css/language_switcher.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mobile-enhancements.css">
     <!-- Favicons -->
     <link rel="icon" href="images/boostigital_button icon.ico" type="image/x-icon">
     <link rel="icon" href="images/boostigital_button icon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/miniatura_boostigital.png">
-    <style>
-        /* Force LTR for header and first section */
-        .main-header, .brand-showcase {
-            direction: ltr !important;
-        }
-        /* Fix for pharmacy section buttons */
-        .clickable-area {
-            cursor: pointer;
-        }
-        /* Make sure mission section buttons work */
-        .screen-toggle[data-lang="ar"] {
-            display: none;
-        }
-        .screen-toggle[data-lang="en"] {
-            display: block;
-        }
-        body[dir="rtl"] .screen-toggle[data-lang="ar"] {
-            display: block;
-        }
-        body[dir="rtl"] .screen-toggle[data-lang="en"] {
-            display: none;
-        }
-    </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="main-header">
         <div class="container">
-            <!-- Logo (always left) -->
             <div class="logo">
                 <a href="index.html">
-                <img src="images/boostigital_logo.png" alt="Logo">
-                 </a>
+                    <img src="images/boostigital_logo.png" alt="Boostigital Logo">
+                </a>
             </div>
             
-            <!-- Hamburger Menu for Mobile -->
-            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu" role="button" tabindex="0">
+            <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             
-            <!-- Navigation Menu (always right) -->
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li>
-                        <a href="index.html" class="nav-link" data-lang="en">Home</a>
-                        <a href="index.html" class="nav-link" data-lang="ar" style="display: none;">الرئيسية</a>
-                    </li>
-                    <li><a href="index.html#services" class="nav-link" data-lang="en">SERVICES</a></li>
-                    <li><a href="contact_us_page.html" class="nav-link" data-lang="en">CONTACT US</a></li>
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                    <li><a href="services.html" class="nav-link" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-en="Portfolio" data-ar="الأعمال">الأعمال</a></li>
+                    <li><a href="contact_us_page.html" class="nav-link" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</a></li>
                     
-                    <!-- Arabic menu items (hidden by default) -->
-                    <li><a href="index.html#services" class="nav-link" data-lang="ar" style="display: none;">خدماتنا</a></li>
-                    <li><a href="contact_us_page.html" class="nav-link" data-lang="ar" style="display: none;">اتصل بنا</a></li>
-                    
-                    <!-- Language Switcher -->
-                    <div class="language-switcher">
-                        <button id="language-button">
-                            <img src="https://flagcdn.com/gb.svg" alt="English" class="flag">
+                    <li class="language-switcher">
+                        <button class="language-button" id="language-button">
+                            <img src="https://flagcdn.com/w40/sa.png" alt="Arabic" width="20" height="15">
                         </button>
-                    </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -501,99 +477,21 @@ center</pre>
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <p data-lang="en">&copy; 2025 Boostigital. All rights reserved.</p>
-            <p data-lang="ar" style="display: none;">&copy; 2025 Boostigital. جميع الحقوق محفوظة</p>
+            <p data-lang="en" style="display: none;">&copy; Boostigital 2025. All rights reserved.</p>
+            <p data-lang="ar">&copy; Boostigital 2025 جميع الحقوق محفوظة</p>
         </div>
     </footer>
     
     <!-- JavaScript -->
+    <!-- Unified Language Switcher -->
+    <script src="js/language-switcher.js"></script>
+    <script src="js/header.js"></script>
+    
+    <!-- Portfolio Page Specific Functions -->
     <script>
-        // Store current language state
-        let currentLanguage = 'en';
-        
-        // Toggle mobile menu
-        function toggleMenu() {
-            const nav = document.getElementById("mainNav");
-            nav.classList.toggle("active");
-        }
-        
-        // Language switcher
-        document.getElementById('language-button').addEventListener('click', function() {
-            const englishElements = document.querySelectorAll('[data-lang="en"]');
-            const arabicElements = document.querySelectorAll('[data-lang="ar"]');
-            const flagImg = this.querySelector('img');
-
-            if (flagImg.src.includes('gb.svg')) {
-                // Switch to Arabic
-                flagImg.src = 'https://flagcdn.com/sa.svg';
-                flagImg.alt = 'Arabic';
-                englishElements.forEach(el => {
-                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
-                        el.style.display = 'none';
-                    }
-                });
-                arabicElements.forEach(el => {
-                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
-                        el.style.display = 'block';
-                    }
-                });
-                currentLanguage = 'ar';
-                
-                // Set RTL for body but keep header LTR
-                document.body.dir = 'rtl';
-                document.body.lang = 'ar';
-            } else {
-                // Switch to English (British flag)
-                flagImg.src = 'https://flagcdn.com/gb.svg';
-                flagImg.alt = 'English';
-                englishElements.forEach(el => {
-                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
-                        el.style.display = 'block';
-                    }
-                });
-                arabicElements.forEach(el => {
-                    if (!el.closest('.main-header') && !el.closest('.brand-showcase')) {
-                        el.style.display = 'none';
-                    }
-                });
-                currentLanguage = 'en';
-                
-                // Reset to LTR
-                document.body.dir = 'ltr';
-                document.body.lang = 'en';
-            }
-            
-            // Store language preference in localStorage
-            localStorage.setItem('boostigitalLanguage', currentLanguage);
-        });
-        
-        // Check for saved language preference
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLanguage = localStorage.getItem('boostigitalLanguage');
-            if (savedLanguage === 'ar') {
-                document.getElementById('language-button').click();
-            }
-            
-            // Update all navigation links to maintain language
-            updateNavLinks();
-        });
-        
-        // Update navigation links to maintain language
-        function updateNavLinks() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                if (link.dataset.lang === currentLanguage) {
-                    link.style.display = 'block';
-                } else {
-                    link.style.display = 'none';
-                }
-            });
-        }
-        
         // Pharmacy section overlay functions
         function showOverlay(type) {
             const overlay = document.getElementById('boostigitalOverlay');
-            // You can customize the overlay content based on the button type
             overlay.style.display = 'flex';
         }
         
@@ -611,6 +509,8 @@ center</pre>
         // Smooth scrolling
         function smoothScroll(targetId, duration) {
             const target = document.querySelector(targetId);
+            if (!target) return;
+            
             const targetPosition = target.getBoundingClientRect().top;
             const startPosition = window.pageYOffset;
             const distance = targetPosition;
@@ -636,13 +536,14 @@ center</pre>
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                smoothScroll(targetId, 1000);
+                const href = this.getAttribute('href');
+                if (href && href !== '#') {
+                    e.preventDefault();
+                    smoothScroll(href, 1000);
+                }
             });
         });
     </script>
-    
-    <script src="/js/portfoliojs.js"></script>
+    <script src="js/portfoliojs.js"></script>
 </body>
 </html>
