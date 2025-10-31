@@ -21,6 +21,12 @@
     gap: 20px;
 }
 
+/* RTL support */
+html[dir="rtl"] .mantra-section { direction: rtl; }
+html[dir="rtl"] .mantra-container { flex-direction: row-reverse; }
+html[dir="rtl"] .mantra-content h3,
+html[dir="rtl"] .mantra-content p { text-align: right; }
+
 /* Left and Right Columns */
 .mantra-left, .mantra-right {
     flex: 1;
@@ -182,6 +188,9 @@
         flex-direction: row; /* Keep side-by-side layout for mobile */
         gap: 10px;
     }
+
+    /* Ensure RTL flow on mobile as well */
+    html[dir="rtl"] .mantra-container { flex-direction: row-reverse; }
 
     .mantra-left, .mantra-right {
         gap: 15px;

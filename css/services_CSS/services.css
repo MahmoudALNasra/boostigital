@@ -98,7 +98,7 @@ body {
 .creation-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
     transition: color 0.3s ease;
@@ -168,7 +168,7 @@ body {
 .branding-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
     max-width: 520px;
@@ -244,13 +244,23 @@ body {
     width: 601px;
     height: 601px;
     flex-shrink: 0;
-    background: url('https://i.imgur.com/9039e3b2.png') lightgray 50%/contain no-repeat;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
 }
 
 .graphic-art-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.graphic-art-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(0,0,0,0) 62%, rgba(0,0,0,0.85) 100%);
 }
 
 .graphic-art-content {
@@ -269,7 +279,7 @@ body {
 .graphic-art-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
     max-width: 528px;
@@ -330,17 +340,23 @@ body {
     width: 623px;
     height: 623px;
     flex-shrink: 0;
-    background: 
-        linear-gradient(#000, #000) padding-box,
-        url('https://i.imgur.com/IDZQ7fo.jpeg') center/contain no-repeat;
+    background-color: #000;
     overflow: hidden;
+    position: relative;
 }
 
 .social-media-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    mix-blend-mode: lighten;
+}
+
+.social-media-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(0,0,0,0) 62%, rgba(0,0,0,0.85) 100%);
 }
 
 .social-media-content {
@@ -360,7 +376,7 @@ body {
 .social-media-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
     max-width: 465px;
@@ -448,7 +464,7 @@ body {
 .content-creation-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
     max-width: 501px;
@@ -506,8 +522,8 @@ body {
 }
 
 .ux-vision-image {
-    width: 687px;
-    height: 687px;
+    width: 623px;
+    height: 623px;
     flex-shrink: 0;
     background: 
         linear-gradient(#000, #000) padding-box,
@@ -539,10 +555,10 @@ body {
 .ux-vision-description {
     color: #FFF;
     font-size: 24px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: normal;
     margin-bottom: 40px;
-    max-width: 546px;
+    max-width: 574px;
     transition: color 0.3s ease;
 }
 
@@ -558,7 +574,7 @@ body {
 .ux-vision-features ul {
     list-style-type: none;
     padding: 0;
-    max-width: 570px;
+    max-width: 574px;
 }
 
 .ux-vision-features li {

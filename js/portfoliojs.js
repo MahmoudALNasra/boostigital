@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 else if (entry.target.classList.contains('social-description') || 
                         entry.target.classList.contains('concept-section')) {
                     const lines = entry.target.querySelectorAll('.title-line');
-                    lines.forEach((line, i) => {
-                        const delay = 0.3 + (i * 0.3);
+                    lines.forEach((line) => {
+                        const delay = 0.3; // show all title parts together
                         line.style.animation = line.classList.contains('title-line-1') 
                             ? `slideInFromLeft 1s ${delay}s forwards` 
                             : `slideInFromRight 1s ${delay}s forwards`;
@@ -78,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     const images = entry.target.querySelectorAll('.desc-image');
                     images.forEach((img, i) => {
-                        img.style.animation = `slideInFromRight 1s ${0.5 + (i * 0.3)}s forwards`;
+                        const delay = 0.3; // align images with title
+                        img.style.animation = `slideInFromRight 1s ${delay}s forwards`;
                     });
                 }
                 
@@ -143,16 +144,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 else if (entry.target.classList.contains('social-description') || 
                         entry.target.classList.contains('concept-section')) {
                     const lines = entry.target.querySelectorAll('.title-line');
-                    lines.forEach((line, i) => {
-                        const delay = 0.3 + (i * 0.3);
+                    lines.forEach((line) => {
+                        const delay = 0.3;
                         line.style.animation = line.classList.contains('title-line-1') 
                             ? `slideOutToLeft 1s ${delay}s forwards` 
                             : `slideOutToRight 1s ${delay}s forwards`;
                     });
                     
                     const images = entry.target.querySelectorAll('.desc-image');
-                    images.forEach((img, i) => {
-                        img.style.animation = `slideOutToRight 1s ${0.5 + (i * 0.3)}s forwards`;
+                    images.forEach((img) => {
+                        const delay = 0.3;
+                        img.style.animation = `slideOutToRight 1s ${delay}s forwards`;
                     });
                 }
                 else if (entry.target.classList.contains('brand-promise')) {

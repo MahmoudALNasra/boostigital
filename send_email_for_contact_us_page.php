@@ -20,7 +20,7 @@ foreach ($required as $field) {
 }
 
 // Prepare email content
-$to = "alnasra@boostigital.com";
+$to = "info@boostigital.com";
 $subject = "New Service Inquiry: " . htmlspecialchars($_POST['service']);
 $message = "New Service Inquiry:\n\n";
 $message .= "Name: " . htmlspecialchars($_POST['full-name']) . "\n";
