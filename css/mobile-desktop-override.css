@@ -1,0 +1,436 @@
+/* Override mobile styles to maintain desktop LAYOUT and PROPORTIONS (scaled appropriately) */
+
+/* Fix asymmetric margins on mobile - the .container wrapper is adding extra padding */
+@media (max-width: 768px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Remove padding from the wrapper .container inside services section */
+    .services-section .container,
+    .image-flip-section .container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+    }
+    
+    /* Apply consistent padding to the actual content containers */
+    .our-team-container,
+    .services-grid {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0 10px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .image-flip-container {
+        padding: 0 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .our-team-container,
+    .services-grid,
+    .image-flip-container {
+        padding: 0 8px !important;
+    }
+}
+
+/* New Hero Section - Keep desktop 3-column layout on mobile, scaled down */
+@media (max-width: 768px) {
+    .new-hero {
+        gap: 20px !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .new-hero-image,
+    .new-hero-title {
+        flex: 0 1 auto !important;
+    }
+
+    .new-hero-title {
+        font-size: clamp(18px, 5vw, 40px) !important;
+        padding: 0 10px !important;
+        flex-shrink: 1 !important;
+    }
+
+    .new-hero-image img {
+        max-width: 25vw !important;
+        min-width: 80px !important;
+    }
+}
+
+@media (max-width: 454px) {
+    .new-hero {
+        gap: 10px !important;
+    }
+
+    .new-hero-title {
+        font-size: clamp(16px, 4.5vw, 30px) !important;
+        padding: 0 5px !important;
+    }
+
+    .new-hero-image img {
+        max-width: 22vw !important;
+        min-width: 70px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .new-hero {
+        gap: 8px !important;
+    }
+
+    .new-hero-title {
+        font-size: clamp(14px, 4vw, 24px) !important;
+    }
+
+    .new-hero-image img {
+        max-width: 20vw !important;
+        min-width: 60px !important;
+    }
+}
+
+/* Image Flip Section - Keep desktop layout (3 images side by side) with scaled text */
+@media (max-width: 768px) {
+    .image-flip-container {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        gap: 15px !important;
+    }
+    
+    .image-flip-item {
+        flex: 0 0 32% !important;
+        min-width: 32% !important;
+    }
+    
+    .flip-description {
+        font-size: 0.7rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .back-content {
+        padding: 12% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-flip-container {
+        gap: 10px !important;
+    }
+    
+    .image-flip-item {
+        flex: 0 0 31% !important;
+        min-width: 31% !important;
+    }
+    
+    .flip-description {
+        font-size: 0.55rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .back-content {
+        padding: 10% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .image-flip-container {
+        gap: 8px !important;
+    }
+    
+    .image-flip-item {
+        flex: 0 0 30% !important;
+        min-width: 30% !important;
+    }
+    
+    .flip-description {
+        font-size: 0.45rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Mantra Section - Keep desktop 3-column layout with proportionally scaled elements */
+@media (max-width: 1024px) {
+    .mantra-container {
+        flex-direction: row !important;
+        gap: 15px !important;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 25px !important;
+    }
+
+    .mantra-item img {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .mantra-content p {
+        font-size: 0.6rem !important;
+    }
+
+    .mantra-center img {
+        max-width: 100% !important;
+    }
+
+    .mantra-center-text {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mantra-container {
+        flex-direction: row !important;
+        gap: 12px !important;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 20px !important;
+    }
+
+    .mantra-item img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.8rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .mantra-content p {
+        font-size: 0.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .mantra-center img {
+        max-width: 100% !important;
+    }
+
+    .mantra-center-text {
+        font-size: 2.8rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mantra-container {
+        flex-direction: row !important;
+        gap: 8px !important;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 15px !important;
+    }
+
+    .mantra-item img {
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.65rem !important;
+        margin-bottom: 4px !important;
+    }
+
+    .mantra-content p {
+        font-size: 0.4rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .mantra-center img {
+        max-width: 100% !important;
+    }
+
+    .mantra-center-text {
+        font-size: 2.2rem !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .mantra-container {
+        flex-direction: row !important;
+        gap: 6px !important;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 12px !important;
+    }
+
+    .mantra-item img {
+        width: 35px !important;
+        height: 35px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.55rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    .mantra-content p {
+        font-size: 0.35rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .mantra-center img {
+        max-width: 100% !important;
+    }
+
+    .mantra-center-text {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 290px) {
+    .mantra-container {
+        flex-direction: row !important;
+        gap: 5px !important;
+    }
+
+    .mantra-left, .mantra-right {
+        gap: 10px !important;
+    }
+
+    .mantra-item img {
+        width: 30px !important;
+        height: 30px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .mantra-content h3 {
+        font-size: 0.5rem !important;
+        margin-bottom: 2px !important;
+    }
+
+    .mantra-content p {
+        font-size: 0.3rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .mantra-center img {
+        max-width: 100% !important;
+    }
+
+    .mantra-center-text {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Hero Section (4th section) - Reverted to original mobile styles */
+
+/* Services Section (5th section) - Force 2 columns on mobile */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+}
+
+/* Team Section (6th section) - Force 3 columns on mobile */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+    }
+    
+    .team-member {
+        padding: 15px 8px !important;
+    }
+    
+    .team-member img {
+        max-width: 100px !important;
+    }
+    
+    .team-member h3 {
+        font-size: 14px !important;
+    }
+    
+    .team-member p {
+        font-size: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+    
+    .team-member {
+        padding: 12px 6px !important;
+    }
+    
+    .team-member img {
+        max-width: 80px !important;
+    }
+    
+    .team-member h3 {
+        font-size: 12px !important;
+    }
+    
+    .team-member p {
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+    }
+    
+    .team-member {
+        padding: 10px 5px !important;
+    }
+    
+    .team-member img {
+        max-width: 70px !important;
+    }
+    
+    .team-member h3 {
+        font-size: 11px !important;
+    }
+    
+    .team-member p {
+        font-size: 8px !important;
+    }
+}

@@ -1,0 +1,437 @@
+/* Fix extreme heights on portfolio page mobile view */
+
+@media (max-width: 768px) {
+    /* Reset section margins and ensure no gaps */
+    .portfolio-container section,
+    .main-container section {
+        margin: 0 !important;
+    }
+    
+    /* Override mobile-enhancements.css section padding */
+    .brand-showcase,
+    .social-section,
+    .social-description,
+    .concept-section,
+    .brand-promise,
+    .image-grid-section,
+    .full-image-section,
+    .unconventional-section,
+    .business-adoption-section,
+    .boost-section,
+    .mission-section,
+    .pharmacy-section,
+    .ux-section,
+    .conversion-boost-section,
+    .hero-boost-section {
+        margin: 0 !important;
+    }
+    
+    /* Ensure unconventional section phones stay side-by-side */
+    .unconventional-section {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 40px 5% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #fff !important;
+    }
+    
+    .unconventional-container {
+        margin: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+    .social-description {
+        background: #fff !important;
+        position: relative !important;
+        margin-bottom: -1px !important;
+    }
+    .social-description::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+    }
+    .concept-section { background: #fff !important; }
+    
+    .business-adoption-section {
+        margin: -1px 0 0 0 !important;
+        padding: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        height: auto !important;
+        display: flex !important;
+        overflow: visible !important;
+        position: relative !important;
+        background: transparent !important;
+        z-index: 1 !important;
+    }
+    
+    .business-adoption-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    
+    .business-adoption-left,
+    .business-adoption-right {
+        margin: 0 !important;
+        padding: 10% 5% !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        flex: 1 !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    /* Color-correct seam masks for each half */
+    .business-adoption-left::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .business-adoption-right::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #000;
+        pointer-events: none;
+        z-index: 2;
+    }
+    
+    .unconventional-content {
+        flex-direction: row !important;
+        gap: 15px !important;
+    }
+    
+    .unconventional-phones {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 10px !important;
+        flex: 1 !important;
+        height: auto !important;
+    }
+    
+    .phone-screen {
+        width: 48% !important;
+        height: auto !important;
+        max-height: 35vh !important;
+        min-height: 180px !important;
+    }
+    
+    /* Reduce min-height for all portfolio sections on mobile */
+    .brand-showcase {
+        min-height: 60vh !important;
+        height: auto !important;
+    }
+    
+    .social-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .social-description {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+        background: #fff !important;
+        position: relative !important;
+        margin-bottom: -1px !important;
+        border-bottom: 1px solid #fff !important;
+    }
+    
+    .concept-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+        background: #fff !important;
+        margin-top: -1px !important;
+        border-top: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .brand-promise {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .image-grid-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .full-image-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .unconventional-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .business-adoption-section {
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+    
+    .boost-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .mission-section {
+        min-height: auto !important;
+        padding: 60px 5% !important;
+    }
+    
+    .pharmacy-section {
+        min-height: auto !important;
+        padding: 40px 5% !important;
+    }
+    
+    .ux-section {
+        min-height: auto !important;
+        padding: 40px 5% !important;
+    }
+    
+    .conversion-boost-section {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+    }
+    
+    .conversion-boost-container {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+    
+    .conversion-boost-left,
+    .conversion-boost-right {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 8% 4% !important;
+        margin: 0 !important;
+    }
+    
+    .hero-boost-section {
+        min-height: 52.5vh !important;
+        padding: 40px 5% !important;
+    }
+    .social-description::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 2px;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+    }
+    
+    /* Section-wide mask removed; using half-specific masks above */
+}
+
+@media (max-width: 480px) {
+    /* Keep phones side-by-side on small mobile */
+    .unconventional-section {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 30px 5% !important;
+        margin: 0 !important;
+        display: flex !important;
+    }
+    
+    .unconventional-container {
+        margin: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+    
+    .social-description {
+        background: #fff !important;
+        position: relative !important;
+        margin-bottom: -1px !important;
+        border-bottom: 1px solid #fff !important;
+    }
+    .concept-section {
+        background: #fff !important;
+        border-top: 1px solid #fff !important;
+    }
+    
+    .business-adoption-section {
+        margin: -1px 0 0 0 !important;
+        padding: 0 !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        height: auto !important;
+        display: flex !important;
+        overflow: visible !important;
+        position: relative !important;
+        background: transparent !important;
+        z-index: 1 !important;
+    }
+    
+    .business-adoption-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    
+    .business-adoption-left,
+    .business-adoption-right {
+        margin: 0 !important;
+        padding: 8% 4% !important;
+        min-height: 100% !important;
+        height: 100% !important;
+        flex: 1 !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+    }
+
+    /* Color-correct seam masks for each half */
+    .business-adoption-left::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .business-adoption-right::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #000;
+        pointer-events: none;
+        z-index: 2;
+    }
+    
+    .unconventional-content {
+        flex-direction: row !important;
+        gap: 10px !important;
+    }
+    
+    .unconventional-text {
+        flex: 0 0 40% !important;
+        min-width: 40% !important;
+    }
+    
+    .unconventional-phones {
+        flex: 0 0 55% !important;
+        gap: 8px !important;
+        height: auto !important;
+    }
+    
+    .phone-screen {
+        width: 48% !important;
+        max-height: 30vh !important;
+        min-height: 150px !important;
+    }
+    
+    .brand-showcase {
+        min-height: 50vh !important;
+    }
+    
+    .social-section,
+    .social-description,
+    .concept-section,
+    .brand-promise,
+    .image-grid-section,
+    .full-image-section,
+    .unconventional-section,
+    .boost-section,
+    .mission-section,
+    .pharmacy-section,
+    .ux-section {
+        padding: 40px 5% !important;
+    }
+    
+    .business-adoption-section {
+        padding: 0 !important;
+    }
+    
+    .conversion-boost-section {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+    }
+    
+    .conversion-boost-container {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+    
+    .conversion-boost-left,
+    .conversion-boost-right {
+        min-height: auto !important;
+        max-height: none !important;
+        height: auto !important;
+        padding: 6% 3% !important;
+        margin: 0 !important;
+    }
+    
+    .hero-boost-section {
+        min-height: 45vh !important;
+        padding: 30px 5% !important;
+    }
+    
+    /* Seam mask for scrolling hairline issues */
+    .business-adoption-section::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+    }
+}
