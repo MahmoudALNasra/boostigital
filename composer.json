@@ -1,0 +1,14 @@
+{
+    "name": "boostigital/website",
+    "description": "Boostigital website with contact forms",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
