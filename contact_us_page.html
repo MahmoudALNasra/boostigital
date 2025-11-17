@@ -201,6 +201,15 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButtons.forEach(btn => btn.disabled = true);
         
         try {
+            // Ensure hidden language-specific controls are not blocking HTML5 validation
+            const langControls = form.querySelectorAll('[data-lang]');
+            langControls.forEach(el => {
+                const style = window.getComputedStyle(el);
+                if (style.display === 'none') {
+                    el.required = false;
+                }
+            });
+
             // Get current language from localStorage
             const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
             

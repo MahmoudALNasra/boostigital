@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/services_section7.css">
   <link rel="stylesheet" href="css/team_section.css">
   <link rel="stylesheet" href="css/contact_section.css">
+  <link rel="stylesheet" href="css/contact_us_page_form_submit_css.css">
   <link rel="stylesheet" href="css/language_switcher.css">
   <link rel="stylesheet" href="css/new_footer.css">
   <link rel="stylesheet" href="css/whatsapp.css">
@@ -344,12 +345,8 @@
                     <p data-lang="ar">مطورو الويب</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
     <section class="contact-section" id="contact_us_form">
-        <div class="contact-container" >
+            <div class="contact-container" >
                 <form id="contactForm">  <!-- Remove action and method -->
 
 
@@ -380,8 +377,10 @@
                 </div>
                 <button type="submit" data-lang="en" style="display: none;">Submit</button>
                 <button type="submit" data-lang="ar">إرسال</button>
+
+                <!-- Response message container placed inside the form so it appears directly under it -->
+                <div id="formResponse" style="display: none; margin: 20px 0; padding: 10px; border-radius: 5px;"></div>
             </form>
-            <div id="formResponse" style="display: none; margin: 20px 0; padding: 10px; border-radius: 5px;"></div>
             <div class="contact-info">
                 <p><strong data-lang="en" style="display: none;">Prefer Another Way to Connect?</strong></p>
                 <p><strong data-lang="ar">تفضل طريقة أخرى للتواصل؟</strong></p>
