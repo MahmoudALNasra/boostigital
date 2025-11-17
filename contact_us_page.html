@@ -102,17 +102,17 @@ src="https://www.facebook.com/tr?id=1113565330594479&ev=PageView&noscript=1"
                 <span class="your-needs" data-lang="en">your needs</span>
                 <span class="your-needs" data-lang="ar" style="display: none;">احتياجاتك</span>
             </div>
-            <form id="needsForm">  <!-- Added ID and removed action/method -->
+            <form id="needsForm" novalidate>  <!-- Disable browser validation; we validate in JS -->
                 <!-- Full Name -->
                 <div class="form-group">
-                    <input type="text" id="full-name" name="full-name" placeholder="Full Name (required)" data-lang="en" required>
-                    <input type="text" id="full-name-ar" name="full-name" placeholder="الاسم الكامل (مطلوب)" data-lang="ar" style="display: none;" required>
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name (required)" data-lang="en">
+                    <input type="text" id="full-name-ar" name="full-name" placeholder="الاسم الكامل (مطلوب)" data-lang="ar" style="display: none;">
                 </div>
 
                 <!-- Company Name -->
                 <div class="form-group">
-                    <input type="text" id="company-name" name="company-name" placeholder="Company Name (required)" data-lang="en" required>
-                    <input type="text" id="company-name-ar" name="company-name" placeholder="اسم الشركة (مطلوب)" data-lang="ar" style="display: none;" required>
+                    <input type="text" id="company-name" name="company-name" placeholder="Company Name (required)" data-lang="en">
+                    <input type="text" id="company-name-ar" name="company-name" placeholder="اسم الشركة (مطلوب)" data-lang="ar" style="display: none;">
                 </div>
 
                 <!-- Contact Number -->
@@ -123,13 +123,13 @@ src="https://www.facebook.com/tr?id=1113565330594479&ev=PageView&noscript=1"
 
                 <!-- Contact Email -->
                 <div class="form-group">
-                    <input type="email" id="contact-email" name="contact-email" placeholder="Contact Email Address (required)" data-lang="en" required>
-                    <input type="email" id="contact-email-ar" name="contact-email" placeholder="البريد الإلكتروني (مطلوب)" data-lang="ar" style="display: none;" required>
+                    <input type="email" id="contact-email" name="contact-email" placeholder="Contact Email Address (required)" data-lang="en">
+                    <input type="email" id="contact-email-ar" name="contact-email" placeholder="البريد الإلكتروني (مطلوب)" data-lang="ar" style="display: none;">
                 </div>
 
                 <!-- Service Selection -->
                 <div class="form-group">
-                    <select id="service" name="service" data-lang="en" required>
+                    <select id="service" name="service" data-lang="en">
                         <option value="" disabled selected>Service You're Interested In:</option>
                         <option value="branding">Branding</option>
                         <option value="social-media">Social Media</option>
@@ -138,7 +138,7 @@ src="https://www.facebook.com/tr?id=1113565330594479&ev=PageView&noscript=1"
                         <option value="full-package">Full Package</option>
                         <option value="other">Other</option>
                     </select>
-                    <select id="service-ar" name="service" data-lang="ar" style="display: none;" required>
+                    <select id="service-ar" name="service" data-lang="ar" style="display: none;">
                         <option value="" disabled selected>الخدمة التي تهتم بها:</option>
                         <option value="branding">الهوية البصرية</option>
                         <option value="social-media">وسائل التواصل الاجتماعي</option>
@@ -151,13 +151,13 @@ src="https://www.facebook.com/tr?id=1113565330594479&ev=PageView&noscript=1"
 
                 <!-- Your Message -->
                 <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Your Message" data-lang="en" rows="8" required></textarea>
-                    <textarea id="message-ar" name="message" placeholder="رسالتك" data-lang="ar" style="display: none;" rows="8" required></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" data-lang="en" rows="8"></textarea>
+                    <textarea id="message-ar" name="message" placeholder="رسالتك" data-lang="ar" style="display: none;" rows="8"></textarea>
                 </div>
 
                 <!-- Privacy Policy Checkbox -->
                 <div class="form-group checkbox">
-                    <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                    <input type="checkbox" id="privacy-policy" name="privacy-policy">
                     <label for="privacy-policy" data-lang="en">I agree to the <a href="/privacy-policy">privacy policy</a></label>
                     <label for="privacy-policy" data-lang="ar" style="display: none;">أوافق على <a href="/privacy-policy">سياسة الخصوصية</a></label>
                 </div>
@@ -201,17 +201,56 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButtons.forEach(btn => btn.disabled = true);
         
         try {
-            // Ensure hidden language-specific controls are not blocking HTML5 validation
-            const langControls = form.querySelectorAll('[data-lang]');
-            langControls.forEach(el => {
-                const style = window.getComputedStyle(el);
-                if (style.display === 'none') {
-                    el.required = false;
-                }
-            });
-
             // Get current language from localStorage
             const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
+
+            // Manual validation: check only visible fields
+            function isVisible(el) {
+                return el && window.getComputedStyle(el).display !== 'none';
+            }
+
+            function getValue(enId, arId) {
+                const enEl = document.getElementById(enId);
+                const arEl = document.getElementById(arId);
+                if (isVisible(arEl)) return arEl.value.trim();
+                return enEl ? enEl.value.trim() : '';
+            }
+
+            const fullName = getValue('full-name', 'full-name-ar');
+            const companyName = getValue('company-name', 'company-name-ar');
+            const contactEmail = getValue('contact-email', 'contact-email-ar');
+            const message = getValue('message', 'message-ar');
+
+            const serviceElEn = document.getElementById('service');
+            const serviceElAr = document.getElementById('service-ar');
+            const service = isVisible(serviceElAr) ? (serviceElAr.value || '').trim() : (serviceElEn.value || '').trim();
+
+            const privacy = document.getElementById('privacy-policy');
+
+            // Validate required fields
+            if (!fullName || !companyName || !contactEmail || !service || !message || !privacy.checked) {
+                if (responseDiv) {
+                    responseDiv.style.display = 'block';
+                    responseDiv.innerHTML = currentLang === 'ar'
+                        ? '<div class="error-message">يرجى تعبئة جميع الحقول المطلوبة والموافقة على سياسة الخصوصية.</div>'
+                        : '<div class="error-message">Please fill in all required fields and accept the privacy policy.</div>';
+                }
+                submitButtons.forEach(btn => btn.disabled = false);
+                return;
+            }
+
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(contactEmail)) {
+                if (responseDiv) {
+                    responseDiv.style.display = 'block';
+                    responseDiv.innerHTML = currentLang === 'ar'
+                        ? '<div class="error-message">يرجى إدخال عنوان بريد إلكتروني صحيح.</div>'
+                        : '<div class="error-message">Please enter a valid email address.</div>';
+                }
+                submitButtons.forEach(btn => btn.disabled = false);
+                return;
+            }
             
             // Prepare form data
             const formData = new FormData(form);
