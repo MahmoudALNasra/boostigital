@@ -7,12 +7,9 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', 'needs_mail_errors.log');
 
-// Load PHPMailer
+// Load dependencies
 require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/mail_config.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     die("Error: Invalid request method.");
@@ -49,30 +46,19 @@ $messageBody .= "Phone: " . $contactNumber . "\n";
 $messageBody .= "Service: " . $service . "\n\n";
 $messageBody .= "Message:\n" . $userMessage;
 
-// Send email using PHPMailer
+// Send email using Mailjet API
 try {
-    $mail = getMailer();
-    
-    // Recipients
-    $mail->addAddress('info@boostigital.com', 'Boostigital Info');
-    $mail->addReplyTo($userEmail, $fullName);
-    
-    // Content
-    $mail->isHTML(false);
-    $mail->Subject = $subject;
-    $mail->Body    = $messageBody;
-    
-    $mail->send();
+    sendWithMailjet($subject, $messageBody, $userEmail, $fullName);
     
     // Log success
-    error_log("Service inquiry email sent successfully from: " . $userEmail);
+    error_log("Mailjet service inquiry email sent successfully from: " . $userEmail);
     
     echo $language === 'ar' 
         ? "تم الإرسال بنجاح! سنتواصل معك قريبًا." 
         : "Success! We'll contact you soon.";
     
 } catch (Exception $e) {
-    error_log("PHPMailer error: " . $mail->ErrorInfo);
+    error_log("Mailjet error: " . $e->getMessage());
     
     echo $language === 'ar'
         ? "خطأ في الإرسال. يرجى المحاولة مرة أخرى."
