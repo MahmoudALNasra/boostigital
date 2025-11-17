@@ -52,18 +52,7 @@ function getMailer() {
  *   MAILJET_TO_EMAIL (fallback if no explicit to address given)
  */
 function sendWithMailjet(string $subject, string $textBody, string $replyToEmail = null, string $replyToName = null) {
-    $apiKey    = getenv('MAILJET_API_KEY') ?: '';
-    $apiSecret = getenv('MAILJET_API_SECRET') ?: '';
-    $fromEmail = getenv('MAILJET_FROM_EMAIL') ?: 'marketing@boostigital.com';
-    $fromName  = getenv('MAILJET_FROM_NAME') ?: 'Boostigital';
-    $toEmail   = getenv('MAILJET_TO_EMAIL') ?: 'info@boostigital.com';
-    $toName    = getenv('MAILJET_TO_NAME') ?: 'Boostigital Info';
-
-    if (empty($apiKey) || empty($apiSecret)) {
-        throw new Exception('Mailjet API credentials are not configured.');
-    }
-
-    // Optional .env loader (local dev) – safe to ignore if not present
+    // Load .env first so getenv() has values in both CLI and FPM
     $envPath = __DIR__ . '/.env';
     if (file_exists($envPath)) {
         $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
@@ -77,6 +66,17 @@ function sendWithMailjet(string $subject, string $textBody, string $replyToEmail
             list($name, $value) = explode('=', $line, 2);
             putenv(trim($name) . '=' . trim($value));
         }
+    }
+
+    $apiKey    = getenv('MAILJET_API_KEY') ?: '';
+    $apiSecret = getenv('MAILJET_API_SECRET') ?: '';
+    $fromEmail = getenv('MAILJET_FROM_EMAIL') ?: 'marketing@boostigital.com';
+    $fromName  = getenv('MAILJET_FROM_NAME') ?: 'Boostigital';
+    $toEmail   = getenv('MAILJET_TO_EMAIL') ?: 'info@boostigital.com';
+    $toName    = getenv('MAILJET_TO_NAME') ?: 'Boostigital Info';
+
+    if (empty($apiKey) || empty($apiSecret)) {
+        throw new Exception('Mailjet API credentials are not configured.');
     }
 
     $mj = new \Mailjet\Client($apiKey, $apiSecret, true, ['version' => 'v3.1']);
