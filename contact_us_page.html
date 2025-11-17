@@ -22,6 +22,35 @@
     <link rel="stylesheet" href="css/whatsapp.css">
     <link rel="stylesheet" href="css/mobile-enhancements.css">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q8B6K1EM52"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q8B6K1EM52');
+</script>
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1113565330594479');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1113565330594479&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <body>
     <!-- Header Section -->
     <header class="main-header">
@@ -76,31 +105,31 @@
             <form id="needsForm">  <!-- Added ID and removed action/method -->
                 <!-- Full Name -->
                 <div class="form-group">
-                    <input type="text" id="full-name" name="full-name-en" placeholder="Full Name (required)" data-lang="en">
-                    <input type="text" id="full-name-ar" name="full-name-ar" placeholder="الاسم الكامل (مطلوب)" data-lang="ar" style="display: none;">
+                    <input type="text" id="full-name" name="full-name" placeholder="Full Name (required)" data-lang="en" required>
+                    <input type="text" id="full-name-ar" name="full-name" placeholder="الاسم الكامل (مطلوب)" data-lang="ar" style="display: none;" required>
                 </div>
 
                 <!-- Company Name -->
                 <div class="form-group">
-                    <input type="text" id="company-name" name="company-name-en" placeholder="Company Name (required)" data-lang="en">
-                    <input type="text" id="company-name-ar" name="company-name-ar" placeholder="اسم الشركة (مطلوب)" data-lang="ar" style="display: none;">
+                    <input type="text" id="company-name" name="company-name" placeholder="Company Name (required)" data-lang="en" required>
+                    <input type="text" id="company-name-ar" name="company-name" placeholder="اسم الشركة (مطلوب)" data-lang="ar" style="display: none;" required>
                 </div>
 
                 <!-- Contact Number -->
                 <div class="form-group">
-                    <input type="tel" id="contact-number" name="contact-number-en" placeholder="Contact Number (Optional)" data-lang="en">
-                    <input type="tel" id="contact-number-ar" name="contact-number-ar" placeholder="رقم الاتصال (اختياري)" data-lang="ar" style="display: none;">
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Contact Number (Optional)" data-lang="en">
+                    <input type="tel" id="contact-number-ar" name="contact-number" placeholder="رقم الاتصال (اختياري)" data-lang="ar" style="display: none;">
                 </div>
 
                 <!-- Contact Email -->
                 <div class="form-group">
-                    <input type="email" id="contact-email" name="contact-email-en" placeholder="Contact Email Address (required)" data-lang="en">
-                    <input type="email" id="contact-email-ar" name="contact-email-ar" placeholder="البريد الإلكتروني (مطلوب)" data-lang="ar" style="display: none;">
+                    <input type="email" id="contact-email" name="contact-email" placeholder="Contact Email Address (required)" data-lang="en" required>
+                    <input type="email" id="contact-email-ar" name="contact-email" placeholder="البريد الإلكتروني (مطلوب)" data-lang="ar" style="display: none;" required>
                 </div>
 
                 <!-- Service Selection -->
                 <div class="form-group">
-                    <select id="service" name="service-en" data-lang="en">
+                    <select id="service" name="service" data-lang="en" required>
                         <option value="" disabled selected>Service You're Interested In:</option>
                         <option value="branding">Branding</option>
                         <option value="social-media">Social Media</option>
@@ -109,7 +138,7 @@
                         <option value="full-package">Full Package</option>
                         <option value="other">Other</option>
                     </select>
-                    <select id="service-ar" name="service-ar" data-lang="ar" style="display: none;">
+                    <select id="service-ar" name="service" data-lang="ar" style="display: none;" required>
                         <option value="" disabled selected>الخدمة التي تهتم بها:</option>
                         <option value="branding">الهوية البصرية</option>
                         <option value="social-media">وسائل التواصل الاجتماعي</option>
@@ -122,8 +151,8 @@
 
                 <!-- Your Message -->
                 <div class="form-group">
-                    <textarea id="message" name="message-en" placeholder="Your Message" data-lang="en" rows="8"></textarea>
-                    <textarea id="message-ar" name="message-ar" placeholder="رسالتك" data-lang="ar" style="display: none;" rows="8"></textarea>
+                    <textarea id="message" name="message" placeholder="Your Message" data-lang="en" rows="8" required></textarea>
+                    <textarea id="message-ar" name="message" placeholder="رسالتك" data-lang="ar" style="display: none;" rows="8" required></textarea>
                 </div>
 
                 <!-- Privacy Policy Checkbox -->
@@ -160,90 +189,51 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('needsForm');
     if (!contactForm) return;
-
-    function isVisible(el) {
-        return el && window.getComputedStyle(el).display !== 'none';
-    }
-
-    function getValue(enId, arId) {
-        const enEl = document.getElementById(enId);
-        const arEl = document.getElementById(arId);
-        if (isVisible(arEl)) return arEl.value.trim();
-        return enEl ? enEl.value.trim() : '';
-    }
-
+    
     contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-
+        
         const form = e.target;
         const responseDiv = document.getElementById('formResponse');
         const submitButtons = form.querySelectorAll('button[type="submit"]');
-
+        
         // Disable buttons during submission
         submitButtons.forEach(btn => btn.disabled = true);
-
+        
         try {
+            // Get current language from localStorage
             const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
-
-            // Collect values from the visible language fields
-            const fullName = getValue('full-name', 'full-name-ar');
-            const companyName = getValue('company-name', 'company-name-ar');
-            const contactNumber = getValue('contact-number', 'contact-number-ar');
-            const contactEmail = getValue('contact-email', 'contact-email-ar');
-            const message = getValue('message', 'message-ar');
-
-            const serviceElEn = document.getElementById('service');
-            const serviceElAr = document.getElementById('service-ar');
-            const service = isVisible(serviceElAr) ? (serviceElAr.value || '').trim() : (serviceElEn.value || '').trim();
-
-            const privacy = document.getElementById('privacy-policy');
-
-            // Basic validation
-            if (!fullName || !companyName || !contactEmail || !service || !message || !privacy.checked) {
-                if (responseDiv) {
-                    responseDiv.style.display = 'block';
-                    responseDiv.innerHTML = currentLang === 'ar'
-                        ? '<div class="error-message">يرجى تعبئة جميع الحقول المطلوبة والموافقة على سياسة الخصوصية.</div>'
-                        : '<div class="error-message">Please fill in all required fields and accept the privacy policy.</div>';
-                }
-                return;
-            }
-
-            // Build canonical form data expected by backend
-            const formData = new FormData();
-            formData.append('full-name', fullName);
-            formData.append('company-name', companyName);
-            if (contactNumber) formData.append('contact-number', contactNumber);
-            formData.append('contact-email', contactEmail);
-            formData.append('service', service);
-            formData.append('message', message);
+            
+            // Prepare form data
+            const formData = new FormData(form);
             formData.append('language', currentLang);
-
-            const response = await fetch('send_email_for_contact_us_page.php', {
-                method: 'POST',
+            
+            const response = await fetch("send_email_for_contact_us_page.php", {
+                method: "POST",
                 body: formData
             });
-
+            
             const result = await response.text();
-
+            
+            // Show response
             if (responseDiv) {
-                responseDiv.style.display = 'block';
-                responseDiv.innerHTML = result.includes('Success') || result.includes('تم الإرسال')
-                    ? `<div class="success-message">${result}</div>`
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = result.includes("Success") || result.includes("تم الإرسال")
+                    ? `<div class="success-message">${result}</div>` 
                     : `<div class="error-message">${result}</div>`;
-
-                if (result.includes('Success') || result.includes('تم الإرسال')) {
+                
+                if (result.includes("Success") || result.includes("تم الإرسال")) {
                     form.reset();
                     setTimeout(() => {
-                        responseDiv.style.display = 'none';
+                        responseDiv.style.display = "none";
                     }, 5000);
                 }
             }
         } catch (error) {
             if (responseDiv) {
                 const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
-                responseDiv.style.display = 'block';
-                responseDiv.innerHTML = currentLang === 'en'
+                responseDiv.style.display = "block";
+                responseDiv.innerHTML = currentLang === 'en' 
                     ? '<div class="error-message">Network error. Please try again.</div>'
                     : '<div class="error-message">خطأ في الشبكة. يرجى المحاولة مرة أخرى.</div>';
             }

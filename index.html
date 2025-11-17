@@ -431,15 +431,40 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             const res = await fetch('send_email.php', { method: 'POST', body: new FormData(form) });
             const text = await res.text();
+
             if (responseDiv) {
+                const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
                 responseDiv.style.display = 'block';
-                responseDiv.textContent = text;
+
+                const isSuccess = res.ok && /Success/i.test(text);
+
+                if (isSuccess) {
+                    const msg = currentLang === 'ar'
+                        ? 'تم الإرسال بنجاح! سنتواصل معك قريبًا.'
+                        : text;
+                    responseDiv.innerHTML = `<div class="success-message">${msg}</div>`;
+                } else {
+                    const msg = currentLang === 'ar'
+                        ? 'حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى.'
+                        : (text || 'Error: Could not send message. Please try again later.');
+                    responseDiv.innerHTML = `<div class="error-message">${msg}</div>`;
+                }
             }
-            if (res.ok && /Success/i.test(text)) form.reset();
+
+            if (res.ok && /Success/i.test(text)) {
+                form.reset();
+                // Hide message after a few seconds, similar to contact page
+                setTimeout(() => {
+                    if (responseDiv) responseDiv.style.display = 'none';
+                }, 5000);
+            }
         } catch (err) {
             if (responseDiv) {
+                const currentLang = localStorage.getItem('boostigitalLanguage') || 'en';
                 responseDiv.style.display = 'block';
-                responseDiv.textContent = 'Error: Network issue. Please try again.';
+                responseDiv.innerHTML = currentLang === 'ar'
+                    ? '<div class="error-message">خطأ في الشبكة. يرجى المحاولة مرة أخرى.</div>'
+                    : '<div class="error-message">Network error. Please try again.</div>';
             }
         } finally {
             submitButtons.forEach(b => b.disabled = false);
