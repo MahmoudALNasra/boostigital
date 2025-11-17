@@ -44,6 +44,12 @@
     font-size: 14px;
     margin-bottom: 5px;
     color: #fff; /* White text */
+    text-align: right; /* Align right for Arabic (RTL) */
+}
+
+/* For English (LTR), align labels left */
+html[dir="ltr"] .form-group label {
+    text-align: left;
 }
 
 .form-group input,
