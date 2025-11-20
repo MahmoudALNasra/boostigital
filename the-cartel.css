@@ -1,14 +1,875 @@
-/* The Cartel Page Styles */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --color-background: #2b1e1a;
+  --color-text-light: #efe6da;
+  --color-text-white: #ffffff;
+  --color-text-dark: #1e1e1e;
+  --color-text-placeholder: #b3b3b3;
+  --color-accent: #5c1e1e;
+  --color-border: #d9d9d9;
+  --font-baskerville: 'Libre Baskerville', serif;
+  --font-actor: 'Actor', sans-serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset + base */
+* { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
 }
 
-/* Add your styles here */
+html, body { 
+  height: 100%; 
+  background: var(--color-background); 
+  color: var(--color-text-white); 
+  font-family: var(--font-actor); 
+  line-height: 1.6;
+}
+
+/* Outer shell */
+.page-shell { 
+  width: 100%; 
+  min-height: 100vh;
+}
+
+/* =========================
+   LOGO STYLES
+   ========================= */
+.logo {
+  display: block;
+}
+
+.logo--small img {
+  width: 111px;
+  height: 46px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.logo--hero img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.logo--footer img {
+  width: 569px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.logo:hover img {
+  opacity: 0.85;
+}
+
+/* =========================
+   HERO / INTRO
+   ========================= */
+.hero-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #251612;
+  color: var(--color-text-light);
+  padding-bottom: 40px;
+}
+
+/* top bar */
+.hero-topbar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+}
+
+.hero-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* simple nav link */
+.hero-nav .nav-link {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-family: var(--font-actor);
+  font-size: 14px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.hero-nav .nav-link:hover {
+  opacity: 1;
+}
+
+/* contact button in top-right */
+.hero-nav .nav-cta {
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-nav .nav-cta:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* hero media area */
+.hero-media {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 480px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* hero background image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* dark overlay for legibility */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15,10,8,0.55) 0%, rgba(18,12,10,0.65) 50%, rgba(20,14,12,0.75) 100%);
+  z-index: 2;
+}
+
+/* hero centered text block */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 28px;
+  text-align: center;
+  gap: 12px;
+}
+
+/* tagline */
+.hero-tagline {
+  margin: 0;
+  font-size: 18px;
+  color: rgba(239,230,218,0.9);
+  font-weight: 400;
+}
+
+/* smaller tagline span styling */
+.hero-small {
+  display: block;
+  margin-top: 6px;
+  font-size: 16px;
+  color: rgba(239,230,218,0.75);
+}
+
+/* =========================
+   PAGE CONTAINER + CARDS
+   ========================= */
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 124px;
+}
+
+.content-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD BASE */
+.card-container {
+  position: relative;
+  width: 1130px;
+  height: 740px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 33px 76px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TYPOGRAPHY */
+.text-pre-title {
+  font-family: var(--font-baskerville);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.15;
+  color: var(--color-text-light);
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.text-title {
+  font-family: var(--font-baskerville);
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1.15;
+  color: var(--color-text-light);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.text-subtitle {
+  font-family: var(--font-actor);
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--color-text-light);
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+
+.text-body {
+  font-family: var(--font-actor);
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--color-text-white);
+  white-space: pre-wrap;
+  font-weight: 400;
+}
+
+.text-body-sm {
+  font-family: var(--font-actor);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-text-white);
+  white-space: pre-wrap;
+  font-weight: 400;
+}
+
+/* BUTTON */
+.menu-button {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-text-white);
+  font-family: var(--font-actor);
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 14px 62px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.menu-button:hover {
+  background-color: #7a2a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FAMILY SECTION */
+#section-family .family-content-wrapper {
+  max-width: 595px;
+}
+
+#section-family .text-title {
+  margin-bottom: 269px;
+}
+
+/* DEAL SECTION */
+#section-deal .card-content {
+  padding-left: 64px;
+}
+
+#section-deal .text-title {
+  margin-bottom: 182px;
+}
+
+#section-deal .deal-text-content {
+  max-width: 602px;
+}
+
+#section-deal .deal-menu-button {
+  position: absolute;
+  bottom: 63px;
+  right: 71px;
+}
+
+/* AFTER HOURS SECTION */
+#section-after-hours .card-content {
+  padding-left: 64px;
+}
+
+#section-after-hours .text-title {
+  margin-bottom: 223px;
+}
+
+#section-after-hours .after-hours-text-content {
+  max-width: 602px;
+}
+
+#section-after-hours .after-hours-menu-button {
+  position: absolute;
+  bottom: 63px;
+  right: 71px;
+}
+
+/* CODE SECTION */
+#section-code .card-content {
+  padding-left: 64px;
+}
+
+#section-code .text-title {
+  margin-bottom: 233px;
+}
+
+#section-code .code-content-wrapper {
+  max-width: 548px;
+}
+
+/* =========================
+   CONTACT SECTION - COMPLETELY FIXED
+   ========================= */
+/* =========================
+   CONTACT SECTION - FIXED (Form visible + no overlap)
+   ========================= */
+#section-contact .card-container {
+  position: relative;
+  width: 1130px;
+  height: 740px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#section-contact .card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#section-contact .card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 60px 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE: Contact text */
+#section-contact .contact-info {
+  flex: 1 1 45%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-pre-title {
+  font-family: var(--font-baskerville);
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 1;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.contact-main-title {
+  font-family: var(--font-baskerville);
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 1;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.contact-subtitle {
+  font-family: var(--font-actor);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  color: var(--color-text-light);
+  margin-top: 20px;
+}
+
+.contact-text {
+  font-family: var(--font-actor);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-text-white);
+  white-space: pre-line;
+}
+
+/* RIGHT SIDE: Contact form */
+#section-contact .contact-form {
+  flex: 1 1 38%;
+  max-width: 400px; /* slightly narrower */
+  margin-left: auto; /* stays pushed to the right */
+  align-self: center;
+  background-color: var(--color-text-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 20px; /* slightly reduced padding */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* tighter spacing */
+  transform: translateY(10px); /* centers visually against text */
+}
+
+
+/* optional: make sure the text block doesn’t stretch too much */
+#section-contact .contact-info {
+  flex: 1 1 50%;
+  max-width: 500px;
+}
+
+#section-contact .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#section-contact .form-field label {
+  color: var(--color-text-dark);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#section-contact .form-field input,
+#section-contact .form-field textarea {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  width: 100%;
+  background: #fff;
+}
+
+#section-contact .form-field input::placeholder,
+#section-contact .form-field textarea::placeholder {
+  color: var(--color-text-placeholder);
+}
+
+#section-contact .contact-submit-button {
+  background-color: var(--color-accent);
+  color: var(--color-text-white);
+  font-family: var(--font-actor);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+#section-contact .contact-submit-button:hover {
+  background-color: #7a2a2a;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CONTACT RESPONSIVE FIXES
+   ========================= */
+@media (max-width: 1200px) {
+  #section-contact .card-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+  }
+
+  #section-contact .contact-info,
+  #section-contact .contact-form {
+    flex: 1 1 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .contact-pre-title,
+  .contact-main-title,
+  .contact-subtitle,
+  .contact-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-pre-title { font-size: 40px; }
+  .contact-main-title { font-size: 64px; }
+  .contact-subtitle { font-size: 24px; }
+  .contact-text { font-size: 16px; }
+}
+
+
+/* =========================
+   FOOTER - FIXED WITH BOTTOM COPYRIGHT
+   ========================= */
+.site-footer {
+  position: relative;
+  width: 100%;
+  height: 931px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+/* Footer background image */
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://i.imgur.com/ISpLuno.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #201813;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.footer-content-wrapper {
+  position: relative;
+  z-index: 3;
+  color: var(--color-text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 532px;
+  margin-top: 150px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.footer-text {
+  font-family: var(--font-actor);
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  width: 532px;
+  margin-bottom: 20px;
+}
+
+.footer-text .footer-headline {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-text a {
+  color: var(--color-text-white);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  font-family: var(--font-actor);
+  font-size: 18px; /* Made bigger */
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  width: 532px;
+  margin-top: auto;
+  margin-bottom: 50px; /* Position at bottom */
+  opacity: 0.9;
+}
+
+/* ==========================
+   RESPONSIVENESS
+========================== */
+@media (max-width: 1200px) {
+  .card-container { 
+    width: 95%; 
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .page-container { 
+    padding: 80px 20px; 
+    gap: 100px; 
+  }
+  
+  .text-pre-title { font-size: 50px; }
+  .text-title { font-size: 80px; }
+  .text-subtitle { font-size: 30px; }
+  .text-body { font-size: 20px; }
+
+  /* Contact Section Responsive */
+  #section-contact .card-container {
+    width: 95%;
+    height: auto;
+    min-height: 600px;
+  }
+  
+  #section-contact .contact-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    position: relative;
+  }
+  
+  #section-contact .contact-info {
+    position: static;
+    width: 100%;
+    max-width: 477px;
+    text-align: center;
+  }
+  
+  .contact-pre-title,
+  .contact-main-title,
+  .contact-subtitle,
+  .contact-text {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  
+  #section-contact .contact-form {
+    position: static;
+    width: 100%;
+    max-width: 455px;
+    height: auto;
+  }
+
+  #section-deal .deal-menu-button,
+  #section-after-hours .after-hours-menu-button {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  /* Footer Responsive */
+  .footer-content-wrapper {
+    width: 90%;
+    max-width: 532px;
+  }
+  
+  .footer-text,
+  .footer-copyright {
+    width: 100%;
+    height: auto;
+  }
+
+  /* hero adjustments */
+  .hero-media { height: 420px; }
+  .logo--hero img { max-width: 500px; }
+  .logo--footer img { max-width: 350px; }
+}
+
+@media (max-width: 768px) {
+  .page-container { 
+    padding: 50px 15px; 
+    gap: 80px; 
+  }
+  
+  .card-container { 
+    width: 100%; 
+    height: auto; 
+    min-height: 500px; 
+  }
+  
+  .card-content { 
+    padding: 25px; 
+  }
+  
+  .text-pre-title { font-size: 40px; }
+  .text-title { font-size: 64px; }
+  .text-subtitle { font-size: 24px; }
+  .text-body { font-size: 18px; }
+  
+  .menu-button { 
+    font-size: 20px; 
+    padding: 12px 40px; 
+  }
+
+  /* Contact Section Mobile */
+  #section-contact .contact-layout { 
+    padding: 25px; 
+  }
+  
+  .contact-pre-title { font-size: 40px; }
+  .contact-main-title { font-size: 64px; }
+  .contact-subtitle { font-size: 24px; }
+  .contact-text { font-size: 16px; }
+  
+  #section-contact .contact-form {
+    padding: 20px;
+  }
+
+  #section-family .text-title,
+  #section-deal .text-title,
+  #section-after-hours .text-title,
+  #section-code .text-title { 
+    margin-bottom: 80px; 
+  }
+
+  #section-deal .deal-menu-button,
+  #section-after-hours .after-hours-menu-button { 
+    position: static; 
+    margin-top: 40px; 
+    align-self: flex-start; 
+  }
+
+  .site-footer { 
+    height: 600px; 
+  }
+  
+  .footer-content-wrapper { 
+    margin-top: 80px; 
+  }
+  
+  .footer-text .footer-headline { 
+    font-size: 32px; 
+  }
+  
+  .footer-text { 
+    font-size: 18px; 
+  }
+  
+  .footer-copyright { 
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* hero mobile */
+  .hero-topbar { 
+    padding: 16px; 
+  }
+  
+  .hero-media { 
+    height: 380px; 
+  }
+  
+  .logo--hero img { 
+    max-width: 350px; 
+  }
+  
+  .logo--footer img { 
+    max-width: 280px; 
+  }
+  
+  .logo--small img { 
+    width: 90px; 
+    height: 37px; 
+  }
+  
+  .hero-tagline { 
+    font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .text-pre-title { font-size: 32px; }
+  .text-title { font-size: 48px; }
+  .text-subtitle { font-size: 20px; }
+  .text-body { font-size: 16px; }
+  
+  /* Contact Section Small Mobile */
+  .contact-pre-title { font-size: 32px; }
+  .contact-main-title { font-size: 48px; }
+  .contact-subtitle { font-size: 20px; }
+  .contact-text { font-size: 14px; }
+  
+  .logo--hero img { 
+    max-width: 280px; 
+  }
+  
+  .hero-media { 
+    height: 320px; 
+  }
+  
+  .site-footer {
+    height: 500px;
+  }
+  
+  .footer-content-wrapper {
+    margin-top: 50px;
+  }
+  
+  .footer-text .footer-headline {
+    font-size: 28px;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  
+  .footer-copyright {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}

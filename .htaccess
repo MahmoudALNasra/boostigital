@@ -1,8 +1,0 @@
-RewriteEngine On
-
-# Redirect /the-cartel to the-cartel.html
-RewriteRule ^the-cartel$ the-cartel.html [L]
-
-# If you want to add more clean URLs in the future, add them here
-# Example: RewriteRule ^services$ services.html [L]
-# Example: RewriteRule ^portfolio$ portfolio.html [L]
