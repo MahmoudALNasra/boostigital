@@ -1,0 +1,84 @@
+/* ============================================
+   SERVICES PAGE - MOBILE HERO SECTION ENHANCEMENT
+   Makes "OUR SERVICES" bigger and section taller
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Increase hero section height on mobile */
+    .fullscreen-hero {
+        height: 80vh !important;
+        min-height: 500px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Make "OUR SERVICES" text much bigger */
+    .hero-text {
+        font-size: 3.5rem !important;
+        font-weight: 900 !important;
+        line-height: 1.2 !important;
+        text-shadow: 0 4px 20px rgba(0,0,0,0.7) !important;
+        padding: 0 20px !important;
+        text-align: center !important;
+    }
+    
+    /* Ensure content is properly centered */
+    .hero-content {
+        padding: 40px 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+    }
+    
+    /* Enhance the background visibility */
+    .hero-gif-background {
+        opacity: 1 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust for smaller phones */
+    .fullscreen-hero {
+        height: 75vh !important;
+        min-height: 450px !important;
+    }
+    
+    .hero-text {
+        font-size: 2.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .hero-content {
+        padding: 30px 15px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Adjust for very small phones */
+    .fullscreen-hero {
+        height: 70vh !important;
+        min-height: 400px !important;
+    }
+    
+    .hero-text {
+        font-size: 2.2rem !important;
+    }
+}
+
+/* Optional: Add a subtle animation for better visual appeal */
+@media (max-width: 768px) {
+    @keyframes floatMobile {
+        0%, 100% { 
+            transform: translateY(0); 
+        }
+        50% { 
+            transform: translateY(-15px); 
+        }
+    }
+    
+    .hero-text {
+        animation: floatMobile 4s ease-in-out infinite !important;
+    }
+}
