@@ -93,6 +93,8 @@ function sendWithMailjet(string $subject, string $textBody, string $replyToEmail
             ]],
             'Subject'  => $subject,
             'TextPart' => $textBody,
+            // Prevent automatic contact list management to avoid hitting contact limits
+            'SkipContactListManagement' => true,
         ]],
     ];
 

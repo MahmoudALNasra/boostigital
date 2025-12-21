@@ -252,8 +252,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Prepare form data
-            const formData = new FormData(form);
+            // Prepare form data - only send visible field values
+            const formData = new FormData();
+            formData.append('full-name', fullName);
+            formData.append('company-name', companyName);
+            formData.append('contact-email', contactEmail);
+            formData.append('service', service);
+            formData.append('message', message);
+            
+            // Add optional contact number if present
+            const contactNumberEn = document.getElementById('contact-number');
+            const contactNumberAr = document.getElementById('contact-number-ar');
+            const contactNumber = isVisible(contactNumberAr) ? contactNumberAr.value.trim() : (contactNumberEn ? contactNumberEn.value.trim() : '');
+            if (contactNumber) {
+                formData.append('contact-number', contactNumber);
+            }
+            
             formData.append('language', currentLang);
             
             const response = await fetch("send_email_for_contact_us_page.php", {
