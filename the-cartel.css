@@ -632,8 +632,22 @@ html, body {
 }
 
 .footer-text a:hover {
-  text-decoration: underline;
   opacity: 0.8;
+}
+
+.footer-text a.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  margin: 0 16px;
+}
+
+.footer-text a.footer-social-link .footer-social-icon {
+  width: 120px;
+  height: 120px;
+  color: var(--color-text-white);
 }
 
 .footer-copyright {
